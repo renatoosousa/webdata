@@ -1,6 +1,6 @@
 from lxml.html import parse 
 from urllib2 import urlopen
-from pandas.io.parses import TextParser
+from pandas.io.parsers import TextParser
 
 def _unpack(row, kind='td'):
 	elts = row.findall('.//%s' % kind)
@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
 	dt = tables[0]
 
-	rows = dt.finall('.//tr')
+	rows = dt.findall('.//tr')
 
 	headers = _unpack(rows[0], kind = 'th')
 
