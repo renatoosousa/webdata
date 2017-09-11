@@ -20,6 +20,12 @@ class Zapi_crawler:
 		self.get_data(self.start_url)
 		return
 
+	def get_rawHtml(self):
+		start_page = requests.get(self.start_url, headers = agent)
+		soup = BeautifulSoup(start_page.content, "html.parser")
+
+		print soup.text
+
 	def get_data(self, link):
 		start_page = requests.get(link, headers = agent)
 		soup = BeautifulSoup(start_page.content, "html.parser")
@@ -95,8 +101,9 @@ class Zapi_crawler:
 
 
 
-url = 'https://www.zapimoveis.com.br/lancamento/apartamento+venda+boa-viagem+recife+pe+jardim-das-orquideas+moura-dubeux+95m2-124m2/ID-13235/?contato=0&oti=4'
+url = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viagem+recife+pe+181m2+RS1670000/ID-15204142/?oti=1'
 url2 = 'https://www.zapimoveis.com.br/lancamento/apartamento+venda+varzea+recife+pe+reserva-polidoro+moura-dubeux+53m2/ID-12969/?contato=0&oti=4'
 url3 = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viagem+recife+pe+149m2+RS1100000/ID-13656803/?oti=1'
 ri = Zapi_crawler(url)
-ri.crawl()
+ri.get_rawHtml()
+#ri.crawl()
