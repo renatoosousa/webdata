@@ -66,10 +66,37 @@ class Zapi_crawler:
 			print key + ": " + self.data[key]
 
 	def extract_data_mb(self, soup):
-		print "todo"
+		prop_addr = soup.find_all("span", {"class": "info-imovel"})
+		prop = prop_addr[0].text
+		self.title = self.title + " - " + prop
+		print self.title
+
+		valor = soup.find("span", {"class": "dados-ficha no-show"})
+		self.data["Valor de Venda"] = valor.text
+		address = prop_addr[1].text
+		address = address.split(',')
+		self.data["Bairro"] = address[0]
+		address = address[1].split('-')
+		self.data["Cidade"] = address[0]
+		self.data["Estado"] = address[1]
+
+		ul = soup.find("ul", {"class": "unstyled container"})
+		h3 = ul.find_all("h3")
+		for item in h3:
+			val = ""
+			for i in range(0, len(item(text=True)) -1 ):
+				val = val + str(item(text=True)[i])
+			self.data[ item(text=True)[-1]] = val
+
+		for key in self.data:
+			print key + ": " + self.data[key]
+
+
 
 
 
 url = 'https://www.zapimoveis.com.br/lancamento/apartamento+venda+boa-viagem+recife+pe+jardim-das-orquideas+moura-dubeux+95m2-124m2/ID-13235/?contato=0&oti=4'
+url2 = 'https://www.zapimoveis.com.br/lancamento/apartamento+venda+varzea+recife+pe+reserva-polidoro+moura-dubeux+53m2/ID-12969/?contato=0&oti=4'
+url3 = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viagem+recife+pe+149m2+RS1100000/ID-13656803/?oti=1'
 ri = Zapi_crawler(url)
 ri.crawl()
