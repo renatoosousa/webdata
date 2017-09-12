@@ -4,7 +4,7 @@ import requests
 import os
 import bs4
 from bs4 import BeautifulSoup
-import re
+
 
 
 agent = { 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0'}
@@ -24,6 +24,9 @@ class Zapi_crawler:
 	def get_rawHtml(self):
 		start_page = requests.get(self.start_url, headers = agent)
 		soup = BeautifulSoup(start_page.content, "html.parser")
+
+		for js in soup(["script", "style"]):
+			js.extract()
 
 		return str(soup(text=True))
 
@@ -106,5 +109,5 @@ url = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viag
 url2 = 'https://www.zapimoveis.com.br/lancamento/apartamento+venda+varzea+recife+pe+reserva-polidoro+moura-dubeux+53m2/ID-12969/?contato=0&oti=4'
 url3 = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viagem+recife+pe+149m2+RS1100000/ID-13656803/?oti=1'
 ri = Zapi_crawler(url)
-ri.get_rawHtml()
+print ri.get_rawHtml()
 #ri.crawl()
