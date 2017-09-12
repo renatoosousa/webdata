@@ -28,7 +28,8 @@ class Zapi_crawler:
 		for js in soup(["script", "style"]):
 			js.extract()
 
-		return str(soup(text=True))
+		return soup.get_text().encode("utf-8")
+		#return str(soup(text=True))
 
 	def get_data(self, link):
 		start_page = requests.get(link, headers = agent)
@@ -109,5 +110,7 @@ url = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viag
 url2 = 'https://www.zapimoveis.com.br/lancamento/apartamento+venda+varzea+recife+pe+reserva-polidoro+moura-dubeux+53m2/ID-12969/?contato=0&oti=4'
 url3 = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viagem+recife+pe+149m2+RS1100000/ID-13656803/?oti=1'
 ri = Zapi_crawler(url)
-print ri.get_rawHtml()
+html = ri.get_rawHtml()
+print html
+print type(html)
 #ri.crawl()
