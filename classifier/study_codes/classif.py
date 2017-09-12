@@ -15,6 +15,9 @@ df = pd.read_csv('database.csv', sep='\t')
 X = df.ix[:,:df.shape[1]-2]
 y = df.ix[:,df.shape[1]-1]
 
+X = X.values
+y = y.values
+
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 
 forest = RandomForestClassifier(n_estimators=500, random_state=0)

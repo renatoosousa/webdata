@@ -12,7 +12,9 @@ def filter_txt(txt):
         txt = txt.replace(" "+word+" "," ")
     txt = txt.decode('utf-8')
     
-    splits = [',', '(', ')', '[', ']', '.', '!', '?', ';', ':', '/', '|', '"', '+', '-', '_', '#']
+    splits = [',', '(', ')', '[', ']', '.', '!', '?', ';', ':', '/', '|', '"',
+              '+', '-', '_', '#', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+              '\'', '\\', '\t', '\n', '>', '<', '*']
     for split in splits:
         txt = txt.replace(split, ' ')
     return txt
@@ -41,12 +43,12 @@ def getValue(dic, word):
 def dict2row(dic, header):
     return [(getValue(dic, word)) for word in header]
 
-
+'''
 url1 = 'https://www.zapimoveis.com.br/lancamento/apartamento+venda+boa-viagem+recife+pe+jardim-das-orquideas+moura-dubeux+95m2-124m2/ID-13235/?contato=0'
 url2 = 'https://www.zapimoveis.com.br/lancamento/apartamento+venda+boa-viagem+recife+pe+jardim-das-acacias+moura-dubeux+185m2/ID-13234/?contato=0'
 url3 = 'https://revista.zapimoveis.com.br/?utm_source=zapimoveis&utm_medium=link-header&utm_campaign=btn-zapemcasa&_ga=2.41900458.9832649.1504960224-2135475700.1504045699'
 
-'''text = open('text1.txt', 'r')
+text = open('text1.txt', 'r')
 txt1 = text.read() + '\n' + url1
 text.close()
 
@@ -82,7 +84,7 @@ for idx, i_dict in enumerate(alldict):
     row.append(urls.loc[idx]['label'])
     df.loc[idx] = row
         
-df.to_csv('database.csv', sep='\t')
+df.to_csv('database.csv', sep='\t', encoding = 'utf-8')
 #wrapper = Zapi_crawler(url1)
 #txt1 = wrapper.get_rawHtml()
 #print type(txt1)
