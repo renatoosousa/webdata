@@ -12,7 +12,7 @@ def filter_txt(txt):
         txt = txt.replace(" "+word+" "," ")
     txt = txt.decode('utf-8')
     
-    splits = [',', '(', ')', '[', ']', '.', '!', '?', ';', ':', '/', '|', '"', '+', '-']
+    splits = [',', '(', ')', '[', ']', '.', '!', '?', ';', ':', '/', '|', '"', '+', '-', '_', '#']
     for split in splits:
         txt = txt.replace(split, ' ')
     return txt
@@ -58,16 +58,41 @@ text = open('text3.txt', 'r')
 txt3 = text.read() + '\n' + url3
 text.close()'''
 
+# dataframe with urls and labels
+urls = pd.read_csv('../dataframe/urls2.csv')
 
-wrapper = Zapi_crawler(url1)
-txt1 = wrapper.get_rawHtml()
-print type(txt1)
+wrapper = Zapi_crawler('')
+alldict = []
 
-txt1 = filter_txt(txt1.lower())
+for index, webpage in urls.iterrows():
+    wrapper.start_url = webpage['site']
+    try:
+        txt = filter_txt(wrapper.get_rawHtml().lower())
+        alldict.append(countWords(txt))
+    except:
+        print("error")
+
+allkeys = all_keys(alldict)
+header = all_keys(alldict)
+header.append('label')
+df = pd.DataFrame(columns = header)
+
+for idx, i_dict in enumerate(alldict):
+    row = dict2row(i_dict, allkeys)
+    row.append(urls.loc[idx]['label'])
+    df.loc[idx] = row
+        
+df.to_csv('database.csv', sep='\t')
+#wrapper = Zapi_crawler(url1)
+#txt1 = wrapper.get_rawHtml()
+#print type(txt1)
+
+#txt1 = filter_txt(txt1.lower())
 # txt2 = filter_txt(txt2.lower())
 # txt3 = filter_txt(txt3.lower())
-dict1 = countWords(txt1)
-print dict1['quartos']
+#dict1 = countWords(txt1)
+
+#print dict1['quartos']
 # dict2 = countWords(txt2)
 # dict3 = countWords(txt3)
 
