@@ -1,24 +1,37 @@
-# from bs4 import BeautifulSoup
-# import requests
-# import sys
+import re
+import urllib2
+from sets import Set
 
-# def buscar_links(url):
-# 	if 'http' not in url:
-# 		url = 'http://'+url
+start_link = 'http://precog.iiitd.edu.in/'
+urls = Set([start_link])
 
-# 	lista = []
-# 	i = 0
-# 	r = requests.get(url)
-# 	soup = BeautifulSoup(r.text)
-# 	for a in soup.findAll('a',href = True):
-# 		link = a['href']
-# 		i += 1
-# 		lista.append(link)
-# 		links = str(link).strip('[]').replace("u","").replace("'","")
-# 		print str(i)+") "+str(link)
-# 	print "\n>> Total = %d \n" % i
-# 	sys.exit()
+def findId(source):
+    l = re.findall(r'"(http[s]*://\S+)"',source)
+    return l
 
-# url = raw_input("url: ")
-# buscar_links(url)
+def get_source(url):
+    response = urllib2.urlopen(url)
+    page_source = response.read()
+    return page_source
 
+def search(source, depth):
+    if depth==2:
+        return
+    print source, depth
+
+    try:
+        page_source = get_source(source)
+        links = Set(findId(page_source))
+    except:
+        print 'some error encountered'
+        return
+
+    global urls
+    for link in links:
+        if link not in urls:
+            urls = urls|Set([link])        
+
+    for link in urls:
+        search(link,depth+1)
+
+search(start_link,0)
