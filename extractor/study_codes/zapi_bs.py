@@ -16,6 +16,7 @@ class Zapi_crawler:
 		self.data = {}
 		self.title = ""
 
+
 	def crawl(self):
 		self.get_data(self.start_url)
 		return
@@ -24,7 +25,7 @@ class Zapi_crawler:
 		start_page = requests.get(self.start_url, headers = agent)
 		soup = BeautifulSoup(start_page.content, "html.parser")
 
-		print soup.text
+		return str(soup(text=True))
 
 	def get_data(self, link):
 		start_page = requests.get(link, headers = agent)
