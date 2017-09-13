@@ -44,12 +44,14 @@ class Zapi_crawler:
 			self.extract_data_mb(soup)
 		elif annoucer == "MRV Engenharia S/A":
 			self.extract_data_mb(soup)
+		elif annoucer == "Bolognesi":
+			self.extract_data_mb(soup)
 		else:
 			self.extract_data_normal(soup)
 
 	def extract_data_normal(self, soup):
 		price = soup.find("span",  {"class": "value-ficha"})
-		self.data[ price(text=True)[1] ] = price(text=True)[2]
+		self.data[ price(text=True)[1] ] = (price(text=True)[2])
 
 		prop = soup.find("h1", {"class": "pull-left"})
 		prop = prop.findChildren()[0](text=True)
@@ -100,17 +102,14 @@ class Zapi_crawler:
 			self.data[ item(text=True)[-1]] = val
 
 		for key in self.data:
-			print key + ": " + self.data[key]
+			print key + ": " + self.data[key].replace
 
 
 
 
 
 url = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viagem+recife+pe+181m2+RS1670000/ID-15204142/?oti=1'
-url2 = 'https://www.zapimoveis.com.br/lancamento/apartamento+venda+varzea+recife+pe+reserva-polidoro+moura-dubeux+53m2/ID-12969/?contato=0&oti=4'
+url2 = 'https://www.zapimoveis.com.br/lancamento/casa+venda+jd-betania+cachoeirinha+rs+chacara-das-rosas-ii+bolognesi+30m2-44m2/ID-11657/?contato=0'
 url3 = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viagem+recife+pe+149m2+RS1100000/ID-13656803/?oti=1'
-ri = Zapi_crawler(url)
-html = ri.get_rawHtml()
-print html
-print type(html)
-#ri.crawl()
+ri = Zapi_crawler(url2)
+ri.crawl()
