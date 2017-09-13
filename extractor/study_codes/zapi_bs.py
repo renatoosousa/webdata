@@ -37,7 +37,7 @@ class Zapi_crawler:
 
 		annoucer = soup.find("input", {"id": "hdnNomeAnunciante"})
 		annoucer = annoucer["value"]
-		print annoucer
+		#print annoucer
 		self.title = annoucer
 
 		if annoucer == "Moura Dubeux":
@@ -51,21 +51,20 @@ class Zapi_crawler:
 
 	def extract_data_normal(self, soup):
 		price = soup.find("span",  {"class": "value-ficha"})
-		self.data[ price(text=True)[1] ] = (price(text=True)[2])
+		self.data[ price(text=True)[1] ] = (price(text=True)[2].strip())
 
 		prop = soup.find("h1", {"class": "pull-left"})
-		prop = prop.findChildren()[0](text=True)
-
-		self.title = self.title + " - " + str(prop)
+		prop = prop.find("span")
+		self.title = self.title + " - " + prop.text
 		print self.title
 
 
 		address = soup.find("span", {"class": "logradouro"})
 		address = address.text.split(',')
-		self.data["Bairro"] = address[0]
+		self.data["Bairro"] = address[0].strip()
 		address = address[1].split('-')
-		self.data["Cidade"] = address[0]
-		self.data["Estado"] = address[1]
+		self.data["Cidade"] = address[0].strip()
+		self.data["Estado"] = address[1].strip()
 
 
 		uls = soup.find_all("ul", {"class": "unstyled"})
@@ -73,7 +72,7 @@ class Zapi_crawler:
 			for li in ul.find_all('li'):
 				spans = li.find_all("span", {"class": "text-info"})
 				if li.find("span", {"class": "text-info"}):
-					self.data[ li(text=True)[1] ] = li(text=True)[0]
+					self.data[ li(text=True)[1].strip() ] = li(text=True)[0].strip()
 
 		for key in self.data:
 			print key + ": " + self.data[key]
@@ -102,7 +101,7 @@ class Zapi_crawler:
 			self.data[ item(text=True)[-1]] = val
 
 		for key in self.data:
-			print key + ": " + self.data[key].replace
+			print key + ": " + self.data[key]
 
 
 
@@ -111,5 +110,5 @@ class Zapi_crawler:
 url = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viagem+recife+pe+181m2+RS1670000/ID-15204142/?oti=1'
 url2 = 'https://www.zapimoveis.com.br/lancamento/casa+venda+jd-betania+cachoeirinha+rs+chacara-das-rosas-ii+bolognesi+30m2-44m2/ID-11657/?contato=0'
 url3 = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viagem+recife+pe+149m2+RS1100000/ID-13656803/?oti=1'
-ri = Zapi_crawler(url2)
+ri = Zapi_crawler(url)
 ri.crawl()
