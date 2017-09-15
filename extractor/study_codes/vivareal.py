@@ -51,11 +51,6 @@ class Vivareal_crawler:
         self.data["Cidade"] = cidade
         self.data["Bairro"] = bairro
 
-        '''inf = soup.find("ul", {"class": "bJ"})
-        spans = inf.find_all("span")
-        for span in spans:
-            print span'''
-
         #por que diabos nao itera ate -1
         infos = soup.find_all("ul", {"class": "bw"})
         lis = infos[0].find_all("li")
@@ -67,6 +62,10 @@ class Vivareal_crawler:
             self.data[line[0]] = line_val
             line_val = ""
 
+        lis = infos[1].find_all("li")
+        for li in lis:
+            self.data[ li(text=True)[1] ] = li(text=True)[0]
+
         for key in self.data:
             print key + ": " + self.data[key]
 
@@ -74,7 +73,7 @@ class Vivareal_crawler:
         print "todo"
 
 
-url = 'https://www.vivareal.com.br/imovel/apartamento-2-quartos-cidade-baixa-bairros-porto-alegre-78m2-venda-RS300000-id-84817060/'
+url = 'https://www.vivareal.com.br/imovel/casa-5-quartos-joa-zona-oeste-rio-de-janeiro-com-garagem-670m2-venda-RS11000000-id-81285815/'
 url2 = 'https://www.vivareal.com.br/imoveis-lancamento/reserva-ecoville-8636/?__vt=map:b'
 ri = Vivareal_crawler(url)
 ri.crawl()
