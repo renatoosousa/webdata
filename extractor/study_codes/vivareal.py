@@ -51,13 +51,24 @@ class Vivareal_crawler:
         self.data["Cidade"] = cidade
         self.data["Bairro"] = bairro
 
+        '''inf = soup.find("ul", {"class": "bJ"})
+        spans = inf.find_all("span")
+        for span in spans:
+            print span'''
+
+        #por que diabos nao itera ate -1
         infos = soup.find_all("ul", {"class": "bw"})
-        for info in infos:
-            lis = info.find_all("li")
-            spans = info.find_all("span")
-            
-        '''for key in self.data:
-            print key + ": " + self.data[key]'''
+        lis = infos[0].find_all("li")
+        line_val = ""
+        for i in range(1, len(lis)):
+            line = lis[i](text=True)
+            for j in range(1, len(line)):
+                line_val = line_val + line[j]
+            self.data[line[0]] = line_val
+            line_val = ""
+
+        for key in self.data:
+            print key + ": " + self.data[key]
 
     def extract_data2(self, soup):
         print "todo"
