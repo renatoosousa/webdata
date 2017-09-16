@@ -70,10 +70,28 @@ class Vivareal_crawler:
             print key + ": " + self.data[key]
 
     def extract_data2(self, soup):
-        print "todo"
+        infos = soup.find_all("div", {"class": "oX"})
+        info = infos[3].find_all("dl")
+        for item in info:
+            line = item(text=True)
+            line_val = ""
+            for i in range(1, len(line)):
+                line_val = line_val + line[i]
+            self.data[line[0]] = line_val.strip()
+            line_val = ""
 
 
-url = 'https://www.vivareal.com.br/imovel/casa-5-quartos-joa-zona-oeste-rio-de-janeiro-com-garagem-670m2-venda-RS11000000-id-81285815/'
-url2 = 'https://www.vivareal.com.br/imoveis-lancamento/reserva-ecoville-8636/?__vt=map:b'
-ri = Vivareal_crawler(url)
+        address = soup.find("cite", {"class": "pk"})
+        address = address.text.split(',')
+        self.data["BAIRRO"] = address[0].strip()
+        self.data["CIDADE"] = address[1].strip()
+        self.data["ESTADO"] = address[2].strip()
+
+        for key in self.data:
+                print key + ": " + self.data[key]
+
+
+url = 'https://www.vivareal.com.br/imovel/apartamento-3-quartos-butanta-zona-oeste-sao-paulo-com-garagem-70m2-venda-RS369000-id-84167740/?__vt=map:b'
+url2 = 'https://www.vivareal.com.br/imoveis-lancamento/voxy-ipiranga-8793/?__vt=map:b'
+ri = Vivareal_crawler(url2)
 ri.crawl()
