@@ -42,8 +42,9 @@ class Directimoveis_crawler:
         address = address.text.split('-')
         bairro = address[1]
         estado = address[2][-2] + address[2][-1]
-        cidade = address[2].split(' ')
-        cidade = cidade[1]
+        l = list(address[2])
+        l[-3:] = []
+        cidade = "".join(l)
 
         self.data["Bairro"] = bairro.strip()
         self.data["Cidade"] = cidade.strip()
