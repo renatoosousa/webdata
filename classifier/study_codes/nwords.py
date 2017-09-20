@@ -5,7 +5,7 @@ sys.path.append('../../extractor/study_codes/')
 from zapi_bs import Zapi_crawler
 
 def filter_txt(txt):
-    stopw = (open('stopwords.txt', 'r')).read()
+    stopw = (open('../study_codes/stopwords.txt', 'r')).read()
     for word in stopw.split():
         txt = txt.replace(" "+word+" "," ")
     txt = txt.decode('utf-8')
