@@ -110,5 +110,5 @@ class Zapi_crawler:
 url = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viagem+recife+pe+181m2+RS1670000/ID-15204142/?oti=1'
 url2 = 'https://www.zapimoveis.com.br/lancamento/casa+venda+jd-betania+cachoeirinha+rs+chacara-das-rosas-ii+bolognesi+30m2-44m2/ID-11657/?contato=0'
 url3 = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viagem+recife+pe+149m2+RS1100000/ID-13656803/?oti=1'
-ri = Zapi_crawler(url)
-ri.crawl()
+#ri = Zapi_crawler(url)
+#ri.crawl()
