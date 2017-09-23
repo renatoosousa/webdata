@@ -12,7 +12,7 @@ for line in result:
     if line.startswith('Allow'):    # this is for allowed url
         result_data_set["Allowed"].append(line.split(': ')[1].split(' ')[0])    # to neglect the comments or other junk info
     elif line.startswith('Disallow'):    # this is for disallowed url
-        result_data_set["Disallowed"].append(line.split(': ')[1].split(' ')[0])    # to neglect the comments or other junk info
+        result_data_set["Disallowed"].append((line.split(': ')[1].split(' ')[0]).replace("\r\n",""))    # to neglect the comments or other junk info
 
-print (result_data_set)
-# print result_data_set["Disallowed"][0]
+# print (result_data_set)
+print result_data_set["Disallowed"]
