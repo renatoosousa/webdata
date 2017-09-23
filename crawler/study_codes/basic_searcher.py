@@ -13,10 +13,13 @@ def buscar_links(url):
 	for a in soup.findAll('a',href = True):
 		link = a['href']
 		i += 1
+		if('http' in link) or ('https' in link):
+			print link
 		lista.append(link)
 		links = str(link).strip('[]').replace("u","").replace("'","")
-		print str(i)+") "+str(link)
-	print "\n>> Total = %d \n" % i
+		# print str(i)+") "+str(link)
+	# print "\n>> Total = %d \n" % i
+	# print lista
 	sys.exit()
 
 url = raw_input("url: ")
