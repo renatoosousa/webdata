@@ -39,8 +39,21 @@ class Redeimoveispe_crawler:
         self.data["Tipo"] = valor(text=True)[0].strip()
         self.data["Valor"] = valor(text=True)[1].strip()
 
-        infos = soup.find("div", {"class": "importante"})
-        print infos(text=True)
+        valores = soup.find("div", {"class": "valoresInfo"})
+        valores = valores.find_all("div")
+        for i in range(1, len(valores) -2 ):
+            try:
+                self.data[ valores[i](text=True)[-2].replace(':', '').strip() ] = valores[i](text=True)[-1].strip()
+            except:
+                pass
+
+        
+
+        infos = soup.find_all("div", {"class": "importante"})
+        for i in range(1, len(infos)):
+            self.data[ infos[i](text=True)[-1].strip() ] = infos[i](text=True)[-2].strip()
+        self.data[ infos[0](text=True)[-2].replace(':', '').strip() ] = infos[0](text=True)[-1].strip()
+
 
 
       
@@ -50,7 +63,7 @@ class Redeimoveispe_crawler:
 
 
 
-url = 'http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP1253-DZQ'
+url = 'http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP0193-CZA'
 url2 = 'http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP1712-D3O'
-ri = Redeimoveispe_crawler(url2)
+ri = Redeimoveispe_crawler(url)
 ri.crawl()
