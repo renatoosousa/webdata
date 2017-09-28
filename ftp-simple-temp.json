@@ -1,0 +1,13 @@
+[
+	{
+		"name": "pi-home",
+		"host": "192.168.25.32",
+		"port": 22,
+		"type": "sftp",
+		"username": "pi",
+		"password": "raspberry",
+		"path": "/home/pi/Documents/scarecrow",
+		"autosave": true,
+		"confirm": true
+	}
+]
