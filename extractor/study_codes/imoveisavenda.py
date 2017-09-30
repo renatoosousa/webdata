@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import print_function
 import requests
 import os
 import bs4
 from bs4 import BeautifulSoup
+
 
 
 
@@ -35,10 +37,31 @@ class Imoveisavenda_crawler:
         start_page = requests.get(link, headers = agent)
         soup = BeautifulSoup(start_page.content, "html.parser")
 
-        infos = soup.find("div", {"id": "basicInfo"})
-        for div in infos.find_all("div"):
-            print div.text
+        valor = soup.find("div", {"class": "price"})
+        self.data["Modalidade"] = valor(text=True)[0].strip()
+        self.data["Preco por m2"] = valor(text=True)[-1].strip()
+         
+        preco = ""
+        for i in range(1, len(valor(text=True)) - 1):
+            preco = valor(text=True)[i].strip() + " " + preco 
+        self.data["Valor"] = preco.strip()
 
-url = 'http://imovelavenda.com.br/Boa_Viagem_Casa_2_Dorm_Protasio_Alves_Porto_Alegre_14069_RS__WMV55'
+        infos = soup.find("div", {"id": "basicInfo"})
+        for b in infos.find_all("b"):
+            campo = b.text.replace(':', '')
+            valor = b.next_element.next_element.text
+            if campo == "Cidade":
+                valor = valor.split('-')
+                self.data["Estado"] = valor[1].strip()
+                valor = valor[0]
+            self.data[campo] = valor
+
+        for key in self.data:
+            print (key, end='')
+            print (": ", end='')
+            print (self.data[key])
+
+
+url = 'http://imovelavenda.com.br/Fiateci_Apto_2_Dorm_Sao_Geraldo_Porto_Alegre_10066_RS__YWQ10'
 ri = Imoveisavenda_crawler(url)
 ri.crawl()
