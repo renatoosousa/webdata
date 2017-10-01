@@ -11,4 +11,4 @@ import nwords as nw
 
 #dataframe_path = ''
 
-df = nw.makedb('db5')
+df = nw.makedb('db6')
