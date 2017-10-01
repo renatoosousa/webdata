@@ -9,6 +9,6 @@ import sys
 sys.path.append('../study_codes/')
 import nwords as nw
 
-dataframe_path = ''
+#dataframe_path = ''
 
-nw.makedb('db1')
+df = nw.makedb('db5')
