@@ -1,4 +1,4 @@
-Description of Datasets!
+Description of Datasets
 ===================
 Description of all data used to train **classifiers**.
 
@@ -10,19 +10,29 @@ Datasets:
 how the data is organized
 
 > **URLS:**
+
 >  **urls.csv** : For 10 different webpages, 10 positive and 10 negative ads.
+
 >  **urls2.csv** : Like urls.csv , some positive and negative examples.
+
 >**BAG OF WORDS:**
+
 >  **db1.csv** : filter (special characters).
+
 >  **db2.csv** : filter (special characters) + lowcase.
+
 >  **db3.csv** : filter (special characters) + lowcase + stemming.
+
 >  **db4.csv** : filter (special characters) + lowcase + NoStopwords.
+
 >  **db5.csv** : filter (special characters and numbers) + lowcase + NoStopwords.
+
 >  **db6.csv** : filter (special characters and numbers) + lowcase + NoStopwords + stemming.
 
 Table:
 ------------- 
 Number of words for each bag of words before and after the gain of information:
+
 
 Dataset     | words      | words (IG)
 :---------: | :--------: | :------:

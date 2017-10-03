@@ -1,92 +1,50 @@
-# Random Forest
+Description of Datasets
+===================
+Description of all data used to train **classifiers**.
 
-**db1**:
+----------
+
+Datasets:
 -------------
-Metrics
-database | Accuracy | Precision | Recall | Fit time
-:------: | :------: | :-------: | :----: | :-----: 
-db1      |          |           |        |      
 
-Confusion Matrix
-predicted\actual class | Positive | Negative
-:--------------------: | :------: | :------:
-Positive               | x tp      | x fp
-Negative               | x fn      | x tn
+how the data is organized
 
-##### db2
-______
-Metrics
-database | Accuracy | Precision | Recall | Fit time
-:------: | :------: | :-------: | :----: | :-----: 
-db2      |          |           |        |      
+> **URLS:**
 
-Confusion Matrix
-predicted\actual class | Positive | Negative
-:--------------------: | :------: | :------:
-Positive               | x tp      | x fp
-Negative               | x fn      | x tn
+>  **urls.csv** : For 10 different webpages, 10 positive and 10 negative ads.
 
-##### db3
-______
-Metrics
-database | Accuracy | Precision | Recall | Fit time
-:------: | :------: | :-------: | :----: | :-----: 
-db3      |          |           |        |      
+>  **urls2.csv** : Like urls.csv , some positive and negative examples.
 
-Confusion Matrix
-predicted\actual class | Positive | Negative
-:--------------------: | :------: | :------:
-Positive               | x tp      | x fp
-Negative               | x fn      | x tn
+>**BAG OF WORDS:**
 
-##### db4
-______
-Metrics
-database | Accuracy | Precision | Recall | Fit time
-:------: | :------: | :-------: | :----: | :-----: 
-db4      |          |           |        |      
+>  **db1.csv** : filter (special characters).
 
-Confusion Matrix
-predicted\actual class | Positive | Negative
-:--------------------: | :------: | :------:
-Positive               | x tp      | x fp
-Negative               | x fn      | x tn
+>  **db2.csv** : filter (special characters) + lowcase.
 
-##### db5
-______
-Metrics
-database | Accuracy | Precision | Recall | Fit time
-:------: | :------: | :-------: | :----: | :-----: 
-db5      |          |           |        |      
+>  **db3.csv** : filter (special characters) + lowcase + stemming.
 
-Confusion Matrix
-predicted\actual class | Positive | Negative
-:--------------------: | :------: | :------:
-Positive               | x tp      | x fp
-Negative               | x fn      | x tn
+>  **db4.csv** : filter (special characters) + lowcase + NoStopwords.
 
-##### db6
-______
-Metrics
-database | Accuracy | Precision | Recall | Fit time
-:------: | :------: | :-------: | :----: | :-----: 
-db6      |          |           |        |      
+>  **db5.csv** : filter (special characters and numbers) + lowcase + NoStopwords.
 
-Confusion Matrix
-predicted\actual class | Positive | Negative
-:--------------------: | :------: | :------:
-Positive               | x tp      | x fp
-Negative               | x fn      | x tn
+>  **db6.csv** : filter (special characters and numbers) + lowcase + NoStopwords + stemming.
 
-##### db1N
-______
-Metrics
-database | Accuracy | Precision | Recall | Fit time
-:------: | :------: | :-------: | :----: | :-----: 
-db1N     |          |           |        |      
+Table:
+------------- 
+Number of words for each bag of words before and after the gain of information:
 
-Confusion Matrix
-predicted\actual class | Positive | Negative
-:--------------------: | :------: | :------:
-Positive               | x tp      | x fp
-Negative               | x fn      | x tn
+
+Dataset     | words      | words (IG)
+:---------: | :--------: | :------:
+db1         | 24041      | 0
+db2         | 20565      | 0
+db3         | 17002      | 0
+db4         | 20437      | 0
+db5         | 12127      | 0
+db6         | 8658       | 0
+db1N        | 24041      | 0
+db2N        | 20565      | 0
+db3N        | 17002      | 0
+db4N        | 20437      | 0
+db5N        | 12127      | 0
+db6N        | 8658       | 0
