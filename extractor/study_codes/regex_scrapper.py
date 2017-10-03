@@ -22,7 +22,21 @@ class Regex_scrapper:
 
     def crawl(self):
         html = self.get_rawHtml()
-        print html
+        try:
+            quartos = re.search("\d+\squarto[s]\s\d+?", html)
+            valor = re.search("R\$\s\d+[,.]\d+", html)
+            vagas = re.search("\d+\svaga[s]\s\d+?",html)
+
+        except:
+            pass
+
+        try:
+            print "valor: " + valor.group()
+            print "quartos: " + quartos.group()
+            print "vagas: " + vagas.group()
+        except:
+            pass
+
         return
 
     def get_rawHtml(self):
