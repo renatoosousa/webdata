@@ -1,7 +1,7 @@
 # Random Forest
 
-##### db1
-______
+**db1**:
+-------------
 Metrics
 database | Accuracy | Precision | Recall | Fit time
 :------: | :------: | :-------: | :----: | :-----: 
