@@ -22,10 +22,13 @@ class Regex_scrapper:
 
     def crawl(self):
         html = self.get_rawHtml()
+
         try:
-            quartos = re.search("\d+\squarto[s]\s\d+?", html)
+            quartos = re.search("\d+\squartos?", html)
             valor = re.search("R\$\s\d+[,.]\d+", html)
-            vagas = re.search("\d+\svaga[s]\s\d+?",html)
+            vagas = re.search("\d+\svagas?",html)
+            area = re.search("\d+\sarea", html)
+            tipo = re.search("locacao|aluguel", html)
 
         except:
             pass
@@ -34,6 +37,8 @@ class Regex_scrapper:
             print "valor: " + valor.group()
             print "quartos: " + quartos.group()
             print "vagas: " + vagas.group()
+            print "area: " + area.group() 
+            print "tipo: "+ tipo.group()
         except:
             pass
 
@@ -49,5 +54,7 @@ class Regex_scrapper:
         return soup.get_text().encode("utf-8")
 
 url = 'https://www.zapimoveis.com.br/lancamento/apartamento+venda+socorro+jaboatao-dos-guararapes+pe+reserva-villa-natal--goiabeiras+mrv-engenharia-s-a+49m2/ID-9704/?oti=1'
-ri = Regex_scrapper(url)
+url2 = 'https://www.expoimovel.com/imovel/apartamentos-comprar-vender-imbui-salvador-bahia/389449/pt/BR'
+url3 = 'http://pe.olx.com.br/grande-recife/imoveis/excelente-locacao-engenho-do-meio-397980090'
+ri = Regex_scrapper(url3)
 ri.crawl()
