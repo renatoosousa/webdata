@@ -56,20 +56,29 @@ class heuristic_crawler(object):
 		soup = BeautifulSoup(r.text)
 		for a in soup.findAll('a',href = True):
 			link = a['href']
-			if(('http' in link) or ('https' in link)) and (' ' not in link)and (len(self.border)<100):
+			if(('http' in link) or ('https' in link)) and (' ' not in link)and (len(self.links_list)<100):
 				if self.isValid_url(link):
 					prob = self.heuristic_func(link)
-					self.border.append((prob,link))
-					self.border = sorted(self.border, key=getKey)
+					if prob < 0.9:
+						self.border.append((prob,link))
+						self.border = sorted(self.border, key=getKey)
 		print len(self.links_list)
 		# print self.border
 
-		while self.border[0][0]<0.3:
-			self.links_list.append(self.border[0][1])
-			self.border.pop(0)
+		# while self.border[0][0]<0.3:
+		# 	# self.links_list.append(self.border[0][1])
+		# 	# if self.border[0][1] not in self.links_list:
+		# 	self.links_list.append(self.border[0][1])	
+		# 	print "insert"
+		# 	self.border.pop(0)
 
-		if(len(self.border)==100):
-			print self.links_list
+		if self.border[0][0]<0.3:
+			if self.border[0][1] not in self.links_list:
+				self.links_list.append(self.border[0][1])	
+				print "Insert"
+
+		if(len(self.links_list)>=50):
+			print self.border
 			return
 		# Filtering based on the robots.txt
 		# for check_elem in self.links_list_check:
@@ -77,7 +86,7 @@ class heuristic_crawler(object):
 
 		next_url = self.border.pop(0)
 		next_url = next_url[1]
-		time.sleep(1)
+		# time.sleep(1)
 		self.search_links(next_url)
 
 	def init_search(self):
@@ -92,3 +101,4 @@ class heuristic_crawler(object):
 
 test = heuristic_crawler("https://www.zapimoveis.com.br")
 test.init_search()
+test.saveLinksCSV("heuristic_zap")
