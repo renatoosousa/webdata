@@ -23,30 +23,11 @@ class Regex_scrapper:
     def crawl(self):
         html = self.pre_processing()
 
-        print html
+        #print html
         file.write(html)
         file.write("\n------------------------------------------------------------------------ FIM DO HTML --------------------------------------------------------------------------------------")
 
-        quarto_regex = "(\d+\s?\n[qQ]uartos?) | ( [Qq]uartos?:?\n+\d+)"
-        try:
-            quartos = re.search(quarto_regex, html)
-            valor = re.search("R\$\s\d+[,.]\d+", html)
-            vagas = re.search("[vV]agas? | (\d+\s?[vV]agas?)",html)
-            area = re.search("\d+\sarea", html)
-            tipo = re.search("locacao|aluguel", html)
-
-        except:
-            pass
-
-        try:
-            print "valor: " + valor.group()
-            print "quartos: " + quartos.group().replace('\n', '')
-            print "vagas: " + vagas.group()
-            print "area: " + area.group() 
-            print "tipo: "+ tipo.group()
-        except:
-            pass
-
+        
         return
 
     def pre_processing(self):
@@ -56,7 +37,33 @@ class Regex_scrapper:
         for js in soup(["script", "style"]):
             js.extract()
 
+        uls = soup.find_all("ul")
+        divs = soup.find_all("div")
 
+        regex = "([Qq]uartos?) | (Dorm)"
+
+        foundUL = 0
+        print "*"*71
+        for ul in uls:
+            if re.search(regex, ul.text):
+                print ul.text.strip()
+                foundUL = 1
+                break
+            
+        for div in divs:
+            if re.search(regex, div.text):
+                if not foundUL:
+                    print div.text.strip()
+                break
+
+        print self.start_url
+        if foundUL:
+            print "ULSON"
+        else:
+            print "DIVSON"
+        x = input()
+        os.system("clear")
+        #imovelweb ulson
         '''for span in soup("span"):
              span.append(soup.new_tag('br'))
 
