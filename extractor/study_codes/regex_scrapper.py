@@ -40,15 +40,16 @@ class Regex_scrapper:
         uls = soup.find_all("ul")
         divs = soup.find_all("div")
 
-        regex = "([Qq]uartos?) | (Dorm)"
+        regex = "([Qq]uartos?)|(Dorm)"
 
         foundUL = 0
         print "*"*71
         for ul in uls:
             if re.search(regex, ul.text):
-                print ul.text.strip()
-                foundUL = 1
-                break
+                if re.search("[Vv]aga", ul.text):
+                    print ul.text.strip()
+                    foundUL = 1
+                    break
             
         for div in divs:
             if re.search(regex, div.text):
