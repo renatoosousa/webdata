@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score
 import time
 
-dfs = ['../../dataframe/db2.csv', '../../dataframe/db3.csv', '../../dataframe/db4.csv', '../../dataframe/db6.csv']
+dfs = ['../../dataframe/db2.csv', '../../dataframe/db3.csv', '../../dataframe/db4.csv', '../../dataframe/db6.csv', '../../dataframe/db7.csv', '../../dataframe/db8.csv']
 
 for path in dfs:
     print('\n\n' + path)
@@ -25,18 +25,18 @@ for path in dfs:
     
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
     
-    forest = RandomForestClassifier(n_estimators=100, random_state=0)
-    folders = 2
+    forest = RandomForestClassifier(n_estimators=500, random_state=0)
+    folders = 10
     scores = cross_val_score(forest, X, y, cv=folders)
-    print(scores)
+#    print(scores)
     print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
     
     scores = cross_val_score(forest, X, y, cv=folders, scoring='precision_micro')
-    print(scores)
+#    print(scores)
     print("Precision: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
     
     scores = cross_val_score(forest, X, y, cv=folders, scoring='recall_micro')
-    print(scores)
+#    print(scores)
     print("Recall: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
     
     start_time = time.time()
