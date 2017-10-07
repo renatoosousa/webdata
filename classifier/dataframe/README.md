@@ -29,22 +29,22 @@ how the data is organized
 
 >  **db6.csv** : filter (special characters and numbers) + lowcase + NoStopwords + stemming.
 
+>  **db7.csv** : filter (special characters and numbers) + lowcase + NoStopwords + stemming (best 1000 words).
+
+>  **db8.csv** : filter (special characters and numbers) + lowcase + NoStopwords + stemming (1000 most frequent words).
+
 Table:
 ------------- 
 Number of words for each bag of words before and after the gain of information:
 
 
-Dataset     | words      | words (IG)
-:---------: | :--------: | :------:
-db1         | 24041      | 0
-db2         | 20565      | 0
-db3         | 17002      | 0
-db4         | 20437      | 0
-db5         | 12127      | 0
-db6         | 8658       | 0
-db1N        | 24041      | 0
-db2N        | 20565      | 0
-db3N        | 17002      | 0
-db4N        | 20437      | 0
-db5N        | 12127      | 0
-db6N        | 8658       | 0
+Dataset     | words      
+:---------: | :--------: 
+db1         | 24041      
+db2         | 20565      
+db3         | 17002      
+db4         | 20437      
+db5         | 12127      
+db6         | 8658       
+db7         | 1000       
+db8         | 1000       
