@@ -21,13 +21,26 @@ class Regex_scrapper:
         self.title = ""
 
     def crawl(self):
-        html = self.pre_processing()
+        info = self.pre_processing()
 
-        #print html
-        file.write(html)
-        file.write("\n------------------------------------------------------------------------ FIM DO HTML --------------------------------------------------------------------------------------")
+        for string in info.stripped_strings:
+            print string
+            print "\n\n\n"
 
+        # x = info.contents
+        # for item in x:
+        #     print item
+        #     print "\n\n\n"
+        # print self.start_url
+        # # x = input()
+        # # os.system("clear")
+
+        file.write(info.prettify().encode("utf-8"))
+        file.write("\n------------------------------------------------------------------------ FIM DO HTML --------------------------------------------------------------------------------------\n")
+        # print dir(info)
+        # print info.prettify()        
         
+
         return
 
     def pre_processing(self):
@@ -43,45 +56,28 @@ class Regex_scrapper:
         regex = "([Qq]uartos?)|(Dorm)"
 
         foundUL = 0
-        print "*"*71
+        #print "*"*71
         for ul in uls:
             if re.search(regex, ul.text):
                 if re.search("[Vv]aga", ul.text):
-                    print ul.text.strip()
+                    info = ul
                     foundUL = 1
                     break
-            
+        if foundUL:
+            return info
+
         for div in divs:
             if re.search(regex, div.text):
-                if not foundUL:
-                    print div.text.strip()
+                info = div
                 break
-
-        print self.start_url
-        if foundUL:
-            print "ULSON"
-        else:
-            print "DIVSON"
-        x = input()
-        os.system("clear")
-        #imovelweb ulson
-        '''for span in soup("span"):
-             span.append(soup.new_tag('br'))
-
-        for li in soup("li"):
-            li.append(soup.new_tag('br'))
-
-        for div in soup("li"):
-            div.append(soup.new_tag('br'))
-
-        for i in soup("i"):
-            i.append(soup.new_tag('br'))
-
-        for p in soup("p"):
-            p.append(soup.new_tag('br'))'''
         
+        for div in info.find_all("div"):
+            if re.search(regex, div.text):
+                if re.search("[Vv]aga", div.text):
+                    info = div
+        
+        return info
 
-        return soup.get_text().encode("utf-8")
 urls = [
         'https://www.zapimoveis.com.br/lancamento/apartamento+venda+socorro+jaboatao-dos-guararapes+pe+reserva-villa-natal--goiabeiras+mrv-engenharia-s-a+49m2/ID-9704/?oti=1',
         'https://www.expoimovel.com/imovel/apartamentos-comprar-vender-imbui-salvador-bahia/389449/pt/BR',
@@ -98,5 +94,6 @@ urls = [
 for url in urls:
     ri = Regex_scrapper(url)
     ri.crawl()
+    z = input()
 
 file.close()
