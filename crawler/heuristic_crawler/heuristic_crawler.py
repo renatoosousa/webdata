@@ -72,7 +72,7 @@ class heuristic_crawler(object):
 		# 	print "insert"
 		# 	self.border.pop(0)
 
-		if self.border[0][0]<0.3:
+		if self.border[0][0]<0.4:
 			if self.border[0][1] not in self.links_list:
 				self.links_list.append(self.border[0][1])	
 				print "Insert"
