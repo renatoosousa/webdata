@@ -31,11 +31,11 @@ for path in dfs:
 #    print(scores)
     print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
     
-    scores = cross_val_score(forest, X, y, cv=folders, scoring='precision_micro')
+    scores = cross_val_score(forest, X, y, cv=folders, scoring='precision')
 #    print(scores)
     print("Precision: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
     
-    scores = cross_val_score(forest, X, y, cv=folders, scoring='recall_micro')
+    scores = cross_val_score(forest, X, y, cv=folders, scoring='recall')
 #    print(scores)
     print("Recall: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
     

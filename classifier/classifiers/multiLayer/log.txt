@@ -1,0 +1,42 @@
+MLP:
+
+../../dataframe/db2.csv
+Accuracy: 0.62 (+/- 0.30)
+Precision: 0.53 (+/- 0.58)
+Recall: 0.70 (+/- 0.76)
+fit time 1.0273 seconds
+
+
+../../dataframe/db3.csv
+Accuracy: 0.52 (+/- 0.16)
+Precision: 0.41 (+/- 0.43)
+Recall: 0.77 (+/- 0.79)
+fit time 1.56981 seconds
+
+
+../../dataframe/db4.csv
+Accuracy: 0.73 (+/- 0.37)
+Precision: 0.64 (+/- 0.72)
+Recall: 0.67 (+/- 0.75)
+fit time 2.9102 seconds
+
+
+../../dataframe/db6.csv
+Accuracy: 0.58 (+/- 0.28)
+Precision: 0.57 (+/- 0.54)
+Recall: 0.72 (+/- 0.65)
+fit time 1.63997 seconds
+
+
+../../dataframe/db7.csv
+Accuracy: 0.61 (+/- 0.20)
+Precision: 0.55 (+/- 0.61)
+Recall: 0.56 (+/- 0.78)
+fit time 0.33602 seconds
+
+
+../../dataframe/db8.csv
+Accuracy: 0.64 (+/- 0.35)
+Precision: 0.63 (+/- 0.72)
+Recall: 0.55 (+/- 0.79)
+fit time 0.294669 seconds

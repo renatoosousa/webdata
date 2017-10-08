@@ -1,0 +1,41 @@
+RANDOM FOREST:
+../../dataframe/db2.csv
+Accuracy: 0.89 (+/- 0.28)
+Precision: 0.90 (+/- 0.60)
+Recall: 0.78 (+/- 0.56)
+fit time 2.79431 seconds
+
+
+../../dataframe/db3.csv
+Accuracy: 0.89 (+/- 0.24)
+Precision: 1.00 (+/- 0.00)
+Recall: 0.78 (+/- 0.49)
+fit time 2.44361 seconds
+
+
+../../dataframe/db4.csv
+Accuracy: 0.89 (+/- 0.29)
+Precision: 0.89 (+/- 0.60)
+Recall: 0.78 (+/- 0.59)
+fit time 2.62891 seconds
+
+
+../../dataframe/db6.csv
+Accuracy: 0.89 (+/- 0.30)
+Precision: 0.99 (+/- 0.05)
+Recall: 0.79 (+/- 0.62)
+fit time 2.14304 seconds
+
+
+../../dataframe/db7.csv
+Accuracy: 0.89 (+/- 0.30)
+Precision: 0.87 (+/- 0.61)
+Recall: 0.83 (+/- 0.61)
+fit time 2.01905 seconds
+
+
+../../dataframe/db8.csv
+Accuracy: 0.87 (+/- 0.31)
+Precision: 0.87 (+/- 0.59)
+Recall: 0.77 (+/- 0.66)
+fit time 1.79734 seconds

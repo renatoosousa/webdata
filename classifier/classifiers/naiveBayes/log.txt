@@ -1,0 +1,42 @@
+NAIVE BAYES:
+
+../../dataframe/db2.csv
+Accuracy: 0.58 (+/- 0.34)
+Precision: 0.41 (+/- 0.65)
+Recall: 0.47 (+/- 0.87)
+fit time 0.0606251 seconds
+
+
+../../dataframe/db3.csv
+Accuracy: 0.55 (+/- 0.23)
+Precision: 0.36 (+/- 0.63)
+Recall: 0.44 (+/- 0.81)
+fit time 0.047797 seconds
+
+
+../../dataframe/db4.csv
+Accuracy: 0.56 (+/- 0.32)
+Precision: 0.36 (+/- 0.66)
+Recall: 0.44 (+/- 0.80)
+fit time 0.061635 seconds
+
+
+../../dataframe/db6.csv
+Accuracy: 0.55 (+/- 0.19)
+Precision: 0.38 (+/- 0.65)
+Recall: 0.36 (+/- 0.70)
+fit time 0.0277941 seconds
+
+
+../../dataframe/db7.csv
+Accuracy: 0.66 (+/- 0.31)
+Precision: 0.59 (+/- 0.67)
+Recall: 0.59 (+/- 0.64)
+fit time 0.0030601 seconds
+
+
+../../dataframe/db8.csv
+Accuracy: 0.57 (+/- 0.25)
+Precision: 0.43 (+/- 0.76)
+Recall: 0.38 (+/- 0.72)
+fit time 0.00308299 seconds
