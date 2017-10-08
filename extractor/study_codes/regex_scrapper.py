@@ -23,25 +23,72 @@ class Regex_scrapper:
     def crawl(self):
         info = self.pre_processing()
 
+        raw_data = []
         for string in info.stripped_strings:
-            print string
-            print "\n\n\n"
+            raw_data.append(string)
 
-        # x = info.contents
-        # for item in x:
-        #     print item
-        #     print "\n\n\n"
-        # print self.start_url
-        # # x = input()
-        # # os.system("clear")
+        print raw_data
 
-        file.write(info.prettify().encode("utf-8"))
-        file.write("\n------------------------------------------------------------------------ FIM DO HTML --------------------------------------------------------------------------------------\n")
-        # print dir(info)
-        # print info.prettify()        
-        
-
+        self.post_processing(raw_data)
         return
+
+    def post_processing(self, raw_data):
+        '''
+            padroes:
+                [valor, campo]
+                [lixo, lixo, valor, campo, lixo, lixo]
+                [campo:, valor]
+                [lixo, lixo... , campo: valor,]
+                [valor campo valor campo valor campo]
+                [campo, valor, campo, valor]
+        '''
+        self.try_pattern1(raw_data)
+        pattern1 = "(\d+\s+.+)|(.+\s+\d+)"
+
+    def try_pattern1(self, raw_data):
+        pattern_Digits = "\d+"
+        pattern_NonDigits = "\D+"
+        regex = "([Qq]uartos?)|(Dorm)|([Vv]aga)|([Ss]u)|([Bb]anh)"
+
+        
+        digit = 0
+        nonDigit = 0
+        digit_Ocurrences = []
+        nonDigit_Ocurrences = []
+        #procura e conta palavras e numeros
+        for i in range(0, len(raw_data)):
+            #print raw_data[i]
+            try:
+                x = re.search(pattern_Digits, raw_data[i]).group()
+                if raw_data[i] == x:
+                    #print "match -> " + raw_data[i]
+                    digit += 1
+                    digit_Ocurrences.append(i)
+
+            except Exception, e:
+                print str(e)
+
+            try:
+                y = re.search(pattern_NonDigits, raw_data[i]).group()
+                if raw_data[i] == y:
+                    #print "match -> " + raw_data[i]
+                    nonDigit += 1
+                    nonDigit_Ocurrences.append(i)
+            except Exception, e:
+                print str(e)
+
+
+        if digit == nonDigit:
+            for i, j in zip(digit_Ocurrences, nonDigit_Ocurrences):
+                print raw_data[j] + ": " + raw_data[i]
+        else:
+            if raw_data[-1] == raw_data[digit_Ocurrences[-1]]:
+                if re.search(regex, raw_data[-2]):
+                    for i in digit_Ocurrences:
+                        print raw_data[i - 1] + ": " + raw_data[i]
+                for i in range(0, len(digit_Ocurrences)-1):
+                    print raw_data[digit_Ocurrences[i]+1] + ": " + raw_data[digit_Ocurrences[i]]
+
 
     def pre_processing(self):
         start_page = requests.get(self.start_url, headers = agent)
