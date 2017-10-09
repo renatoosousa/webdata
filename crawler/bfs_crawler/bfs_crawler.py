@@ -36,27 +36,42 @@ class bfs_crawler(object):
 			return True
 
 	def search_links(self,url):
-		if 'http' not in url:
-			url = 'http://'+url
-		r = requests.get(url, headers=headers)
-		soup = BeautifulSoup(r.text)
-		for a in soup.findAll('a',href = True):
-			link = a['href']
-			if(('http' in link) or ('https' in link)) and (' ' not in link)and (len(self.links_list)<1000):
-				if self.isValid_url(link):
-					self.links_list.append(link)
-		print len(self.links_list)
-		if(len(self.links_list)==1000):
-			print self.links_list
-			return
+		try:
+			if 'http' not in url:
+				url = 'http://'+url
+			r = requests.get(url, headers=headers)
+			soup = BeautifulSoup(r.text)
+			for a in soup.findAll('a',href = True):
+				link = a['href']
 
-		# Filtering based on the robots.txt
-		for check_elem in self.links_list_check:
-			self.links_list = [elem for elem in self.links_list if elem != check_elem]
+				if(len(link)!=0):
+					if(link[0]=='/'):
+						link = self.url + link
+				 
+					# print "yes" and (self.url in link)
+				if(('http' in link) or ('https' in link)) and (' ' not in link)and (len(self.links_list)<1000) and (self.url in link):
+					if self.isValid_url(link):
+						self.links_list.append(link)
+			print len(self.links_list)
+			if(len(self.links_list)>=1000):
+				# print self.links_list
+				print "Finished"
+				return
 
-		next_url = self.links_list.pop(0)
-		time.sleep(1)
-		self.search_links(next_url)
+			# Filtering based on the robots.txt
+			for check_elem in self.links_list_check:
+				self.links_list = [elem for elem in self.links_list if elem != check_elem]
+
+			next_url = self.links_list.pop(0)
+			time.sleep(1)
+			self.search_links(next_url)
+		except Exception:
+			print "Error"
+			if(len(self.links_list)==0):
+				return
+			next_url = self.links_list.pop(0)
+			time.sleep(1)
+			self.search_links(next_url)
 
 	def init_search(self):
 		self.search_links(self.url)
@@ -66,7 +81,9 @@ class bfs_crawler(object):
 
 	def saveLinksCSV(self, name):
 		df = pd.DataFrame(self.links_list, columns=["column"])
-		df.to_csv(name +'.csv',index=False)
+		df.to_csv(name +'.csv',header=True, index=False, encoding='utf-8')
 
-
+test = bfs_crawler("http://www.redeimobiliariasecovi.com.br")
+test.init_search()
+test.saveLinksCSV("bfs_redeimobilidaria")
 

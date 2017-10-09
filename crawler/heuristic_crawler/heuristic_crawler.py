@@ -25,6 +25,8 @@ class heuristic_crawler(object):
 		self.links_list_check = getRobot(url)
 		self.border = []
 		self.links_list = []
+		self.general_links=[]
+		self.it_time_sleep = 100
 		with open('classifier_fitted.pkl', 'rb') as f:
 			self.clf_test = pickle.load(f)
 		# self.init_search(url)
@@ -50,44 +52,69 @@ class heuristic_crawler(object):
 			return True
 
 	def search_links(self,url):
-		if 'http' not in url:
-			url = 'http://'+url
-		r = requests.get(url, headers=headers)
-		soup = BeautifulSoup(r.text)
-		for a in soup.findAll('a',href = True):
-			link = a['href']
-			if(('http' in link) or ('https' in link)) and (' ' not in link)and (len(self.links_list)<100):
-				if self.isValid_url(link):
-					prob = self.heuristic_func(link)
-					if prob < 0.9:
-						self.border.append((prob,link))
-						self.border = sorted(self.border, key=getKey)
-		print len(self.links_list)
-		# print self.border
+		try:
+			if 'http' not in url:
+				url = 'http://'+url
+			r = requests.get(url, headers=headers)
+			soup = BeautifulSoup(r.text)
+			for a in soup.findAll('a',href = True):
+				link = a['href']
 
-		# while self.border[0][0]<0.3:
-		# 	# self.links_list.append(self.border[0][1])
-		# 	# if self.border[0][1] not in self.links_list:
-		# 	self.links_list.append(self.border[0][1])	
-		# 	print "insert"
-		# 	self.border.pop(0)
+				if(len(link)!=0):
+					if(link[0]=='/'):
+						link = self.url + link
+				# and (self.url in link)
+				if(('http' in link) or ('https' in link)) and (' ' not in link)and (len(self.links_list)<1000) and (self.url in link) and (link not in self.general_links):
+					if self.isValid_url(link):
+						prob = self.heuristic_func(link)
+						if prob < 0.9:
+							self.general_links.append(link)
+							self.border.append((prob,link))
+							self.border = sorted(self.border, key=getKey)
+			print len(self.links_list)
+			# print self.border[0][1]
+			# print self.border
 
-		if self.border[0][0]<0.4:
+			# while self.border[0][0]<0.3:
+			# 	# self.links_list.append(self.border[0][1])
+			# 	# if self.border[0][1] not in self.links_list:
+			# 	self.links_list.append(self.border[0][1])	
+			# 	print "insert"
+			# 	self.border.pop(0)
+			
+			# Verificando robot.txt 
+			for check_elem in self.links_list_check:
+				self.links_list = [elem for elem in self.links_list if elem != check_elem]
+
+			# if self.border[0][0]<=0.4:
 			if self.border[0][1] not in self.links_list:
 				self.links_list.append(self.border[0][1])	
 				print "Insert"
 
-		if(len(self.links_list)>=50):
-			print self.border
-			return
-		# Filtering based on the robots.txt
-		# for check_elem in self.links_list_check:
-			# self.links_list = [elem for elem in self.links_list if elem != check_elem]
+			if(len(self.links_list)>=1000):
+				# print self.border
+				print "Finished"
+				return
+			# Filtering based on the robots.txt
+			# for check_elem in self.links_list_check:
+				# self.links_list = [elem for elem in self.links_list if elem != check_elem]
 
-		next_url = self.border.pop(0)
-		next_url = next_url[1]
-		# time.sleep(1)
-		self.search_links(next_url)
+			next_url = self.border.pop(0)
+			next_url = next_url[1]
+			if(len(self.links_list)==self.it_time_sleep):
+				time.sleep(1)
+				self.it_time_sleep+=100
+			self.search_links(next_url)
+		except Exception:
+			print "Error"
+			if(len(self.border)==0):
+				return
+			next_url = self.border.pop(0)
+			next_url = next_url[1]
+			if(len(self.links_list)==self.it_time_sleep):
+				time.sleep(1)
+				self.it_time_sleep+=100
+			self.search_links(next_url)
 
 	def init_search(self):
 		self.search_links(self.url)
@@ -97,8 +124,8 @@ class heuristic_crawler(object):
 
 	def saveLinksCSV(self, name):
 		df = pd.DataFrame(self.links_list, columns=["column"])
-		df.to_csv(name +'.csv',index=False)
+		df.to_csv(name +'.csv',header=True, index=False, encoding='utf-8')
 
-test = heuristic_crawler("https://www.zapimoveis.com.br")
+test = heuristic_crawler("https://www.vivareal.com.br")
 test.init_search()
-test.saveLinksCSV("heuristic_zap")
+test.saveLinksCSV("heuristic_vivareal")
