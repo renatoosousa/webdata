@@ -8,17 +8,17 @@ import re
 
 
 
-file = open("/Users/vbas/Documents/UFPE/RI/htmls.html", "w")
 
 agent = { 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0',
-          'Accept-Language': 'pt-BR'}
+          'Accept-Language': 'pt-BR',
+          'Accept-Charset': 'utf-8'	}
 
 class Regex_scrapper:
 
     def __init__(self, start_url):
         self.start_url = start_url
         self.data = {}
-        self.title = ""
+        self.pattern = 0
 
     def crawl(self):
         info = self.pre_processing()
@@ -27,25 +27,31 @@ class Regex_scrapper:
         for string in info.stripped_strings:
             raw_data.append(string)
 
-        print raw_data
+        #print raw_data
 
         self.post_processing(raw_data)
+
+       
+        for key, value in self.data.items():
+            if re.search("R\$", key):
+                self.data.pop(key,None)
+        
+        for key in self.data:
+                print key + ": " + self.data[key]
+
         return
 
     def post_processing(self, raw_data):
-        '''
-            padroes:
-                [valor, campo]
-                [lixo, lixo, valor, campo, lixo, lixo]
-                [campo:, valor]
-                [lixo, lixo... , campo: valor,]
-                [valor campo valor campo valor campo]
-                [campo, valor, campo, valor]
-        '''
-        self.try_pattern1(raw_data)
-        pattern1 = "(\d+\s+.+)|(.+\s+\d+)"
+
+        self.try_pattern2(raw_data)
+        if not self.pattern:
+            self.try_pattern1(raw_data)
+
+        #print "pattern: " + str(self.pattern)
 
     def try_pattern1(self, raw_data):
+        self.pattern = 1
+
         pattern_Digits = "\d+"
         pattern_NonDigits = "\D+"
         regex = "([Qq]uartos?)|(Dorm)|([Vv]aga)|([Ss]u)|([Bb]anh)"
@@ -55,39 +61,83 @@ class Regex_scrapper:
         nonDigit = 0
         digit_Ocurrences = []
         nonDigit_Ocurrences = []
-        #procura e conta palavras e numeros
+
         for i in range(0, len(raw_data)):
-            #print raw_data[i]
             try:
                 x = re.search(pattern_Digits, raw_data[i]).group()
                 if raw_data[i] == x:
-                    #print "match -> " + raw_data[i]
                     digit += 1
                     digit_Ocurrences.append(i)
 
             except Exception, e:
-                print str(e)
+                pass
 
             try:
                 y = re.search(pattern_NonDigits, raw_data[i]).group()
                 if raw_data[i] == y:
-                    #print "match -> " + raw_data[i]
                     nonDigit += 1
                     nonDigit_Ocurrences.append(i)
             except Exception, e:
-                print str(e)
-
+                pass
 
         if digit == nonDigit:
             for i, j in zip(digit_Ocurrences, nonDigit_Ocurrences):
-                print raw_data[j] + ": " + raw_data[i]
+                #print raw_data[j] + ": " + raw_data[i]
+                self.data[raw_data[j]] = raw_data[i]
         else:
             if raw_data[-1] == raw_data[digit_Ocurrences[-1]]:
                 if re.search(regex, raw_data[-2]):
                     for i in digit_Ocurrences:
-                        print raw_data[i - 1] + ": " + raw_data[i]
-                for i in range(0, len(digit_Ocurrences)-1):
-                    print raw_data[digit_Ocurrences[i]+1] + ": " + raw_data[digit_Ocurrences[i]]
+                        #print raw_data[i - 1] + ": " + raw_data[i]
+                        self.data[raw_data[i-1]] = raw_data[i]
+                else:
+                    for i in range(0, len(digit_Ocurrences)-1):
+                        #print raw_data[digit_Ocurrences[i]+1] + ": " + raw_data[digit_Ocurrences[i]]
+                        self.data[raw_data[digit_Ocurrences[i]+1]] = raw_data[digit_Ocurrences[i]]
+
+            else:
+                for i in digit_Ocurrences:
+                    #print raw_data[i+1] + ": " + raw_data[i]
+                    self.data[raw_data[i+1]] = raw_data[i]
+
+    def try_pattern2(self, raw_data):
+        regex = "([Vv]aga.+\d+)|(\d+.+[Vv]aga(.+)?$)"
+
+        for i in range(0, len(raw_data)):
+            try:
+                if re.search(regex, raw_data[i]).group():
+                    self.pattern = 2
+                    break
+            except Exception, e:
+                pass
+
+
+        if  self.pattern != 2:
+            return
+        else:
+            for i in raw_data:
+                try:
+                    if re.search("\d+", i):
+                        split = 0
+                        try:
+                            out = i.split(':')
+                            if len(out) == 2:
+                                #print out[0] + ": " + out[1]
+                                self.data[out[0]] = out[1]
+                                split = 1
+                            elif len(out) == 1:
+                                if not split:
+                                    out = i.split(' ')
+                                    if len(out) == 1 or len(out) > 20:
+                                        out = []
+                                    else:
+                                        self.try_pattern1(out)
+                        except:
+                            pass
+
+                except Exception, e:
+                    pass
+
 
 
     def pre_processing(self):
@@ -97,16 +147,46 @@ class Regex_scrapper:
         for js in soup(["script", "style"]):
             js.extract()
 
+
+        regex_prices = "(R\$\s?\d+([.,])?\d+)"
+        regex_priceNu = "\d+[,.]\d+"
+        regex_casa_apt = "([cC][aA][sS][aA])|([aA][pP][aA][rR][tT])|([fF][lL][aA][tT])|([lL][oO][jJ][aA])"
+
+        try:
+            prices = []
+            price = re.findall(regex_prices, soup.text)
+            while len(price) > 4:
+                price.pop()
+            #print price
+            for item in price:
+                try:
+                    prices.append(float(re.search(regex_priceNu, str(item)).group()))
+                except:
+                    pass
+
+            #print max(prices)
+            self.data["Valor"] = str(max(prices))
+
+            
+
+
+            imovel = re.search(regex_casa_apt, soup.text).group()
+            if imovel:
+                self.data["Imovel"] = imovel
+        except Exception, e:
+            print str(e)
+        
+
+
         uls = soup.find_all("ul")
         divs = soup.find_all("div")
 
-        regex = "([Qq]uartos?)|(Dorm)"
+        regex = "([Qq][uU][aA][rR][tT][oO][sS]?)|(Dorm)"
 
         foundUL = 0
-        #print "*"*71
         for ul in uls:
             if re.search(regex, ul.text):
-                if re.search("[Vv]aga", ul.text):
+                if re.search("[Vv][aA][gG][aA]", ul.text):
                     info = ul
                     foundUL = 1
                     break
@@ -123,6 +203,7 @@ class Regex_scrapper:
                 if re.search("[Vv]aga", div.text):
                     info = div
         
+        
         return info
 
 urls = [
@@ -138,9 +219,11 @@ urls = [
         'https://www.vivareal.com.br/imovel/apartamento-3-quartos-butanta-zona-oeste-sao-paulo-com-garagem-70m2-venda-RS369000-id-84167740/?__vt=map:b',
 ]
 
-for url in urls:
-    ri = Regex_scrapper(url)
-    ri.crawl()
-    z = input()
+urlx = 'https://www.expoimovel.com/imovel/apartamentos-comprar-vender-piraja-salvador-bahia/389436/pt/BR'
+ri = Regex_scrapper(urlx)
+ri.crawl()
+# for url in urls:
+#     ri = Regex_scrapper(url)
+#     ri.crawl()
+#     z = input()
 
-file.close()
