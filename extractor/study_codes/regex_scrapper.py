@@ -21,14 +21,74 @@ class Regex_scrapper:
         self.title = ""
 
     def crawl(self):
-        html = self.pre_processing()
+        info = self.pre_processing()
 
-        #print html
-        file.write(html)
-        file.write("\n------------------------------------------------------------------------ FIM DO HTML --------------------------------------------------------------------------------------")
+        raw_data = []
+        for string in info.stripped_strings:
+            raw_data.append(string)
+
+        print raw_data
+
+        self.post_processing(raw_data)
+        return
+
+    def post_processing(self, raw_data):
+        '''
+            padroes:
+                [valor, campo]
+                [lixo, lixo, valor, campo, lixo, lixo]
+                [campo:, valor]
+                [lixo, lixo... , campo: valor,]
+                [valor campo valor campo valor campo]
+                [campo, valor, campo, valor]
+        '''
+        self.try_pattern1(raw_data)
+        pattern1 = "(\d+\s+.+)|(.+\s+\d+)"
+
+    def try_pattern1(self, raw_data):
+        pattern_Digits = "\d+"
+        pattern_NonDigits = "\D+"
+        regex = "([Qq]uartos?)|(Dorm)|([Vv]aga)|([Ss]u)|([Bb]anh)"
 
         
-        return
+        digit = 0
+        nonDigit = 0
+        digit_Ocurrences = []
+        nonDigit_Ocurrences = []
+        #procura e conta palavras e numeros
+        for i in range(0, len(raw_data)):
+            #print raw_data[i]
+            try:
+                x = re.search(pattern_Digits, raw_data[i]).group()
+                if raw_data[i] == x:
+                    #print "match -> " + raw_data[i]
+                    digit += 1
+                    digit_Ocurrences.append(i)
+
+            except Exception, e:
+                print str(e)
+
+            try:
+                y = re.search(pattern_NonDigits, raw_data[i]).group()
+                if raw_data[i] == y:
+                    #print "match -> " + raw_data[i]
+                    nonDigit += 1
+                    nonDigit_Ocurrences.append(i)
+            except Exception, e:
+                print str(e)
+
+
+        if digit == nonDigit:
+            for i, j in zip(digit_Ocurrences, nonDigit_Ocurrences):
+                print raw_data[j] + ": " + raw_data[i]
+        else:
+            if raw_data[-1] == raw_data[digit_Ocurrences[-1]]:
+                if re.search(regex, raw_data[-2]):
+                    for i in digit_Ocurrences:
+                        print raw_data[i - 1] + ": " + raw_data[i]
+                for i in range(0, len(digit_Ocurrences)-1):
+                    print raw_data[digit_Ocurrences[i]+1] + ": " + raw_data[digit_Ocurrences[i]]
+
 
     def pre_processing(self):
         start_page = requests.get(self.start_url, headers = agent)
@@ -43,45 +103,28 @@ class Regex_scrapper:
         regex = "([Qq]uartos?)|(Dorm)"
 
         foundUL = 0
-        print "*"*71
+        #print "*"*71
         for ul in uls:
             if re.search(regex, ul.text):
                 if re.search("[Vv]aga", ul.text):
-                    print ul.text.strip()
+                    info = ul
                     foundUL = 1
                     break
-            
+        if foundUL:
+            return info
+
         for div in divs:
             if re.search(regex, div.text):
-                if not foundUL:
-                    print div.text.strip()
+                info = div
                 break
-
-        print self.start_url
-        if foundUL:
-            print "ULSON"
-        else:
-            print "DIVSON"
-        x = input()
-        os.system("clear")
-        #imovelweb ulson
-        '''for span in soup("span"):
-             span.append(soup.new_tag('br'))
-
-        for li in soup("li"):
-            li.append(soup.new_tag('br'))
-
-        for div in soup("li"):
-            div.append(soup.new_tag('br'))
-
-        for i in soup("i"):
-            i.append(soup.new_tag('br'))
-
-        for p in soup("p"):
-            p.append(soup.new_tag('br'))'''
         
+        for div in info.find_all("div"):
+            if re.search(regex, div.text):
+                if re.search("[Vv]aga", div.text):
+                    info = div
+        
+        return info
 
-        return soup.get_text().encode("utf-8")
 urls = [
         'https://www.zapimoveis.com.br/lancamento/apartamento+venda+socorro+jaboatao-dos-guararapes+pe+reserva-villa-natal--goiabeiras+mrv-engenharia-s-a+49m2/ID-9704/?oti=1',
         'https://www.expoimovel.com/imovel/apartamentos-comprar-vender-imbui-salvador-bahia/389449/pt/BR',
@@ -98,5 +141,6 @@ urls = [
 for url in urls:
     ri = Regex_scrapper(url)
     ri.crawl()
+    z = input()
 
 file.close()
