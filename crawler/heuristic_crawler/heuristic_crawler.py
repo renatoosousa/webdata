@@ -64,6 +64,7 @@ class heuristic_crawler(object):
 					if(link[0]=='/'):
 						link = self.url + link
 				# and (self.url in link)
+
 				if(('http' in link) or ('https' in link)) and (' ' not in link)and (len(self.links_list)<1000) and (self.url in link) and (link not in self.general_links):
 					if self.isValid_url(link):
 						prob = self.heuristic_func(link)
@@ -102,10 +103,12 @@ class heuristic_crawler(object):
 			next_url = self.border.pop(0)
 			next_url = next_url[1]
 			if(len(self.links_list)==self.it_time_sleep):
-				time.sleep(1)
+				# time.sleep(1)
+				self.saveLinksCSV("heuristic_imovelweb")
 				self.it_time_sleep+=100
 			self.search_links(next_url)
 		except Exception:
+			print 
 			print "Error"
 			if(len(self.border)==0):
 				return
@@ -126,6 +129,6 @@ class heuristic_crawler(object):
 		df = pd.DataFrame(self.links_list, columns=["column"])
 		df.to_csv(name +'.csv',header=True, index=False, encoding='utf-8')
 
-test = heuristic_crawler("https://www.vivareal.com.br")
+test = heuristic_crawler("http://www.imovelweb.com.br")
 test.init_search()
-test.saveLinksCSV("heuristic_vivareal")
+# test.saveLinksCSV("heuristic_expoimovel")
