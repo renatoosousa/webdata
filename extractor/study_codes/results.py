@@ -76,4 +76,4 @@ class ExtractorDB:
             return self.db[9]
 
     def get_all(self):
-        return db
+        return self.db
