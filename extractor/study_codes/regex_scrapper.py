@@ -144,35 +144,49 @@ class Regex_scrapper:
         start_page = requests.get(self.start_url, headers = agent)
         soup = BeautifulSoup(start_page.content, "html.parser")
 
-        for js in soup(["script", "style"]):
-            js.extract()
+        # for js in soup(["script", "style"]):
+        #     js.extract()
 
 
         regex_prices = "(R\$\s?\d+([.,])?\d+)"
-        regex_priceNu = "\d+[,.]\d+"
+        regex_priceNu = "\d+([,.]\d+)?"
         regex_casa_apt = "([cC][aA][sS][aA])|([aA][pP][aA][rR][tT])|([fF][lL][aA][tT])|([lL][oO][jJ][aA])"
-
+        regex_address_av = "[Aa][vV](.)?([eE][nN][iI])?.+-\s\w+"
+        regex_address_rua = "[Rr][uU][aA].+-?\w+$"
         try:
             prices = []
             price = re.findall(regex_prices, soup.text)
             while len(price) > 4:
                 price.pop()
-            #print price
             for item in price:
                 try:
+                    #print item
                     prices.append(float(re.search(regex_priceNu, str(item)).group()))
                 except:
                     pass
-
-            #print max(prices)
             self.data["Valor"] = str(max(prices))
-
-            
-
 
             imovel = re.search(regex_casa_apt, soup.text).group()
             if imovel:
                 self.data["Imovel"] = imovel
+
+            address = soup.find("address")
+            print address
+            if not address:
+                address = re.search(regex_address_av, soup.text).group()
+                print address
+                if address:
+                    print address
+                print address
+                else:
+                    address = re.search(regex_address_rua, soup.text).group()
+                    if address:
+                        print address
+            else:
+                address = address.text
+                print address    
+        
+
         except Exception, e:
             print str(e)
         
@@ -219,11 +233,11 @@ urls = [
         'https://www.vivareal.com.br/imovel/apartamento-3-quartos-butanta-zona-oeste-sao-paulo-com-garagem-70m2-venda-RS369000-id-84167740/?__vt=map:b',
 ]
 
-urlx = 'https://www.expoimovel.com/imovel/apartamentos-comprar-vender-piraja-salvador-bahia/389436/pt/BR'
+'''urlx = 'http://www.imovelweb.com.br/propriedades/apartamento-locacao-boa-viagem-2-quartos-2932218024.html?labs=I-spark-sep_&labs_source=Recomendados_ficha_propiedad_desktop&userid=0'
 ri = Regex_scrapper(urlx)
-ri.crawl()
-# for url in urls:
-#     ri = Regex_scrapper(url)
-#     ri.crawl()
-#     z = input()
+ri.crawl()'''
+for url in urls:
+    ri = Regex_scrapper(url)
+    ri.crawl()
+    z = input()
 
