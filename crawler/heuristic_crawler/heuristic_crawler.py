@@ -59,11 +59,16 @@ class heuristic_crawler(object):
 			soup = BeautifulSoup(r.text)
 			for a in soup.findAll('a',href = True):
 				link = a['href']
-
-				if(len(link)!=0):
+				# print link
+				# if(len(link)!=0):
+					# if(link[0]=='/'):
+						# link = self.url + link
+				# and (self.url in link)
+				if((not (self.isValid_url(link))) and ("javascript" not in link) and (len(link)>1) and ("www." not in link)):
 					if(link[0]=='/'):
 						link = self.url + link
-				# and (self.url in link)
+					else:
+						link = self.url + "/" + link
 
 				if(('http' in link) or ('https' in link)) and (' ' not in link)and (len(self.links_list)<1000) and (self.url in link) and (link not in self.general_links):
 					if self.isValid_url(link):
@@ -89,7 +94,8 @@ class heuristic_crawler(object):
 
 			# if self.border[0][0]<=0.4:
 			if self.border[0][1] not in self.links_list:
-				self.links_list.append(self.border[0][1])	
+				self.links_list.append(self.border[0][1])
+				self.saveLinksCSV("heuristic_teuimovel_br")	
 				print "Insert"
 
 			if(len(self.links_list)>=1000):
@@ -104,7 +110,7 @@ class heuristic_crawler(object):
 			next_url = next_url[1]
 			if(len(self.links_list)==self.it_time_sleep):
 				# time.sleep(1)
-				self.saveLinksCSV("heuristic_imovelweb")
+				# self.saveLinksCSV("heuristic_directimoveis")
 				self.it_time_sleep+=100
 			self.search_links(next_url)
 		except Exception:
@@ -129,6 +135,6 @@ class heuristic_crawler(object):
 		df = pd.DataFrame(self.links_list, columns=["column"])
 		df.to_csv(name +'.csv',header=True, index=False, encoding='utf-8')
 
-test = heuristic_crawler("http://www.imovelweb.com.br")
+test = heuristic_crawler("http://teuimovel.com.br")
 test.init_search()
-# test.saveLinksCSV("heuristic_expoimovel")
+test.saveLinksCSV("heuristic_teuimovel_br")

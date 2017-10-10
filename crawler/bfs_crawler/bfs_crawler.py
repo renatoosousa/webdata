@@ -44,10 +44,18 @@ class bfs_crawler(object):
 			for a in soup.findAll('a',href = True):
 				link = a['href']
 
-				if(len(link)!=0):
+				# General filter and get links
+				# if(len(link)!=0):
+				# 	if(link[0]=='/'):
+				# 		link = self.url + link
+				
+				# Filter to redeimobiliaria, buscaimoveis				 
+				if((not (self.isValid_url(link))) and ("javascript" not in link) and (len(link)>1) and ("www." not in link)):
 					if(link[0]=='/'):
 						link = self.url + link
-				 
+					else:
+						link = self.url + "/" + link
+				print link
 					# print "yes" and (self.url in link)
 				if(('http' in link) or ('https' in link)) and (' ' not in link)and (len(self.links_list)<1000) and (self.url in link):
 					if self.isValid_url(link):
@@ -83,7 +91,7 @@ class bfs_crawler(object):
 		df = pd.DataFrame(self.links_list, columns=["column"])
 		df.to_csv(name +'.csv',header=True, index=False, encoding='utf-8')
 
-test = bfs_crawler("http://www.redeimobiliariasecovi.com.br")
+test = bfs_crawler("http://teuimovel.com.br")
 test.init_search()
-test.saveLinksCSV("bfs_redeimobilidaria")
+test.saveLinksCSV("bfs_teuimovel_br")
 
