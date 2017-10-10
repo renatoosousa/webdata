@@ -1,0 +1,110 @@
+https://www.zapimoveis.com.br/oferta/aluguel+apartamento+2-quartos+petropolis+porto-alegre+rs+72m2+RS1500/ID-14573242/?paginaoferta=1
+Condomínio: R$ 880
+quartos: 2
+Valor de Locacao: R$ 1.500,00
+Área Total (m²): 123
+Bairro: Petrópolis
+Cidade: Porto Alegre
+suítes: 2
+vagas: 2
+Área Útil (m²): 72
+Estado: RS
+
+
+
+https://www.zapimoveis.com.br/oferta/aluguel+apartamento+2-quartos+bela-vista+porto-alegre+rs+89m2+RS5500/ID-14573236/?paginaoferta=1
+inexistent site?
+
+
+
+https://www.zapimoveis.com.br/oferta/venda+apartamento+3-quartos+bela-vista+porto-alegre+rs+104m2+RS1060000/ID-7316528/?oti=1
+Valor do m: R$ 10.192
+Condomínio: R$ 900
+quartos: 3
+Área Total (m²): 171
+Valor de Venda: R$ 1.060.000,00
+suíte: 1
+vagas: 2
+Área Útil (m²): 104
+
+
+
+https://www.zapimoveis.com.br/lancamento/apartamento+venda+vl-rosa+novo-hamburgo+rs+parque-porto-trinidad+mrv-engenharia-s-a+46m2/ID-12865/?contato=0&oti=4
+MRV Engenharia S/A - Apartamento
+quartos: 2 
+Bairro: Vila Rosa
+Cidade:  Novo Hamburgo 
+Valor de Venda: A partir de  R$ 167.727
+Estado:  RS
+Área (m²): 46 
+
+
+
+https://www.zapimoveis.com.br/lancamento/apartamento+venda+perdizes+zona-oeste+sao-paulo+sp+bosque-araucaria+tecnisa+157m2/ID-8089/?contato=0
+inexistent site?
+
+
+
+https://www.zapimoveis.com.br/lancamento/apartamento+venda+rosarinho+recife+pe+park-dumont+roccia-construtora+50m2/ID-13471/?contato=0
+Área (m²): 50
+2: 
+quartos: 2
+suíte: 1
+vaga: 1
+
+
+
+https://www.zapimoveis.com.br/lancamento/apartamento+venda+torre+recife+pe+lara+roccia-construtora+63m2/ID-13472/?contato=0
+a: 2
+Área (m²): 63
+2: 
+suíte: 1
+vagas: 2
+
+
+
+https://www.zapimoveis.com.br/superdestaque/aluguel+apartamento+2-quartos+boa-viagem+recife+pe+73m2+RS1680/ID-13946474/
+Condomínio: R$ 500
+quartos: 2
+Valor de Locacao: R$ 1.680,00
+Área Total (m²): 73
+Bairro: Boa Viagem
+Cidade: Recife
+suíte: 1
+IPTU: R$ 115
+vaga: 1
+Área Útil (m²): 73
+Estado: PE
+
+
+
+https://www.zapimoveis.com.br/superdestaque/aluguel+apartamento+2-quartos+gracas+recife+pe+46m2+RS1300/ID-14950680/
+MIGUEL EGUREN CONSULTORIA IMOBILIARIA - Apartamento para Alugar
+Condomínio: R$ 700
+quartos: 2
+Valor de Locacao: R$ 1.300,00
+Bairro: Graças
+Cidade: Recife
+suíte: 1
+IPTU: R$ 85
+vaga: 1
+Área Útil (m²): 46
+Estado: PE
+
+
+
+https://www.zapimoveis.com.br/oferta/aluguel+apartamento+3-quartos+jaqueira+recife+pe+95m2+RS1000/ID-14244802/?paginaoferta=1
+Joao - Apartamento para Alugar
+Condomínio: R$ 1.170
+quartos: 3
+Valor de Locacao: R$ 1.000,00
+Bairro: Jaqueira
+Cidade: Recife
+suíte: 1
+IPTU: R$ 450
+vagas: 2
+Área Útil (m²): 95
+Estado: PE
+
+
+

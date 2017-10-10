@@ -5,6 +5,8 @@ import os
 import bs4
 from bs4 import BeautifulSoup
 import re
+from results import ExtractorDB
+
 
 
 
@@ -22,6 +24,8 @@ class Regex_scrapper:
 
     def crawl(self):
         info = self.pre_processing()
+        if info == -1:
+            return
 
         raw_data = []
         for string in info.stripped_strings:
@@ -35,9 +39,9 @@ class Regex_scrapper:
         for key, value in self.data.items():
             if re.search("R\$", key):
                 self.data.pop(key,None)
-        
+        print self.start_url
         for key in self.data:
-                print key + ": " + self.data[key]
+                print key.encode("utf-8") + ": " + self.data[key].encode("utf-8")
 
         return
 
@@ -80,25 +84,28 @@ class Regex_scrapper:
             except Exception, e:
                 pass
 
-        if digit == nonDigit:
-            for i, j in zip(digit_Ocurrences, nonDigit_Ocurrences):
-                #print raw_data[j] + ": " + raw_data[i]
-                self.data[raw_data[j]] = raw_data[i]
-        else:
-            if raw_data[-1] == raw_data[digit_Ocurrences[-1]]:
-                if re.search(regex, raw_data[-2]):
-                    for i in digit_Ocurrences:
-                        #print raw_data[i - 1] + ": " + raw_data[i]
-                        self.data[raw_data[i-1]] = raw_data[i]
-                else:
-                    for i in range(0, len(digit_Ocurrences)-1):
-                        #print raw_data[digit_Ocurrences[i]+1] + ": " + raw_data[digit_Ocurrences[i]]
-                        self.data[raw_data[digit_Ocurrences[i]+1]] = raw_data[digit_Ocurrences[i]]
-
+        try:
+            if digit == nonDigit:
+                for i, j in zip(digit_Ocurrences, nonDigit_Ocurrences):
+                    #print raw_data[j] + ": " + raw_data[i]
+                    self.data[raw_data[j]] = raw_data[i]
             else:
-                for i in digit_Ocurrences:
-                    #print raw_data[i+1] + ": " + raw_data[i]
-                    self.data[raw_data[i+1]] = raw_data[i]
+                if raw_data[-1] == raw_data[digit_Ocurrences[-1]]:
+                    if re.search(regex, raw_data[-2]):
+                        for i in digit_Ocurrences:
+                            #print raw_data[i - 1] + ": " + raw_data[i]
+                            self.data[raw_data[i-1]] = raw_data[i]
+                    else:
+                        for i in range(0, len(digit_Ocurrences)-1):
+                            #print raw_data[digit_Ocurrences[i]+1] + ": " + raw_data[digit_Ocurrences[i]]
+                            self.data[raw_data[digit_Ocurrences[i]+1]] = raw_data[digit_Ocurrences[i]]
+
+                else:
+                    for i in digit_Ocurrences:
+                        #print raw_data[i+1] + ": " + raw_data[i]
+                        self.data[raw_data[i+1]] = raw_data[i]
+        except:
+            pass
 
     def try_pattern2(self, raw_data):
         regex = "([Vv]aga.+\d+)|(\d+.+[Vv]aga(.+)?$)"
@@ -151,8 +158,10 @@ class Regex_scrapper:
         regex_prices = "(R\$\s?\d+([.,])?\d+)"
         regex_priceNu = "\d+([,.]\d+)?"
         regex_casa_apt = "([cC][aA][sS][aA])|([aA][pP][aA][rR][tT])|([fF][lL][aA][tT])|([lL][oO][jJ][aA])"
-        regex_address_av = "[Aa][vV](.)?([eE][nN][iI])?.+-\s\w+"
-        regex_address_rua = "[Rr][uU][aA].+-?\w+$"
+        regex_address_av = "((Av.)|(Av)|([aA][vV][eE][nN][iI])|(Av)).+-\s\w+"
+        regex_address_rua = "[Rr][uU][aA].+-\w+"
+        regex_address_rua2 = "[Rr][uU][aA].+"
+
         try:
             prices = []
             price = re.findall(regex_prices, soup.text)
@@ -164,80 +173,106 @@ class Regex_scrapper:
                     prices.append(float(re.search(regex_priceNu, str(item)).group()))
                 except:
                     pass
-            self.data["Valor"] = str(max(prices))
+            try:
+                self.data["Valor"] = str(max(prices))
+            except:
+                pass
 
             imovel = re.search(regex_casa_apt, soup.text).group()
             if imovel:
                 self.data["Imovel"] = imovel
 
             address = soup.find("address")
-            print address
             if not address:
-                address = re.search(regex_address_av, soup.text).group()
-                print address
-                if address:
-                    print address
-                print address
-                else:
-                    address = re.search(regex_address_rua, soup.text).group()
-                    if address:
-                        print address
+                #print "entrou if1"
+                try:
+                    address = re.search(regex_address_av, soup.text).group()
+                    #print "XXX " + address
+                  
+                except:
+                    #print "entrou if2"
+                    try:
+                        address = re.search(regex_address_rua, soup.text).group()
+                        #print "yyy " + address
+                    except:
+                        #print "entrou if3"
+                        try:
+                            address = re.search(regex_address_rua2, soup.text).group()
+                            #print "zzz " + address
+                        except:
+                            #print "entrou if4"
+                            try:
+                                address = re.search("[cC]idade\.+-/D{2}", soup.text).group()
+                            #print address
+                            except:
+                                pass
             else:
                 address = address.text
-                print address    
+                #print address 
+            if address != None:
+                if len(address) > 100:
+                    address = address.split('-')[0]
+                self.data["Endereco"] = address.strip()   
         
 
         except Exception, e:
             print str(e)
         
 
+        try:
+            uls = soup.find_all("ul")
+            divs = soup.find_all("div")
 
-        uls = soup.find_all("ul")
-        divs = soup.find_all("div")
+            regex = "([Qq][uU][aA][rR][tT][oO][sS]?)|(Dorm)"
 
-        regex = "([Qq][uU][aA][rR][tT][oO][sS]?)|(Dorm)"
+            foundUL = 0
+            for ul in uls:
+                if re.search(regex, ul.text):
+                    if re.search("[Vv][aA][gG][aA]", ul.text):
+                        info = ul
+                        foundUL = 1
+                        break
+            if foundUL:
+                return info
 
-        foundUL = 0
-        for ul in uls:
-            if re.search(regex, ul.text):
-                if re.search("[Vv][aA][gG][aA]", ul.text):
-                    info = ul
-                    foundUL = 1
-                    break
-        if foundUL:
-            return info
-
-        for div in divs:
-            if re.search(regex, div.text):
-                info = div
-                break
-        
-        for div in info.find_all("div"):
-            if re.search(regex, div.text):
-                if re.search("[Vv]aga", div.text):
+            for div in divs:
+                if re.search(regex, div.text):
                     info = div
-        
-        
+                    break
+            
+            for div in info.find_all("div"):
+                if re.search(regex, div.text):
+                    if re.search("[Vv]aga", div.text):
+                        info = div
+        except:
+            return -1
+
         return info
 
-urls = [
-        'https://www.zapimoveis.com.br/lancamento/apartamento+venda+socorro+jaboatao-dos-guararapes+pe+reserva-villa-natal--goiabeiras+mrv-engenharia-s-a+49m2/ID-9704/?oti=1',
-        'https://www.expoimovel.com/imovel/apartamentos-comprar-vender-imbui-salvador-bahia/389449/pt/BR',
-        'http://pe.olx.com.br/grande-recife/imoveis/excelente-locacao-engenho-do-meio-397980090',
-        'http://www.directimoveis.com.br/imovel-V0373/morada-da-peninsula',
-        'http://imovelavenda.com.br/Fiateci_Apto_2_Dorm_Sao_Geraldo_Porto_Alegre_10066_RS__YWQ10',
-        'http://www.imovelweb.com.br/propriedades/apartamento-residencial-para-locacao-boa-viagem-2932218008.html',
-        'http://diariodepernambuco.lugarcerto.com.br/imovel/casa-em-condominio-2-quartos-aldeia-camaragibe-54m2-venda-rs230000-id-329299726',
-        'http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP0193-CZA',
-        'http://www.teuimovel.com/index_detalheimovel_id_2116_desc_sao-paulo-sp-vila-silvia',
-        'https://www.vivareal.com.br/imovel/apartamento-3-quartos-butanta-zona-oeste-sao-paulo-com-garagem-70m2-venda-RS369000-id-84167740/?__vt=map:b',
-]
+# urls = [
+#         'https://www.zapimoveis.com.br/lancamento/apartamento+venda+socorro+jaboatao-dos-guararapes+pe+reserva-villa-natal--goiabeiras+mrv-engenharia-s-a+49m2/ID-9704/?oti=1',
+#         'https://www.expoimovel.com/imovel/apartamentos-comprar-vender-imbui-salvador-bahia/389449/pt/BR',
+#         'http://pe.olx.com.br/grande-recife/imoveis/excelente-locacao-engenho-do-meio-397980090',
+#         'http://www.directimoveis.com.br/imovel-V0373/morada-da-peninsula',
+#         'http://imovelavenda.com.br/Fiateci_Apto_2_Dorm_Sao_Geraldo_Porto_Alegre_10066_RS__YWQ10',
+#         'http://www.imovelweb.com.br/propriedades/apartamento-residencial-para-locacao-boa-viagem-2932218008.html',
+#         'http://diariodepernambuco.lugarcerto.com.br/imovel/casa-em-condominio-2-quartos-aldeia-camaragibe-54m2-venda-rs230000-id-329299726',
+#         'http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP0193-CZA',
+#         'http://www.teuimovel.com/index_detalheimovel_id_2116_desc_sao-paulo-sp-vila-silvia',
+#         'https://www.vivareal.com.br/imovel/apartamento-3-quartos-butanta-zona-oeste-sao-paulo-com-garagem-70m2-venda-RS369000-id-84167740/?__vt=map:b',
+# ]
+# for url in urls:
+#     ri = Regex_scrapper(url)
+#     ri.crawl()
+#     z = input()
 
-'''urlx = 'http://www.imovelweb.com.br/propriedades/apartamento-locacao-boa-viagem-2-quartos-2932218024.html?labs=I-spark-sep_&labs_source=Recomendados_ficha_propiedad_desktop&userid=0'
-ri = Regex_scrapper(urlx)
-ri.crawl()'''
-for url in urls:
-    ri = Regex_scrapper(url)
-    ri.crawl()
-    z = input()
+
+db = ExtractorDB()
+for item in db.get_all():
+    for site in item:
+        all_domains = Regex_scrapper(site)
+        all_domains.crawl()
+        print "\n\n"
+        #z = input()
+    #z = input()
 

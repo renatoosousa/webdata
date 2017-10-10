@@ -5,6 +5,7 @@ import os
 import bs4
 from bs4 import BeautifulSoup
 import re
+from results import ExtractorDB
 
 
 
@@ -35,38 +36,53 @@ class Directimoveis_crawler:
         start_page = requests.get(link, headers = agent)
         soup = BeautifulSoup(start_page.content, "html.parser")
 
-        tipo = soup.find('span', {'class': 'small'})
-        self.data["Tipo"] = tipo.text.strip()
+        try:
+            tipo = soup.find('span', {'class': 'small'})
+            self.data["Tipo"] = tipo.text.strip()
+        except:
+            pass
 
-        address = soup.find("address")
-        address = address.text.split('-')
-        bairro = address[1]
-        estado = address[2][-2] + address[2][-1]
-        l = list(address[2])
-        l[-3:] = []
-        cidade = "".join(l)
+        try:
+            address = soup.find("address")
+            address = address.text.split('-')
+            bairro = address[1]
+            estado = address[2][-2] + address[2][-1]
+            l = list(address[2])
+            l[-3:] = []
+            cidade = "".join(l)
 
-        self.data["Bairro"] = bairro.strip()
-        self.data["Cidade"] = cidade.strip()
-        self.data["Estado"] = estado.strip()
+            self.data["Bairro"] = bairro.strip()
+            self.data["Cidade"] = cidade.strip()
+            self.data["Estado"] = estado.strip()
+        except:
+            pass
 
-        valor = soup.find("li", {"class": "boxValue"})
-        self.data[valor(text=True)[0]] = valor(text=True)[1].strip()
+        try:
+            valor = soup.find("li", {"class": "boxValue"})
+            self.data[valor(text=True)[0]] = valor(text=True)[1].strip()
+        except:
+            pass
 
-        infos = soup.find_all("li", {"class": "boxTextList"})
-        info = infos[1].find("p")
-        info = info.text.split('-')
+        try:
+            infos = soup.find_all("li", {"class": "boxTextList"})
+            info = infos[1].find("p")
+            info = info.text.split('-')
 
-        self.data["Area Total"] = info[1].strip()
-        for i in range(2, len(info)):
-            val = info[i].split(':')
-            self.data[val[0].strip()] = val[1].strip()
-
+            self.data["Area Total"] = info[1].strip()
+            for i in range(2, len(info)):
+                val = info[i].split(':')
+                self.data[val[0].strip()] = val[1].strip()
+        except:
+            pass
+            
         for key in self.data:
-            print key + ": " + self.data[key]
+            print key.encode("utf-8") + ": " + self.data[key].encode("utf-8")
 
 
 
-url = 'http://www.directimoveis.com.br/imovel-V0373/morada-da-peninsula'
-ri = Directimoveis_crawler(url)
-ri.crawl()
+db = ExtractorDB()
+for item in db.get_domain("directimoveis"):
+	print item
+	directimoveis = Directimoveis_crawler(item)
+	directimoveis.crawl()
+	print "\n\n"

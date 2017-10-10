@@ -1,0 +1,1207 @@
+https://www.zapimoveis.com.br/oferta/aluguel+apartamento+2-quartos+petropolis+porto-alegre+rs+72m2+RS1500/ID-14573242/?paginaoferta=1
+quartos: 2
+Área Total (m²): 123
+Imovel: Apart
+vagas: 2
+suítes: 2
+Valor: 880.0
+Área Útil (m²): 72
+Endereco: Avenida Coronel Lucas de OliveiraPetrópolis, Porto Alegre - RS
+
+
+
+
+
+
+https://www.zapimoveis.com.br/oferta/venda+apartamento+3-quartos+bela-vista+porto-alegre+rs+104m2+RS1060000/ID-7316528/?oti=1
+quartos: 3
+Área Total (m²): 171
+Imovel: Apart
+vagas: 2
+suíte: 1
+Valor: 900.0
+Área Útil (m²): 104
+
+
+
+https://www.zapimoveis.com.br/lancamento/apartamento+venda+vl-rosa+novo-hamburgo+rs+parque-porto-trinidad+mrv-engenharia-s-a+46m2/ID-12865/?contato=0&oti=4
+A partir de: 46
+•: 2
+quartos: 2
+Imovel: Apart
+Área (m²): 46
+Valor: 167.727
+Endereco: Avaí, 119Vila Rosa, Novo Hamburgo - RS
+
+
+
+
+
+
+https://www.zapimoveis.com.br/lancamento/apartamento+venda+rosarinho+recife+pe+park-dumont+roccia-construtora+50m2/ID-13471/?contato=0
+quartos: 2
+Imovel: Apart
+Área (m²): 50
+suíte: 1
+vaga: 1
+Valor: 285.884
+Endereco: Av. Santos Dumont				, 1515				Rosarinho, Recife - PE
+
+
+
+https://www.zapimoveis.com.br/lancamento/apartamento+venda+torre+recife+pe+lara+roccia-construtora+63m2/ID-13472/?contato=0
+a: 2
+quartos: 3
+Imovel: Apart
+Área (m²): 63
+vagas: 2
+suíte: 1
+Valor: 376.0
+Endereco: Av. Conde de Irajá				, 544Torre, Recife - PE
+
+
+
+https://www.zapimoveis.com.br/superdestaque/aluguel+apartamento+2-quartos+boa-viagem+recife+pe+73m2+RS1680/ID-13946474/
+quartos: 2
+Área Total (m²): 73
+Imovel: Apart
+suíte: 1
+vaga: 1
+Valor: 500.0
+Área Útil (m²): 73
+Endereco: Rua José Moreira Leal, Boa Viagem, Recife
+
+
+
+https://www.zapimoveis.com.br/superdestaque/aluguel+apartamento+2-quartos+gracas+recife+pe+46m2+RS1300/ID-14950680/
+quartos: 2
+Imovel: Apart
+suíte: 1
+vaga: 1
+Valor: 700.0
+Área Útil (m²): 46
+Endereco: Rua Xavier MarquesGraças, Recife - PE
+
+
+
+https://www.zapimoveis.com.br/oferta/aluguel+apartamento+3-quartos+jaqueira+recife+pe+95m2+RS1000/ID-14244802/?paginaoferta=1
+quartos: 3
+Imovel: Apart
+vagas: 2
+suíte: 1
+Valor: 450.0
+Área Útil (m²): 95
+Endereco: Avenida Conselheiro Rosa e SilvaJaqueira, Recife - PE
+
+
+
+https://www.expoimovel.com/emp/apartamentos-lancamento-barra-de-jangada-jaboatao-dos-guararapes-pernambuco/1910/pt/BR
+Quartos: 2
+Imovel: Apart
+Valor: 284.75
+suítes: 1
+Vagas: 1
+Endereco: Rua Padre Nestor de Alencar,-Barra de Jangada-Jaboatão dos Guararapes-PE
+
+
+
+https://www.expoimovel.com/imovel/casas-comprar-vender-piedade-jaboatao-dos-guararapes-pernambuco/382781/pt/BR
+Área total: 180
+Quartos: 3
+Imovel: Casa
+Vagas: 3
+suítes: 1
+Valor: 900.0
+Endereco: Rua Prof Herculano Pires,247-Piedade-Jaboatão dos Guararapes-PE
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-lancamento-altiplano-cabo-branco-joao-pessoa-paraiba/399608/pt/BR
+Área total: 265
+Quartos: 3
+Imovel: Apart
+Vagas: 5
+suítes: 3
+Valor: 909.872
+Endereco: Rua Orlando di Cavalcanti Villar,s/n-Altiplano Cabo Branco-João Pessoa-PB
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-lancamento-altiplano-cabo-branco-joao-pessoa-paraiba/399606/pt/BR
+Área total: 126
+Quartos: 3
+Imovel: Apart
+Vagas: 2
+suítes: 1
+Valor: 909.872
+Endereco: Rua Poeta Targino Teixeira,150-Altiplano Cabo Branco-João Pessoa-PB
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-lancamento-altiplano-cabo-branco-joao-pessoa-paraiba/397564/pt/BR
+Área total: 510
+Quartos: 4
+Imovel: Apart
+Vagas: 5
+suítes: 4
+Valor: 909.872
+Endereco: Rua Calçada
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-comprar-vender-barra-da-tijuca-rio-de-janeiro-rio-de-janeiro/384881/pt/BR
+Área total: 281
+Quartos: 4
+Imovel: Apart
+Vagas: 3
+suítes: 4
+Valor: 2.75
+Endereco: ruas arborizadas e ótimas opções de lazer e serviços. Também é sede de vários multinacionais, como Shell Brasil, Esso Brasil e Vale do Rio Doce.
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-comprar-vender-analia-franco-sao-paulo-sao-paulo/398437/pt/BR
+Área total: 180
+Quartos: 3
+Imovel: Apart
+Valor: 650.0
+suítes: 1
+Vagas: 1
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-lancamento-belem-sao-paulo-sao-paulo/380944/pt/BR
+de 4: 1
+Área total: 43
+Quartos: 2
+Imovel: Apart
+Valor: 225.0
+Endereco: Rua Intendência,177-Belém-São Paulo-SP
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-lancamento-belem-sao-paulo-sao-paulo/380943/pt/BR
+de 4: 1
+Área total: 43
+Quartos: 2
+Imovel: Apart
+Valor: 225.0
+Endereco: Rua Intendência,177-Belém-São Paulo-SP
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-comprar-vender-aflitos-recife-pernambuco/372744/pt/BR
+Área total: 110
+Quartos: 3
+Imovel: Apart
+Valor: 700.0
+suítes: 1
+Vagas: 2
+
+
+
+http://sp.olx.com.br/sao-paulo-e-regiao/imoveis/apto-reforma-impecavel-396014219
+Imovel: casa
+Endereco: Rua do Catete, 359 - 7º andar - Flamengo - CEP: 22.220-001
+links patrocinados: 396014219
+Características:: 2
+Valor: 120.0
+
+
+
+http://es.olx.com.br/norte-do-espirito-santo/imoveis/maravilhosa-cobertura-4-qts-na-praia-da-costa-396014106
+quartos
+		: 2
+quartos: 5
+Suítes: 2
+À venda   | 2 quartos
+		 | 61 m² | Condomínio:  R$ 350
+Valor: 400.0
+Para alugar   | 400 m² | Condomínio:  R$ 0
+À venda   | 4 quartos
+		 | 170 m² | Condomínio:  R$ 600
+À venda   | 2 quartos
+		 | 110 m² | Condomínio:  R$ 180
+07: 49
+À venda   | 2 quartos
+		 | 55 m² | Condomínio:  R$ 190
+À venda   | 2 quartos
+		 | 63 m² | Condomínio:  R$ 270
+Imovel: Loja
+08: 00
+suítes: 2
+°: 2
+À venda   | 2 quartos
+		 | 60 m² | Condomínio:  R$ 280
+Oportunidade:  Jardim Camburi 2 Qtos c/ Suíte - Direto c/ proprietário
+quartos-Lançamento-Entrega: 3
+m²: 57
+suíte,: 1
+À venda   | 2 quartos
+		 | 50 m² | Condomínio:  R$ 230
+À venda   | 2 quartos
+		 | 65 m² | Condomínio:  R$ 350
+À venda   | 3 quartos
+		 | 84 m² | Condomínio:  R$ 600
+À venda   | 4 quartos
+		 | 260 m² | Condomínio:  R$ 1300
+alqueireis: 97
+Varandas: 2
+Quartos,: 3
+Qts: 3
+Para alugar   | 25 m² | Condomínio:  R$ 0
+quarto: 1
+Vagas: 2
+À venda   | 2 quartos
+		 | 62 m² | Condomínio:  R$ 211
+Endereco: Rua do Catete, 359 - 7º andar - Flamengo - CEP: 22.220-001
+Quartos/suíte: 3
+quartos-vista: 2
+mil: 15000
+À venda   | 2 quartos
+		 | 76 m² | Condomínio:  R$ 300
+Quartos: 2
+Maior 4Q na Praia de Itaparica:  Premium
+quartos,: 2
+vaga: 1
+BARATO: 1
+À venda   | 2 quartos
+		 | 59 m² | Condomínio:  R$ 300
+À venda   | 3 quartos
+		 | 100 m² | Condomínio:  R$ 370
+quartos-lazer: 2
+vagas: 2
+À venda   | 4 quartos
+		 | 165 m² | Condomínio:  R$ 450
+Itapoã: 2
+e: 2
+À venda   | 2 quartos
+		 | 64 m² | Condomínio:  R$ 220
+
+
+
+http://pe.olx.com.br/grande-recife/imoveis/excelente-preco-no-terminal-de-piedade-lindo-396013840
+Imovel: casa
+Endereco: Rua do Catete, 359 - 7º andar - Flamengo - CEP: 22.220-001
+Quartos:: 3
+Vagas na garagem:: 1
+Valor: 135.0
+
+
+
+http://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/imoveis/casa-387735719
+Imovel: Casa
+Endereco: Rua do Catete, 359 - 7º andar - Flamengo - CEP: 22.220-001
+Quartos:: 2
+Vagas na garagem:: 1
+Valor: 250.0
+
+
+
+http://sp.olx.com.br/sao-paulo-e-regiao/imoveis/aluga-se-casa-5-comodos-saida-independente-por-r-700-00-396013390
+Imovel: casa
+Endereco: Rua do Catete, 359 - 7º andar - Flamengo - CEP: 22.220-001
+links patrocinados: 396013390
+self.adParams = {
+		
+			'real_estate_type': 'Aluguel - casa em vila',
+		
+		'condominio': '',
+		'iptu': '',
+		'size': '90',
+		'rooms': '3',
+		'beds': '',
+		'garage_spaces': '',
+		
+			
+			'features': '""'
+		
+	}: 3
+Valor: 800.0
+
+
+
+http://rn.olx.com.br/rio-grande-do-norte/imoveis/apartamento-3-4-com-suite-200-m-tirol-396013375
+Imovel: Apart
+Endereco: Rua do Catete, 359 - 7º andar - Flamengo - CEP: 22.220-001
+Quartos:: 3
+Vagas na garagem:: 2
+Valor: 2.9
+
+
+
+http://pe.olx.com.br/grande-recife/imoveis/excelente-casa-na-lagoa-encantada-396013116
+Imovel: Casa
+Endereco: Rua do Catete, 359 - 7º andar - Flamengo - CEP: 22.220-001
+links patrocinados: 396013116
+self.adParams = {
+		
+			'real_estate_type': 'Aluguel - casa em rua pública',
+		
+		'condominio': '',
+		'iptu': '',
+		'size': '80',
+		'rooms': '2',
+		'beds': '',
+		'garage_spaces': '',
+		
+			
+			'features': '""'
+		
+	}: 2
+Valor: 480.0
+
+
+
+http://rj.olx.com.br/rio-de-janeiro-e-regiao/imoveis/otimo-apartamento-em-itaipuacu-marica-520-00-396013014
+Imovel: Apart
+Endereco: Rua do Catete, 359 - 7º andar - Flamengo - CEP: 22.220-001
+links patrocinados: 396013014
+Características:: 1
+Valor: 520.0
+
+
+
+http://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/imoveis/apartamento-396014221
+Imovel: Apart
+Endereco: Rua do Catete, 359 - 7º andar - Flamengo - CEP: 22.220-001
+self.adParams = {
+		
+			'real_estate_type': 'Venda - apartamento padrão',
+		
+		'condominio': '350',
+		'iptu': '',
+		'size': '53',
+		'rooms': '2',
+		'beds': '',
+		'garage_spaces': '',
+		
+			
+			'features': '""'
+		
+	}: 2
+links patrocinados: 396014221
+Valor: 350.0
+
+
+
+http://es.olx.com.br/norte-do-espirito-santo/imoveis/a-melhor-oportunidade-de-3-quartos-na-7-etapa-de-itaparica-396013790
+quartos
+		: 2
+quartos: 5
+Suítes: 2
+À venda   | 2 quartos
+		 | 61 m² | Condomínio:  R$ 350
+Valor: 400.0
+Para alugar   | 400 m² | Condomínio:  R$ 0
+À venda   | 4 quartos
+		 | 170 m² | Condomínio:  R$ 600
+À venda   | 2 quartos
+		 | 110 m² | Condomínio:  R$ 180
+07: 49
+À venda   | 2 quartos
+		 | 55 m² | Condomínio:  R$ 190
+À venda   | 2 quartos
+		 | 63 m² | Condomínio:  R$ 270
+Imovel: Loja
+08: 00
+suítes: 2
+°: 2
+À venda   | 2 quartos
+		 | 60 m² | Condomínio:  R$ 280
+Oportunidade:  Jardim Camburi 2 Qtos c/ Suíte - Direto c/ proprietário
+quartos-Lançamento-Entrega: 3
+m²: 57
+suíte,: 1
+À venda   | 2 quartos
+		 | 50 m² | Condomínio:  R$ 230
+À venda   | 2 quartos
+		 | 65 m² | Condomínio:  R$ 350
+À venda   | 3 quartos
+		 | 84 m² | Condomínio:  R$ 600
+À venda   | 4 quartos
+		 | 260 m² | Condomínio:  R$ 1300
+alqueireis: 97
+Varandas: 2
+Quartos,: 3
+Qts: 3
+Para alugar   | 25 m² | Condomínio:  R$ 0
+quarto: 1
+Vagas: 2
+À venda   | 2 quartos
+		 | 62 m² | Condomínio:  R$ 211
+Endereco: Rua do Catete, 359 - 7º andar - Flamengo - CEP: 22.220-001
+Quartos/suíte: 3
+quartos-vista: 2
+mil: 15000
+À venda   | 2 quartos
+		 | 76 m² | Condomínio:  R$ 300
+Quartos: 2
+Maior 4Q na Praia de Itaparica:  Premium
+quartos,: 2
+vaga: 1
+BARATO: 1
+À venda   | 2 quartos
+		 | 59 m² | Condomínio:  R$ 300
+À venda   | 3 quartos
+		 | 100 m² | Condomínio:  R$ 370
+quartos-lazer: 2
+vagas: 2
+À venda   | 4 quartos
+		 | 165 m² | Condomínio:  R$ 450
+Itapoã: 2
+e: 2
+À venda   | 2 quartos
+		 | 64 m² | Condomínio:  R$ 220
+
+
+
+http://www.directimoveis.com.br/imovel-v0932/edf-parador-de-cervantes
+- Dormitórios:  2 (sendo 1 suítes)
+ambientes: 3
+- Área útil:  60,00 m²
+- Banheiros:  2
+Imovel: Apart
+-: 105
+- Vagas de garagem:  2
+- Condominio:  400
+Valor: 530.0
+Endereco: Rua Serinhaém 105 - Boa Viagem - Recife PE
+- IPTU:  R$ 148,00
+
+
+
+http://www.directimoveis.com.br/imovel-AL0101
+Imovel: Apart
+Endereco: ruaruFortalezaGoianaGravatáIgarassuIlha de ItamaracáIpojucaJaboatão dos GuararapesLisboaMaragogiOlindaPaudalhoPaulistaPesqueiraPorto SeguroRecifeSanto AgostinhoSão Lourenço da MataTamandaré
+
+
+
+
+
+
+http://www.directimoveis.com.br/imovel-V0390/edificio-maison-languth
+- Dormitórios:  3 (sendo 1 suítes)
+ambientes: 2
+- Área útil:  125,00 m²
+- Banheiros:  1
+Imovel: Apart
+-: 469
+- Vagas de garagem:  2
+- Condominio:  700
+Valor: 320.0
+Endereco: Avenida Conselheiro Rosa e Silva 469 - Aflitos - Recife PE
+
+
+
+http://www.directimoveis.com.br/imovel-V0496/verano
+A-2,: 4
+- Dormitórios:  3 (sendo 3 suítes)
+ambientes: 2
+- Área útil:  97,00 m²
+- Banheiros:  1
+Imovel: Apart
+- Vagas de garagem:  2
+Valor: 800.0
+Endereco: Avenida A, S/N, Quadra F1, Lote 4 A-2, R  - Praia do Paiva - Cabo de Santo Agostinho PE
+
+
+
+http://www.directimoveis.com.br/imovel-v0553/edf-daniela
+- Dormitórios:  3 (sendo 2 suítes)
+ambientes: 2
+- Área útil:  106,00 m²
+- Banheiros:  1
+Imovel: Apart
+-: 242
+- Vagas de garagem:  1
+- Condominio:  300
+Valor: 330.0
+Endereco: Rua Dona Magina Pontual 242 - Boa Viagem - Recife PE
+
+
+
+http://www.directimoveis.com.br/imovel-v0577/edf-vitoria
+- Dormitórios:  3 (sendo 2 suítes)
+ambientes: 2
+- Área útil:  132,00 m²
+- Banheiros:  1
+Imovel: Apart
+-: 1272
+- Vagas de garagem:  2
+- Condominio:  1000
+Valor: 900.0
+Endereco: Avenida Boa Viagem 1272 - Boa Viagem - Recife PE
+- IPTU:  R$ 230,00
+
+
+
+http://www.directimoveis.com.br/imovel-AL0022/edificio-lila
+- Dormitórios:  1
+ambientes: 2
+- Área útil:  53,00 m²
+- Banheiros:  1
+Imovel: Apart
+-: 270
+- Vagas de garagem:  1
+- Condominio:  650
+Valor: 1.5
+Endereco: Rua Jacó Velosine 270 - Casa Forte - Recife PE
+- IPTU:  R$ 95,00
+
+
+
+http://www.directimoveis.com.br/imovel-AL0323/edf-jacaranda
+- Dormitórios:  4 (sendo 2 suítes)
+- Área útil:  210,00 m²
+- Banheiros:  3
+Imovel: Apart
+-: 2170
+- Vagas de garagem:  2
+- Condominio:  900
+Valor: 8.0
+Endereco: Avenida Boa Viagem 2170 - Boa Viagem - Recife PE
+- IPTU:  R$ 240,00
+
+
+
+http://www.directimoveis.com.br/imovel-v0757/edf-john-lennon
+- Dormitórios:  3 (sendo 1 suítes)
+ambientes: 2
+- Área útil:  153,00 m²
+- Banheiros:  2
+Imovel: Apart
+-: 24
+- Vagas de garagem:  2
+- Condominio:  800
+Valor: 650.0
+Endereco: Rua Agenor Lopes 24 - Boa Viagem - Recife PE
+- IPTU:  R$ 235,00
+
+
+
+http://imovelavenda.com.br/Apto_Macaxeira_Ter_3_Qtos_1_STE_Conjunto_Apipucos_Recife_PE__BU505
+Imovel: Apart
+m²: 73
+Suíte: 1
+Vaga: 1
+Valor: 220.0
+Dorm: 3
+Endereco: Av. Norte",BEDROOM=3,SUITE=1,BATHROOM=1,PARKING=1,PRICE_SALE=220000,PRICE_RENT=0,PRICE_PERIOD=0,ACCESS=0,ALOGIN="israelfreitas",ADIR="usuario/"+ALOGIN.split("").join("/")+"/",AURL="",ANAME="",AGENDER=0,ALOGGED=0,OWNER=0,EDITOR=0,INSERTED=1483997198,SPOTLIGHT=0,SHOWCASE=0,TITLE="Apto Macaxeira Ter 3 Qtos 1 STE Conjunto Apipucos",PATH="Apto_Macaxeira_Ter_3_Qtos_1_STE_Conjunto_Apipucos",CCODE="",STATUS=1,NF=5,NV=0,PLAYERS=[],PF=0,PV=0,GMODE=0,PHONES=new Array(),IPHONES=[],DTS=Date.UTC(2017,0,09),DTH=[{name:"Venda",color:"#d01133",data:[[Date.UTC(2017,0,09),220000]]},{name:"Condomínio",color:"#00c5ef",data:[[Date.UTC(2017,0,09),180]]}],MAP=null,MAPG=null,MAPC={lat:0,lng:0},MAPM={lat:0,lng:0},MAPZ=16;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM
+Banh: 1
+
+
+
+http://imovelavenda.com.br/Apartamento_3_Quartos_Boa_Viagem_Recife_PE__QY194
+m²: 82
+Imovel: Apart
+Valor: 6.707
+Suíte: 1
+Vagas: 2
+Dorm: 3
+Banh: 2
+
+
+
+http://imovelavenda.com.br/Apto_3_Dorm_Ipanema_Porto_Alegre_139795_RS__RR993
+Imovel: Apart
+Valor: 520.408
+Suíte: 1
+Vagas: 2
+Dorm: 3
+Banh: 2
+
+
+
+http://imovelavenda.com.br/Fiateci_Apto_2_Dorm_Sao_Geraldo_Porto_Alegre_10066_RS__YWQ10
+Imovel: Apart
+Dorm: 2
+Vaga: 1
+Banh: 1
+Valor: 330.0
+
+
+
+http://imovelavenda.com.br/Torre_Molinos_Cobertura_3_Dorm_Rio_Branco_Porto_Alegre_11122_RS__RC381
+Imovel: Apart
+Valor: 5.274
+Suíte: 1
+Vagas: 2
+Dorm: 3
+Banh: 3
+
+
+
+http://imovelavenda.com.br/Apto_4_Dorm_Rio_Branco_Porto_Alegre_159467_RS__OUR86
+m²: 217
+Imovel: Apart
+Valor: 10.959
+Suítes: 3
+Vagas: 4
+Dorm: 4
+Banh: 5
+
+
+
+http://imovelavenda.com.br/Apto_3_Dorm_Tatuape_Sao_Paulo_3684_SP__DUO21
+m²: 170
+Imovel: Apart
+Valor: 900.0
+Suíte: 1
+Vagas: 3
+Dorm: 3
+Banh: 3
+
+
+
+http://imovelavenda.com.br/Apto_3_Dorm_Tatuape_Sao_Paulo_11236_SP__RQ183
+m²: 93
+Imovel: Apart
+Valor: 817.0
+Suíte: 1
+Vagas: 2
+Dorm: 3
+Banh: 3
+
+
+
+http://imovelavenda.com.br/Apto_3_Dorm_Tatuape_Sao_Paulo_10245_SP__DW476
+Imovel: Apart
+Valor: 900.0
+Suíte: 1
+Vagas: 3
+Dorm: 3
+Banh: 3
+
+
+
+http://imovelavenda.com.br/Apto_4_Dorm_Tatuape_Sao_Paulo_3669_SP__RW870
+m²: 113
+Imovel: Apart
+Valor: 905.0
+Suíte: 1
+Vagas: 3
+Dorm: 4
+Banh: 6
+
+
+
+http://www.imovelweb.com.br/propriedades/casa-residencial-piracicamirim-2932019491.html
+Imovel: Casa
+Valor: 450.0
+
+
+
+http://www.imovelweb.com.br/propriedades/apartamento-duplex-no-centro-de-piracicaba-2932019561.html
+Banheiros: 3
+Quartos: 2
+Imovel: Apart
+Valor: 520.0
+Suite: 1
+Endereco: Rua Capitão Pedroso
+Vagas: 2
+
+
+
+http://www.imovelweb.com.br/propriedades/villagio-nova-carrao-evenday24desetembro-2924220069.html
+Dados pessoais: 1
+Data estimada: 4
+Imovel: Apart
+m²: 51
+Descrição dos itens da mudança: 5
+CEP de origem: 2
+Endereco: Rua Refinaria de Mataripe, 365, Vila Carrão, São Paulo
+Tipo de imóvel de	origem: 3
+
+
+
+http://www.imovelweb.com.br/propriedades/mariz-vila-mariana-evenday24desetembro-2924220061.html
+Dados pessoais: 1
+Data estimada: 4
+Imovel: Apart
+m²: 100
+Descrição dos itens da mudança: 5
+CEP de origem: 2
+Endereco: Rua Mariz e Barros, 506, Vila Mariana, São Paulo
+Tipo de imóvel de	origem: 3
+
+
+
+http://www.imovelweb.com.br/propriedades/tribeca-nova-leopoldina-evenday24desetembro-2930628796.html
+Dados pessoais: 1
+Data estimada: 4
+Imovel: Apart
+m²: 76
+Descrição dos itens da mudança: 5
+CEP de origem: 2
+Tipo de imóvel de	origem: 3
+
+
+
+http://www.imovelweb.com.br/propriedades/ibirapuera-449m-3-suites-4-vagas-2929529916.html
+Banheiros: 6
+Suites: 3
+Quartos: 4
+Idade do imóvel:  5 anos
+Imovel: Apart
+Vagas: 4
+Valor: 7.5
+Endereco: Av. Juriti, 73 - Moema
+
+
+
+http://www.imovelweb.com.br/propriedades/dominio-marajoara-com-vista-para-o-parque-aquatico.-2924082611.html
+Banheiros: 5
+Suites: 2
+Quartos: 4
+Idade do imóvel:  4 anos
+Imovel: Apart
+Vagas: 2
+Valor: 960.0
+Endereco: RUA LUIS DOS SANTOS CABRAL,55
+
+
+
+http://www.imovelweb.com.br/propriedades/apartamento-a-venda-em-butanta-2926586565.html
+Banheiros: 5
+Suites: 2
+Quartos: 3
+Imovel: Apart
+Vagas: 2
+Valor: 783.0
+Endereco: Avenidas Escola Politécnica, Pablo Casals, Manoel da Nóbrega e Doutor Martin Luther King.  51.000 m² de terreno, com 88% de área livre, sendo 7.000 m² de clube e 8.000 m² de área preservada. Excelente Condomínio conceito clube com lazer completo: Ateliê, Brinquedoteca, Campo de Futebol, Churrasqueira, Deck, Espaço Zen, Horta; Lan House, Playground, Praça, Quadra Poliesportiva, Redário, Salão de beleza, Trilha / pista de caminhada, Cinema, Hall, Salão de festas Adulto e Infantil, Piscina Adulto coberta com raia, Bar, Piscina Adulto e Infantil descoberta, Bicicletário e vagas para visitantes.
+
+
+
+http://www.imovelweb.com.br/propriedades/apartamento-a-venda-copacabana-rio-de-janeiro-2930623359.html
+Imovel: Apart
+Endereco: Rua Barata Ribeiro, Copacabana, Rio de Janeiro
+Valor: 900.0
+
+
+
+http://www.imovelweb.com.br/propriedades/apartamento-gavea-2932087545.html
+Banheiros: 2
+Quartos: 3
+Imovel: Apart
+Valor: 3.66
+Suite: 1
+Endereco: Rua Professor Manuel Ferreira, Gávea, Rio de Janeiro
+Vagas: 2
+
+
+
+http://www.lugarcerto.com.br/imovel/apartamento-3-quartos-jardins-sao-paulo-com-garagem-158m2-compra-e-venda-rs2200000-id-233689725
+BANHEIROS: 1
+Imovel: Apart
+SUÍTE: 3
+VAGA: 1
+Valor: 3.638
+Endereco: AvazgEzgWjxKU=/fit
+
+
+
+http://www.lugarcerto.com.br/imovel/apartamento-3-quartos-jardins-sao-paulo-com-garagem-184m2-compra-e-venda-rs1600000-id-228984720
+BANHEIROS: 2
+Imovel: Apart
+Valor: 1.88
+SUÍTES: 3
+VAGAS: 2
+Endereco: AvPJ4o=/181x110/imgs.carteira.lugarcerto.com.br/anuncio/lugarcerto/0/c/d/0cd6a93ed86eef11fd96d55bb868ad72/228984720_169621280_g.jpg","media":"https://i.lugarcerto.com.br/WRyoUhl4iT
+
+
+
+http://diariodepernambuco.lugarcerto.com.br/imovel/apartamento-3-quartos-casa-amarela-recife-87m2-venda-rs510000-id-153249719
+BANHEIROS: 2
+Imovel: Apart
+Valor: 510.0
+SUÍTE: 3
+VAGAS: 1
+Endereco: Rua Agrestina","descricao_dados":"3 quartos, 2 vagas, 1 suite e 87m2","sc_logradouro":"","tn_caracteristicas_condominio":"Churrasqueira#Piscina#Playground#Sal\u00e3o de festa","tx_searchestadocidade":"recife pe","ia_destaque":1,"caracteristicas":["Varanda","Sal\u00e3o de festa","Piscina","Arm\u00e1rio embutido","Porteiro 24 horas","Garagem coberta","Playground","Vista definitiva","Churrasqueira"],"dt_insercao":"2016
+
+
+
+http://estadodeminas.lugarcerto.com.br/imovel/apartamento-4-quartos-lourdes-belo-horizonte-com-garagem-220m2-aluguel-rs4000-id-155949766
+Imovel: Apart
+Endereco: Av. \u00c1lvares Cabral, 1155, Lourdes, Belo Horizonte
+VAGAS: 4
+BANHEIROS: 2
+Valor: 4.0
+
+
+
+http://estadodeminas.lugarcerto.com.br/imovel/apartamento-4-quartos-lourdes-belo-horizonte-com-garagem-252m2-compra-e-venda-rs2900000-id-340430084
+ÁREA: 110
+Imovel: Apart
+BANHEIRO(S): 1
+QUARTO(S): 4
+VAGA(S): 1
+Valor: 1.4
+Endereco: AVENIDA AMINTAS JACQUES E FABRICA DA MATE COURO.*CONDOM\u00cdNIO E IPTU S\u00c3O REFERENCIAIS E PODEM SOFRER ALTERAC\u00d5ES.\r\nWHATSAPP: (31) 983 867 630", "descricaoanuncio": "Casa, 2 Quartos", "endereco": "R. Vila Velha", "idanuncio": "155419783", "local": "Belo Horizonte
+
+
+
+http://estadodeminas.lugarcerto.com.br/imovel/apartamento-2-quartos-anchieta-belo-horizonte-com-garagem-52m2-compra-e-venda-rs550000-id-10578150844
+BANHEIROS: 2
+Imovel: Apart
+Valor: 550.0
+SUÍTES: 2
+VAGAS: 2
+Endereco: Rua do Ouro, 918
+
+
+
+http://estadodeminas.lugarcerto.com.br/imovel/andar-centro-belo-horizonte-com-garagem-392m2-compra-e-venda-rs2500000-id-340004839
+ÁREA: 110
+Imovel: Apart
+BANHEIRO(S): 1
+QUARTO(S): 4
+VAGA(S): 1
+Valor: 1.4
+Endereco: AVENIDA AMINTAS JACQUES E FABRICA DA MATE COURO.*CONDOM\u00cdNIO E IPTU S\u00c3O REFERENCIAIS E PODEM SOFRER ALTERAC\u00d5ES.\r\nWHATSAPP: (31) 983 867 630", "descricaoanuncio": "Casa, 2 Quartos", "endereco": "R. Vila Velha", "idanuncio": "155419783", "local": "Belo Horizonte
+
+
+
+http://www.lugarcerto.com.br/imovel/apartamento-2-quartos-santo-cristo-rio-de-janeiro-com-garagem-compra-e-venda-rs340000-id-308414719
+ÁREA: 110
+Imovel: Apart
+BANHEIRO(S): 1
+QUARTO(S): 4
+VAGA(S): 1
+Valor: 1.4
+Endereco: AVENIDA AMINTAS JACQUES E FABRICA DA MATE COURO.*CONDOM\u00cdNIO E IPTU S\u00c3O REFERENCIAIS E PODEM SOFRER ALTERAC\u00d5ES.\r\nWHATSAPP: (31) 983 867 630", "descricaoanuncio": "Casa, 2 Quartos", "endereco": "R. Vila Velha", "idanuncio": "155419783", "local": "Belo Horizonte
+
+
+
+http://www.lugarcerto.com.br/imovel/apartamento-2-quartos-curicica-rio-de-janeiro-59m2-compra-e-venda-rs420000-id-340596979
+Imovel: Apart
+Endereco: Rua Urucuia,","descricao_dados":"2 quartos, 2 suites e 59m2","sc_logradouro":"","tn_caracteristicas_condominio":"Interfone#Playground","tx_searchestadocidade":"rio de janeiro rj","ia_destaque":1,"caracteristicas":["Varanda","Churrasqueira","Playground","Piscina","Churrasqueira","Interfone","Copa","Playground","Interfone"],"gratis":false,"cidade_cap":"Rio de Janeiro","us_subcategoria":"residenciais","thumb_g":"/lugarcerto/3/6/a/36aa3a817d753dbfaca4721cc0bdb497/340596979_168262051_g.jpg","urldestino":"http://www.lugarcerto.com.br/imovel/apartamento
+Código do imóvel:  FAI-1574
+fotos: 15
+Valor: 420.0
+
+
+
+http://www.lugarcerto.com.br/imovel/apartamento-3-quartos-barra-da-tijuca-rio-de-janeiro-91m2-compra-e-venda-rs770000-id-340596735
+Imovel: Apart
+Valor: 770.0
+quartos,: 2
+vaga,: 1
+suite: 1
+Endereco: Avenida Vice
+
+
+
+http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP1169-DZQ
+Imovel: Apart
+Valor: 835.0
+suíte: 1
+Banheiro(s): 1
+Dormitórios,: 3
+Sala(s): 2
+Vagas: 2
+
+
+
+http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP1231-DZQ
+Imovel: Apart
+Banheiro(s): 2
+Vaga: 1
+Dormitórios: 2
+Sala(s): 1
+Valor: 420.0
+
+
+
+http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP1132-DZQ
+Banheiro(s): 1
+Imovel: Apart
+suíte: 1
+Vaga: 1
+Dormitórios,: 4
+Andar(es): 5
+Sala(s): 2
+Valor: 350.0
+Endereco: Rua calçada, 5 andares, 5 unidades por andar, perto de shopping, praia, portaria 24 hs.
+
+
+
+http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP0181-C8F
+Imovel: Apart
+Valor: 480.0
+suítes: 3
+Banheiro(s): 4
+Dormitórios,: 3
+Andar(es): 10
+Sala(s): 2
+Vagas: 2
+
+
+
+http://www.redeimoveispe.com.br/empreendimento-detalhes.aspx?id_empreendimento=7759469
+Imovel: Apart
+119,0000: 2
+2: 2
+5: 4
+4: 4
+Valor: 900.0
+Endereco: Rua Le Park 100, Imbiribeira, Recife-PE
+
+
+
+http://www.redeimoveispe.com.br/empreendimento-detalhes.aspx?id_empreendimento=7766946
+Imovel: Apart
+Valor: 3.328
+3: 5
+5: 6
+6: 5
+Endereco: Rua Muniz Tavares 137, Jaqueira, Recife-PE
+312,0000: 3
+
+
+
+http://www.redeimoveispe.com.br/empreendimento-detalhes.aspx?id_empreendimento=7751473
+52,9500: 1
+57,5000: 1
+Imovel: Apart
+1: 2
+2: 2
+Valor: 240.0
+Endereco: Rua asfaltada
+52,0000: 1
+
+
+
+http://www.redeimoveispe.com.br/empreendimento-detalhes.aspx?id_empreendimento=7619227
+Imovel: apart
+Endereco: ruas pavimentadas, infraestrutura de água e esgoto e guarita de segurança . Área de lazer completa, com piscina adulto e infantil, salão de festas, quadra, playground e espaço fitness.
+1: 1
+42,2200: 1
+Valor: 120.0
+
+
+
+http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=CO0005-DZQ
+Imovel: APART
+Valor: 7.212
+suítes: 6
+Banheiro(s): 2
+Dormitórios,: 6
+Andar(es): 28
+Vagas: 5
+Endereco: rua calçada, sala de ginástica, salão de festas, sauna, sistema de segurança, tv a cabo.
+
+
+
+http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=CA0117-D3O
+Imovel: Casa
+Valor: 4.5
+suítes: 5
+Banheiro(s): 1
+Dormitórios,: 5
+Sala(s): 6
+Vagas: 13
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_1991_desc_CURITIBA-PR%20Jardim%20das%20Am%C3%A9ricas
+Suites: 1
+Quartos: 4
+Imovel: Casa
+(m²): 490
+Valor: 855.0
+Vagas: 5
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_1961_desc_CURITIBA-PR%20Apartamento
+Suites: 1
+Quartos: 3
+Imovel: Apart
+(m²): 98
+Valor: 320.0
+Vagas: 1
+Endereco: Rua Martin Afonso  Apartamento CURITIBA PR
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_2100_desc_JOAO%20PESSOA-PB%20Mana%C3%ADra
+Imovel: Apart
+Endereco: Rua Coronel Severino Lucena  Manaíra JOAO PESSOA PB
+Vagas: 1
+Quartos: 1
+Valor: 225.5
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_2003_desc_JOAO%20PESSOA-PB%20torre
+Suites: 1
+Quartos: 3
+Imovel: Apart
+(m²): 79
+Valor: 210.0
+Vagas: 1
+Endereco: Rua Gregório de Oliveira  torre JOAO PESSOA PB
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_1748_desc_maceio-al-ponta-verde
+Suites: 1
+Quartos: 1
+Imovel: Apart
+(m²): 56
+Valor: 1.4
+Vagas: 1
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_1831_desc_belo-horizonte-mg-castelo
+Quartos: 2
+Imovel: Apart
+(m²): 65
+Valor: 1.0
+Vagas: 1
+Endereco: RUA ELSON NUNES DE SOUZA  Castelo BELO HORIZONTE MG
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_2113_desc_sombrio-sc-centro
+Suites: 1
+Quartos: 2
+Imovel: Apart
+(m²): 75
+Valor: 367.0
+Vagas: 1
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_2061_desc_RIO%20DE%20JANEIRO-RJ%20Gl%C3%B3ria
+Visualizações: 34
+Imovel: Apart
+Ótimo apartamento, amplo, vazio, todo reformado, piso novo, polido. Salão, 2 dormitórios,  sacada, 1 banheiro social, cozinha, dependências completas, (o dormitório de empregada pode ser revertido em 3º dormitório), elevador, sem vaga de garagem. Porteiro 24 horas. Proximidade  a  vasto comércio, colégios,  estação do Metro e transporte para vários pontos do bairro e Cidade.
+Forma de Aquisição:   À vista, Carta de Crédito da Caixa Econômica Federal e outros Órgãos de Financiamento Imobiliário
+Matrícula do imóvel:  83431
+Valor: 599.0
+Endereco: Rua Santo Amaro  Glória RIO DE JANEIRO RJ
+Visitas: 9
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_2042_desc_RIO%20DE%20JANEIRO-RJ%20Barra%20da%20Tijuca
+Suites: 4
+Quartos: 4
+Imovel: Apart
+(m²): 233
+Valor: 10.0
+Vagas: 3
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_2011_desc_RIO%20DE%20JANEIRO-RJ%20Del%20Castilho
+Suites: 1
+Quartos: 2
+Imovel: Apart
+(m²): 51
+Valor: 325.0
+Vagas: 1
+
+
+
+https://www.vivareal.com.br/imoveis-lancamento/yup-8389/
+Banheiros: 2
+00: 0
+Imovel: Apart
+Valor: 199.0
+Código: 1
+--: 00
+UNIDADES E PLANTAS: 9062
+Endereco: Avenida Engenheiro Thomaz Magalhães
+
+
+
+https://www.vivareal.com.br/imovel/casa-de-condominio-3-quartos-jardim-analia-franco-zona-leste-sao-paulo-com-garagem-110m2-venda-RS615000-id-84562353/
+banheiros: 3
+quartos: 3
+Imovel: Casa
+Valor: 650.0001
+vagas: 2
+Endereco: Avenida Diogo Gomes Carneiro, 500
+
+
+
+https://www.vivareal.com.br/imovel/casa-4-quartos-barra-da-tijuca-zona-oeste-rio-de-janeiro-com-garagem-480m2-venda-RS3800000-id-84416313/
+banheiros: 5
+quartos: 4
+Imovel: Casa
+Valor: 3.8
+vagas: 4
+Endereco: Avenida Rachel de Queiroz, 100
+
+
+
+https://www.vivareal.com.br/imovel/casa-2-quartos-marechal-hermes-zona-norte-rio-de-janeiro-60m2-venda-RS115000-id-83867231/
+Banheiros: 1
+Quartos: 2
+Área: 60
+Imovel: Casa
+Vagas: 0
+Valor: 115.0001
+Endereco: Rua Vidal Ramos, 293
+
+
+
+https://www.vivareal.com.br/imovel/casa-2-quartos-jardim-vitoria-bairros-belo-horizonte-com-garagem-100m2-aluguel-RS890-id-84634467/
+banheiros: 2
+quartos: 2
+Imovel: Casa
+Valor: 890.0
+vagas: 3
+Endereco: Avenida Waldomiro Lobo, 20
+
+
+
+https://www.vivareal.com.br/imovel/casa-4-quartos-floresta-bairros-belo-horizonte-com-garagem-200m2-aluguel-RS3200-id-86273977/
+banheiros: 3
+quartos: 4
+Imovel: Casa
+Valor: 3.2
+vagas: 2
+Endereco: Rua Itaúna, 171, Floresta em Belo Horizonte, por R$ 3.200
+
+
+
+https://www.vivareal.com.br/imoveis-lancamento/parque-das-hortensias-8796/
+Imovel: Apart
+Endereco: Rua Bela Cintra, 539 - Consolação - São Paulo - SP"
+Maio: 2020
+Quartos.: 3
+
+
+
+https://www.vivareal.com.br/imovel/apartamento-3-quartos-asa-norte-bairros-brasilia-com-garagem-105m2-venda-RS980000-id-86144451/
+banheiros: 3
+quartos: 3
+Imovel: Apart
+vaga: 1
+Valor: 980.0001
+Endereco: Rua São Sebastião
+
+
+
+https://www.vivareal.com.br/imovel/apartamento-3-quartos-madalena-bairros-recife-com-garagem-86m2-venda-RS650000-id-85864609/
+banheiros: 3
+quartos: 3
+Imovel: Apart
+Valor: 650.0001
+vagas: 2
+Endereco: Rua Demócrito de Souza Filho, 171, Madalena em Recife, por R$ 650.000
+
+
+
+https://www.vivareal.com.br/imoveis-lancamento/morada-dos-ipes-9208/
+Imovel: Apart
+Endereco: Aveloz Morada dos Ipês - Apartamento - Prado, Recife - VivaReal
+Valor: 327.42
+
+
+

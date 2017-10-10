@@ -4,6 +4,9 @@ import requests
 import os
 import bs4
 from bs4 import BeautifulSoup
+from results import ExtractorDB
+import re
+
 
 
 
@@ -35,35 +38,71 @@ class Redeimoveispe_crawler:
         start_page = requests.get(link, headers = agent)
         soup = BeautifulSoup(start_page.content, "html.parser")
 
-        valor = soup.find("div", {"class": "valorImovel"})
-        self.data["Tipo"] = valor(text=True)[0].strip()
-        self.data["Valor"] = valor(text=True)[1].strip()
+        html2 = soup.find("section", {"id": "fichaEmpreendimento01"})
+        if html2:
+            self.get_data2(soup)
+            return
 
-        valores = soup.find("div", {"class": "valoresInfo"})
-        valores = valores.find_all("div")
-        for i in range(1, len(valores) -2 ):
-            try:
+        try:
+            valor = soup.find("div", {"class": "valorImovel"})
+            self.data["Tipo"] = valor(text=True)[0].strip()
+            self.data["Valor"] = valor(text=True)[1].strip()
+        except:
+            pass
+
+
+        try:            
+            valores = soup.find("div", {"class": "valoresInfo"})
+            valores = valores.find_all("div")
+            for i in range(1, len(valores) -2 ):
                 self.data[ valores[i](text=True)[-2].replace(':', '').strip() ] = valores[i](text=True)[-1].strip()
-            except:
-                pass
+        except:
+            pass
 
         
+        try:
+            infos = soup.find_all("div", {"class": "importante"})
+            for i in range(1, len(infos)):
+                self.data[ infos[i](text=True)[-1].strip() ] = infos[i](text=True)[-2].strip()
+            self.data[ infos[0](text=True)[-2].replace(':', '').strip() ] = infos[0](text=True)[-1].strip()
+        except:
+            pass
 
-        infos = soup.find_all("div", {"class": "importante"})
-        for i in range(1, len(infos)):
-            self.data[ infos[i](text=True)[-1].strip() ] = infos[i](text=True)[-2].strip()
-        self.data[ infos[0](text=True)[-2].replace(':', '').strip() ] = infos[0](text=True)[-1].strip()
-
-
-
-      
 
         for key in self.data:
-            print key + ": " + self.data[key]
+            print key.encode("utf-8") + ": " + self.data[key].encode("utf-8")
+
+    def get_data2(self, soup):
+
+        try:
+            infos = soup.find_all("div", {"class": "importantes"})
+            if re.search(r"\d+", infos[0].text).group():
+                self.data[infos[0](text=True)[1].strip()] = infos[0](text=True)[2].strip()
+            
+            infos = infos[1].find_all("span")
+            self.data["Area"] = infos[0].text.strip()
+            for i in range(1, len(infos)):
+                x = infos[i].text.split(' ')
+                self.data[x[-1].strip()] = x[-2].strip()
+        except:
+            pass
+
+        try:
+            address = soup.find("div", {"id": "mapaCond"})
+            self.data["Endereco"] = address.text.strip()
+        except:
+            pass
+
+        for key in self.data:
+            print key.encode("utf-8") + ": " + self.data[key].encode("utf-8")
 
 
+# ri = Redeimoveispe_crawler('http://www.redeimoveispe.com.br/empreendimento-detalhes.aspx?id_empreendimento=7759469')
+# ri.crawl()
 
-url = 'http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP0193-CZA'
-url2 = 'http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP1712-D3O'
-ri = Redeimoveispe_crawler(url)
-ri.crawl()
+db = ExtractorDB()
+for item in db.get_domain("redeimoveispe"):
+	print item
+	redeimoveispe = Redeimoveispe_crawler(item)
+	redeimoveispe.crawl()
+	print "\n\n"

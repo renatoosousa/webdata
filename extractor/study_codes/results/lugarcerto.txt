@@ -1,0 +1,114 @@
+http://www.lugarcerto.com.br/imovel/apartamento-3-quartos-jardins-sao-paulo-com-garagem-158m2-compra-e-venda-rs2200000-id-233689725
+BANHEIROS: 2
+Condomínio: R$ 3.638,00
+QUARTOS: 3
+ÁREA: 158m²
+BAIRRO: Jardins
+CIDADE: São Paulo
+SUÍTE: 1
+IPTU: R$ 648,00
+VAGA: 1
+Código do imóvel: AP0381
+VALOR: R$ 2.200.000,00
+ESTADO: SP
+
+
+
+http://www.lugarcerto.com.br/imovel/apartamento-3-quartos-jardins-sao-paulo-com-garagem-184m2-compra-e-venda-rs1600000-id-228984720
+BANHEIROS: 3
+Condomínio: R$ 1.880,00
+QUARTOS: 3
+ÁREA: 184m²
+BAIRRO: Jardins
+CIDADE: São Paulo
+VALOR: R$ 1.600.000,00
+SUÍTES: 2
+IPTU: R$ 460,00
+Código do imóvel: AP0371
+VAGAS: 2
+ESTADO: SP
+
+
+
+http://diariodepernambuco.lugarcerto.com.br/imovel/apartamento-3-quartos-casa-amarela-recife-87m2-venda-rs510000-id-153249719
+BANHEIROS: 3
+Condomínio: R$ 500,00
+QUARTOS: 3
+ÁREA: 87m²
+BAIRRO: Casa Amarela
+CIDADE: Recife
+VALOR: R$ 510.000,00
+SUÍTE: 1
+IPTU: R$ 1,00
+Código do imóvel: VDH1508
+VAGAS: 2
+ESTADO: PE
+
+
+
+http://estadodeminas.lugarcerto.com.br/imovel/apartamento-4-quartos-lourdes-belo-horizonte-com-garagem-220m2-aluguel-rs4000-id-155949766
+BANHEIROS: 2
+Condomínio: R$ 875,00
+QUARTOS: 4
+ÁREA: 220m²
+BAIRRO: Lourdes
+CIDADE: Belo Horizonte
+VALOR: R$ 4.000,00
+Código do imóvel: I00225
+VAGAS: 2
+ESTADO: MG
+
+
+
+http://estadodeminas.lugarcerto.com.br/imovel/apartamento-4-quartos-lourdes-belo-horizonte-com-garagem-252m2-compra-e-venda-rs2900000-id-340430084
+
+
+
+http://estadodeminas.lugarcerto.com.br/imovel/apartamento-2-quartos-anchieta-belo-horizonte-com-garagem-52m2-compra-e-venda-rs550000-id-10578150844
+BANHEIROS: 2
+QUARTOS: 2
+ÁREA: 52m²
+BAIRRO: Anchieta
+CIDADE: Belo Horizonte
+VALOR: R$ 550.000,00
+SUÍTES: 2
+Código do imóvel: GPI6451
+VAGAS: 2
+ESTADO: MG
+
+
+
+http://estadodeminas.lugarcerto.com.br/imovel/andar-centro-belo-horizonte-com-garagem-392m2-compra-e-venda-rs2500000-id-340004839
+
+
+
+http://www.lugarcerto.com.br/imovel/apartamento-2-quartos-santo-cristo-rio-de-janeiro-com-garagem-compra-e-venda-rs340000-id-308414719
+
+
+
+http://www.lugarcerto.com.br/imovel/apartamento-2-quartos-curicica-rio-de-janeiro-59m2-compra-e-venda-rs420000-id-340596979
+BANHEIROS: 2
+QUARTOS: 2
+ÁREA: 59m²
+BAIRRO: Curicica
+CIDADE: Rio de Janeiro
+SUÍTES: 2
+Código do imóvel: FAI-1574
+VALOR: R$ 420.000,00
+ESTADO: RJ
+
+
+
+http://www.lugarcerto.com.br/imovel/apartamento-3-quartos-barra-da-tijuca-rio-de-janeiro-91m2-compra-e-venda-rs770000-id-340596735
+BANHEIROS: 2
+Condomínio: R$ 1.296,00
+QUARTOS: 3
+ÁREA: 91m²
+CIDADE: Avenida Vice
+SUÍTE: 1
+Código do imóvel: FAI-1132
+VALOR: R$ 770.000,00
+ESTADO: presidente José Alencar, Barra da Tijuca, Rio de Janeiro
+
+
+
