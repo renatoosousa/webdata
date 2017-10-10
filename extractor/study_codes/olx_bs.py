@@ -59,7 +59,7 @@ class Olx_crawler:
             pass
             
         for key in self.data:
-			print key + " " + self.data[key]
+			print key.encode("utf-8") + " " + self.data[key].encode("utf-8")
 
 db = ExtractorDB()
 for item in db.get_domain("olx"):

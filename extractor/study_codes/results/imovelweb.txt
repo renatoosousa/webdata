@@ -1,0 +1,136 @@
+http://www.imovelweb.com.br/propriedades/casa-residencial-piracicamirim-2932019491.html
+Valor Venda: R$ 1.250.000
+Quartos: 3
+Tipo: Casa
+Área: 385m²
+Valor Condominio: R$ 450
+Modalidade: Venda
+
+
+
+http://www.imovelweb.com.br/propriedades/apartamento-duplex-no-centro-de-piracicaba-2932019561.html
+Banheiros: 3
+Quartos: 2
+Tipo: Apartamento
+Área: 145m²
+Valor Venda: R$ 520.000
+Modalidade: Venda
+Suite: 1
+
+
+
+http://www.imovelweb.com.br/propriedades/villagio-nova-carrao-evenday24desetembro-2924220069.html
+Tipo: Lançamento
+Bairro: Vila Carrão
+Valor  De: Consultar valor
+-: 2
+1: Até
+Unidades: -
+Entrega: Imediata
+Modalidade: 
+Cidade: São Paulo
+
+
+
+http://www.imovelweb.com.br/propriedades/mariz-vila-mariana-evenday24desetembro-2924220061.html
+Quartos: 3
+Tipo: Lançamento
+Área: 100m²
+Entrega: -
+Bairro: Vila Mariana
+Valor  De: Consultar valor
+Unidades: -
+2: Até
+Modalidade: 
+Cidade: São Paulo
+
+
+
+http://www.imovelweb.com.br/propriedades/tribeca-nova-leopoldina-evenday24desetembro-2930628796.html
+Tipo: Lançamento
+Bairro: Vila Leopoldina
+Valor  De: Consultar valor
+-: 2
+Unidades: -
+Entrega: Imediata
+Modalidade: 
+Cidade: São Paulo
+
+
+
+http://www.imovelweb.com.br/propriedades/ibirapuera-449m-3-suites-4-vagas-2929529916.html
+Banheiros: 6
+Suites: 3
+Valor Venda: R$ 7.500.000
+Quartos: 4
+Tipo: Apartamento
+Área: 335m²
+Bairro: Vila Uberabinha
+Cidade: São Paulo
+Valor Condominio: R$ 2.500
+IPTU: R$ 1.640
+Modalidade: Venda
+Vagas: 4
+
+
+
+http://www.imovelweb.com.br/propriedades/dominio-marajoara-com-vista-para-o-parque-aquatico.-2924082611.html
+Banheiros: 5
+Suites: 2
+Valor Venda: R$ 1.450.000
+Quartos: 4
+Tipo: Apartamento
+Área: 160m²
+Bairro: Jardim Marajoara
+Cidade: São Paulo
+Valor Condominio: R$ 960
+Modalidade: Venda
+Vagas: 2
+
+
+
+http://www.imovelweb.com.br/propriedades/apartamento-a-venda-em-butanta-2926586565.html
+Banheiros: 5
+Suites: 2
+Valor Venda: R$ 783.000
+Quartos: 3
+Tipo: Apartamento
+Área: 151m²
+Bairro: Butantã
+Cidade: São Paulo
+Valor Condominio: R$ 720
+IPTU: R$ 550
+Modalidade: Venda
+
+
+
+http://www.imovelweb.com.br/propriedades/apartamento-a-venda-copacabana-rio-de-janeiro-2930623359.html
+Valor Venda: R$ 900.000
+Quartos: 2
+Banheiro: 1
+Tipo: Apartamento
+Área: 62m²
+Bairro: Copacabana
+Cidade: Rio de Janeiro
+Valor Condominio: R$ 700
+IPTU: R$ 112
+Modalidade: Venda
+Suite: 1
+
+
+
+http://www.imovelweb.com.br/propriedades/apartamento-gavea-2932087545.html
+Banheiros: 2
+Valor Venda: R$ 1.750.000
+Quartos: 3
+Tipo: Apartamento
+Área: 117m²
+Bairro: Gávea
+Cidade: Rio de Janeiro
+Valor Condominio: R$ 1.200
+IPTU: R$ 3.660
+Modalidade: Venda
+Suite: 1
+
+
+

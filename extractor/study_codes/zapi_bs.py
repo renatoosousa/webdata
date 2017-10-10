@@ -20,6 +20,9 @@ class Zapi_crawler:
 
 	def crawl(self):
 		self.get_data(self.start_url)
+
+		for key in self.data:
+			print key.encode("utf-8") + ": " + self.data[key].encode("utf-8")
 		return
 
 	def get_rawHtml(self):
@@ -84,8 +87,7 @@ class Zapi_crawler:
 				if li.find("span", {"class": "text-info"}):
 					self.data[ li(text=True)[1].strip() ] = li(text=True)[0].strip()
 
-		for key in self.data:
-			print key + ": " + self.data[key]
+		
 
 	def extract_data_mb(self, soup):
 		prop_addr = soup.find_all("span", {"class": "info-imovel"})
@@ -109,9 +111,6 @@ class Zapi_crawler:
 			for i in range(0, len(item(text=True)) -1 ):
 				val = val + str(item(text=True)[i])
 			self.data[ item(text=True)[-1]] = val
-
-		for key in self.data:
-			print key + ": " + self.data[key]
 
 
 

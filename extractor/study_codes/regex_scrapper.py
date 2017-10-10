@@ -41,7 +41,7 @@ class Regex_scrapper:
                 self.data.pop(key,None)
         print self.start_url
         for key in self.data:
-                print key + ": " + self.data[key]
+                print key.encode("utf-8") + ": " + self.data[key].encode("utf-8")
 
         return
 

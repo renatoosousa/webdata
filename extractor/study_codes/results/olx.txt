@@ -1,0 +1,111 @@
+http://sp.olx.com.br/sao-paulo-e-regiao/imoveis/apto-reforma-impecavel-396014219
+IPTU: R$ 0
+CEP do imóvel: 06421-030
+Área útil: 50 m²
+Condomínio: R$ 25
+Bairro: Jardim Maria Cristina
+Município: Barueri
+Estado: SP
+Valor de Venda R$ 120.000
+Tipo: Venda - apartamento padrão
+Quartos: 2
+
+
+
+http://es.olx.com.br/norte-do-espirito-santo/imoveis/maravilhosa-cobertura-4-qts-na-praia-da-costa-396014106
+Estado: ES
+
+
+
+http://pe.olx.com.br/grande-recife/imoveis/excelente-preco-no-terminal-de-piedade-lindo-396013840
+CEP do imóvel: 54430-250
+Bairro: Candeias
+Condomínio: R$ 50
+Vagas na garagem: 1
+Município: Jaboatão dos Guararapes
+Estado: PE
+Valor de Venda R$ 135.000
+Tipo: Venda - apartamento padrão
+Quartos: 3
+
+
+
+http://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/imoveis/casa-387735719
+CEP do imóvel: 92035-020
+Área construída: 84 m²
+Bairro: Olaria
+Condomínio: R$ 0
+Vagas na garagem: 1
+Município: Canoas
+Estado: RS
+Valor de Venda R$ 250.000
+Tipo: Venda - casa em rua pública
+Quartos: 2
+
+
+
+http://sp.olx.com.br/sao-paulo-e-regiao/imoveis/aluga-se-casa-5-comodos-saida-independente-por-r-700-00-396013390
+CEP do imóvel: 06655-280
+Área construída: 90 m²
+Bairro: Jardim Briquet
+Município: Itapevi
+Estado: SP
+Valor de Venda R$ 800
+Tipo: Aluguel - casa em vila
+Quartos: 3
+
+
+
+http://rn.olx.com.br/rio-grande-do-norte/imoveis/apartamento-3-4-com-suite-200-m-tirol-396013375
+CEP do imóvel: 59000-000
+Área útil: 200 m²
+Vagas na garagem: 2
+Município: Natal
+Estado: RN
+Valor de Venda R$ 2.900
+Tipo: Aluguel - apartamento padrão
+Quartos: 3
+
+
+
+http://pe.olx.com.br/grande-recife/imoveis/excelente-casa-na-lagoa-encantada-396013116
+CEP do imóvel: 51280-400
+Área construída: 80 m²
+Bairro: Cohab
+Município: Recife
+Estado: PE
+Valor de Venda R$ 480
+Tipo: Aluguel - casa em rua pública
+Quartos: 2
+
+
+
+http://rj.olx.com.br/rio-de-janeiro-e-regiao/imoveis/otimo-apartamento-em-itaipuacu-marica-520-00-396013014
+CEP do imóvel: 24933-180
+Bairro: Itaipuaçu
+Município: Manoel Ribeiro, Maricá
+Estado: RJ
+Valor de Venda R$ 520
+Tipo: Aluguel - apartamento padrão
+Quartos: 1
+
+
+
+http://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/imoveis/apartamento-396014221
+CEP do imóvel: 90250-180
+Área útil: 53 m²
+Condomínio: R$ 350
+Bairro: Humaitá
+Município: Porto Alegre
+Estado: RS
+Valor de Venda R$ 215.000
+Tipo: Venda - apartamento padrão
+Quartos: 2
+
+
+
+http://es.olx.com.br/norte-do-espirito-santo/imoveis/a-melhor-oportunidade-de-3-quartos-na-7-etapa-de-itaparica-396013790
+Estado: ES
+
+
+

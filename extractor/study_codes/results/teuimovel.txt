@@ -1,0 +1,106 @@
+http://www.teuimovel.com/index_detalheimovel_id_1991_desc_CURITIBA-PR%20Jardim%20das%20Am%C3%A9ricas
+Suites: 1
+Quartos: 4
+Tipo: Venda
+(m²): 490
+Valor: R$ 855.000,00
+Vagas: 5
+Estado: PR
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_1961_desc_CURITIBA-PR%20Apartamento
+Suites: 1
+Quartos: 3
+Tipo: Venda
+(m²): 98
+Valor: R$ 320.000,00
+Vagas: 1
+Estado: PR
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_2100_desc_JOAO%20PESSOA-PB%20Mana%C3%ADra
+Quartos: 1
+Tipo: Venda
+(m²): 41.15
+Valor: R$ 225.500,00
+Vagas: 1
+Estado: PB
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_2003_desc_JOAO%20PESSOA-PB%20torre
+Suites: 1
+Quartos: 3
+Tipo: Venda
+(m²): 79
+Valor: R$ 210.000,00
+Vagas: 1
+Estado: PB
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_1748_desc_maceio-al-ponta-verde
+Suites: 1
+Quartos: 1
+Tipo: Aluguel
+(m²): 56
+Valor: R$ 1.400,00
+Vagas: 1
+Estado: AL
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_1831_desc_belo-horizonte-mg-castelo
+Quartos: 2
+Tipo: Aluguel
+(m²): 65
+Valor: R$ 1.000,00
+Vagas: 1
+Estado: MG
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_2113_desc_sombrio-sc-centro
+Suites: 1
+Quartos: 2
+Tipo: Venda
+(m²): 75
+Valor: R$ 367.000,00
+Vagas: 1
+Estado: SC
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_2061_desc_RIO%20DE%20JANEIRO-RJ%20Gl%C3%B3ria
+Quartos: 2
+(m²): 90
+Estado: RJ
+Tipo: Venda
+Valor: R$ 599.000,00
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_2042_desc_RIO%20DE%20JANEIRO-RJ%20Barra%20da%20Tijuca
+Suites: 4
+Quartos: 4
+Tipo: Aluguel
+(m²): 233
+Valor: R$ 10.000,00
+Vagas: 3
+Estado: RJ
+
+
+
+http://www.teuimovel.com/index_detalheimovel_id_2011_desc_RIO%20DE%20JANEIRO-RJ%20Del%20Castilho
+Suites: 1
+Quartos: 2
+Tipo: Venda
+(m²): 51
+Valor: R$ 325.000,00
+Vagas: 1
+Estado: RJ
+
+
+

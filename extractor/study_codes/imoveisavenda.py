@@ -68,9 +68,12 @@ class Imoveisavenda_crawler:
 
             
         for key in self.data:
-            print (key, end='')
-            print (": ", end='')
-            print (self.data[key])
+            try:
+                print (key, end='').encode("utf-8")
+                print (": ", end='')
+                print (self.data[key]).encode("utf-8")
+            except:
+                pass
 
 db = ExtractorDB()
 for item in db.get_domain("imovelavenda"):

@@ -1,0 +1,144 @@
+http://www.directimoveis.com.br/imovel-v0932/edf-parador-de-cervantes
+Banheiros: 2
+Área útil: 60,00 m²
+Area Total: Área total não consta
+Tipo: Apartamento Padrão
+Bairro: Boa Viagem
+Cidade: Recife
+Vagas de garagem: 2
+IPTU: R$ 148,00
+Dormitórios: 2 (sendo 1 suítes)
+Condominio: 400
+Valor: R$ 530.000,00
+Estado: PE
+
+
+
+http://www.directimoveis.com.br/imovel-AL0101
+Tipo: O melhor para o seu negócio
+
+
+
+http://www.directimoveis.com.br/imovel-AL0141
+Banheiros: 1
+Área útil: 211,00 m²
+Area Total: Área total 440,00
+Tipo: Comercial Casa
+Bairro: Aflitos
+Cidade: Recife
+Vagas de garagem: 5
+IPTU: R$ 540,00
+Condominio: 244
+Valor: R$ 4.500,00
+Estado: PE
+
+
+
+http://www.directimoveis.com.br/imovel-V0390/edificio-maison-languth
+Banheiros: 1
+Área útil: 125,00 m²
+Area Total: Área total não consta
+Tipo: Apartamento Padrão
+Bairro: Aflitos
+Cidade: Recife
+Vagas de garagem: 2
+Dormitórios: 3 (sendo 1 suítes)
+Condominio: 700
+Valor: R$ 320.000,00
+Estado: PE
+
+
+
+http://www.directimoveis.com.br/imovel-V0496/verano
+Banheiros: 1
+Área útil: 97,00 m²
+Area Total: Área total não consta
+Tipo: Apartamento Padrão
+Bairro: 2, R
+Cidade: Praia do Pai
+Vagas de garagem: 2
+Dormitórios: 3 (sendo 3 suítes)
+Valor: R$ 800.000,00
+Estado: a
+
+
+
+http://www.directimoveis.com.br/imovel-v0553/edf-daniela
+Banheiros: 1
+Área útil: 106,00 m²
+Area Total: Área total 132,00
+Tipo: Apartamento Padrão
+Bairro: Boa Viagem
+Cidade: Recife
+Vagas de garagem: 1
+Dormitórios: 3 (sendo 2 suítes)
+Condominio: 300
+Valor: R$ 330.000,00
+Estado: PE
+
+
+
+http://www.directimoveis.com.br/imovel-v0577/edf-vitoria
+Banheiros: 1
+Área útil: 132,00 m²
+Area Total: Área total não consta
+Tipo: Apartamento Padrão
+Bairro: Boa Viagem
+Cidade: Recife
+Vagas de garagem: 2
+IPTU: R$ 230,00
+Dormitórios: 3 (sendo 2 suítes)
+Condominio: 1000
+Valor: R$ 900.000,00
+Estado: PE
+
+
+
+http://www.directimoveis.com.br/imovel-AL0022/edificio-lila
+Banheiros: 1
+Área útil: 53,00 m²
+Area Total: Área total não consta
+Tipo: Apartamento Padrão
+Bairro: Casa Forte
+Cidade: Recife
+Vagas de garagem: 1
+IPTU: R$ 95,00
+Dormitórios: 1
+Condominio: 650
+Valor: R$ 1.500,00
+Estado: PE
+
+
+
+http://www.directimoveis.com.br/imovel-AL0323/edf-jacaranda
+Banheiros: 3
+Área útil: 210,00 m²
+Area Total: Área total não consta
+Tipo: Apartamento Padrão
+Bairro: Boa Viagem
+Cidade: Recife
+Vagas de garagem: 2
+IPTU: R$ 240,00
+Dormitórios: 4 (sendo 2 suítes)
+Condominio: 900
+Valor: R$ 8.000,00
+Estado: PE
+
+
+
+http://www.directimoveis.com.br/imovel-v0757/edf-john-lennon
+Banheiros: 2
+Área útil: 153,00 m²
+Area Total: Área total não consta
+Tipo: Apartamento Padrão
+Bairro: Boa Viagem
+Cidade: Recife
+Vagas de garagem: 2
+IPTU: R$ 235,00
+Dormitórios: 3 (sendo 1 suítes)
+Condominio: 800
+Valor: R$ 650.000,00
+Estado: PE
+
+
+

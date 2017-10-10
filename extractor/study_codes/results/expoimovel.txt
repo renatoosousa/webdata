@@ -1,0 +1,120 @@
+https://www.expoimovel.com/emp/apartamentos-lancamento-barra-de-jangada-jaboatao-dos-guararapes-pernambuco/1910/pt/BR
+Quartos: 2
+Tipo: O Empreendimento
+Área: 54,75 m²
+Vagas: 1
+suítes: 1
+Valor: a partir de  R$ 284.750
+
+
+
+https://www.expoimovel.com/imovel/casas-comprar-vender-piedade-jaboatao-dos-guararapes-pernambuco/382781/pt/BR
+Quartos: 3
+Tipo: Casa
+Área: 180m²
+Bairro: Piedade
+Cidade: Jaboatão dos Guararapes
+Vagas: 3
+suítes: 1
+Condominio: 
+Valor: R$ 710.000
+Estado: PE
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-lancamento-altiplano-cabo-branco-joao-pessoa-paraiba/399608/pt/BR
+Quartos: 3
+Tipo: Apartamento
+Área: 265m²
+Bairro: AP2001
+Cidade: João Pessoa
+Vagas: 5
+suítes: 3
+Condominio: 
+Valor: R$ 1.671.413
+Estado: PB
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-lancamento-altiplano-cabo-branco-joao-pessoa-paraiba/399606/pt/BR
+Quartos: 3
+Tipo: Apartamento
+Área: 126m²
+Vagas: 2
+suítes: 1
+Condominio: 
+Valor: R$ 909.872
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-lancamento-altiplano-cabo-branco-joao-pessoa-paraiba/397564/pt/BR
+Quartos: 4
+Tipo: Apartamento
+Área: 510m²
+Bairro: Altiplano Cabo Branco
+Cidade: João Pessoa
+Vagas: 5
+suítes: 4
+Condominio: 
+Valor: R$ 3.976.928
+Estado: PB
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-comprar-vender-barra-da-tijuca-rio-de-janeiro-rio-de-janeiro/384881/pt/BR
+Quartos: 4
+Tipo: Apartamento
+Área: 281m²
+Bairro: Barra da Tijuca
+Cidade: Rio de Janeiro
+Vagas: 3
+suítes: 4
+Condominio: R$ 2.700
+Valor: R$ 2.750.000
+Estado: RJ
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-comprar-vender-analia-franco-sao-paulo-sao-paulo/398437/pt/BR
+Quartos: 3
+Tipo: Apartamento
+Área: 180m²
+Vagas: 1
+suítes: 1
+Condominio: R$ 645
+Valor: R$ 650.000
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-lancamento-belem-sao-paulo-sao-paulo/380944/pt/BR
+Condominio: 
+Valor: R$ 225.000
+Quartos: 2
+Tipo: Apartamento
+Área: 43m²
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-lancamento-belem-sao-paulo-sao-paulo/380943/pt/BR
+Condominio: 
+Valor: R$ 225.000
+Quartos: 2
+Tipo: Apartamento
+Área: 43m²
+
+
+
+https://www.expoimovel.com/imovel/apartamentos-comprar-vender-aflitos-recife-pernambuco/372744/pt/BR
+Quartos: 3
+Tipo: Apartamento
+Área: 110m²
+Bairro: Aflitos
+Cidade: Recife
+Vagas: 2
+suítes: 1
+Condominio: R$ 700
+Valor: R$ 470.000
+Estado: PE
+
+
+

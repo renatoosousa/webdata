@@ -65,7 +65,7 @@ class Imovelweb_crawler:
             pass
 
         for key in self.data:
-            print key + ": " + self.data[key]
+            print key.encode("utf-8") + ": " + self.data[key].encode("utf-8")
 
 
 db = ExtractorDB()
