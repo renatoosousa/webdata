@@ -4,6 +4,7 @@ import requests
 import os
 import bs4
 from bs4 import BeautifulSoup
+from results import ExtractorDB
 
 
 
@@ -40,20 +41,32 @@ class Expoimovel_crawler:
         for js in soup(["script", "style"]):
             js.extract()
 
-        infos = soup.find_all("div", {"id": "boxCaracJan"})
-        infos = infos[0].find_all("div", {"class": "detTitBox"})
-        for i in range(0, len(infos), 2):
-            self.data[infos[i].text.strip()] = infos[i+1].text.strip().replace('\n', '').replace('\t', '')
+        try:
+            infos = soup.find_all("div", {"id": "boxCaracJan"})
+            infos = infos[0].find_all("div", {"class": "detTitBox"})
+            for i in range(0, len(infos), 2):
+                self.data[infos[i].text.strip()] = infos[i+1].text.strip().replace('\n', '').replace('\t', '')
+        except:
+            pass
 
-        tipo = soup.find_all("font", {"class": "color-detalhe-orange"})
-        self.data["Tipo"] = tipo[1].text.strip()
+        try:
+            tipo = soup.find_all("font", {"class": "color-detalhe-orange"})
+            self.data["Tipo"] = tipo[1].text.strip()
+        except:
+            pass
 
-        preco = soup.find("div", {"id": "boxPrecoImo"})
-        self.data["Valor"] = preco.text.strip()
+        try:
+            preco = soup.find("div", {"id": "boxPrecoImo"})
+            self.data["Valor"] = preco.text.strip()
+        except:
+            pass
 
-        condominio = soup.find("div", {"id": "noxSubValCond"})
-        self.data["Condominio"] = condominio.text.strip()
-
+        try:
+            condominio = soup.find("div", {"id": "noxSubValCond"})
+            self.data["Condominio"] = condominio.text.strip()
+        except:
+            pass
+            
         local = soup.find("div", {"class": "prentesaoTopDet"})
         try:
             local = local.text.split('-')
@@ -71,8 +84,9 @@ class Expoimovel_crawler:
             print key + ": " + self.data[key]
 
 
-
-url = 'https://www.expoimovel.com/imovel/casas-comprar-vender-stella-maris-salvador-bahia/389428/pt/BR'
-url2 = 'https://www.expoimovel.com/imovel/apartamentos-comprar-vender-de-lazzer-caxias-do-sul-rio-grande-do-sul/376137/pt/BR'
-ri = Expoimovel_crawler(url2)
-ri.crawl()
+db = ExtractorDB()
+for item in db.get_domain("expoimovel"):
+	print item
+	expo = Expoimovel_crawler(item)
+	expo.crawl()
+	print "\n\n"

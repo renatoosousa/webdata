@@ -4,6 +4,7 @@ import requests
 import os
 import bs4
 from bs4 import BeautifulSoup
+from results import ExtractorDB
 
 
 
@@ -36,10 +37,14 @@ class Zapi_crawler:
 		soup = BeautifulSoup(start_page.content, "html.parser")
 
 		annoucer = soup.find("input", {"id": "hdnNomeAnunciante"})
-		annoucer = annoucer["value"]
-		#print annoucer
-		self.title = annoucer
+		try:
+			annoucer = annoucer["value"]
+			#print annoucer
+			self.title = annoucer
+		except:
+			print "inexistent site?"
 
+		
 		if annoucer == "Moura Dubeux":
 			self.extract_data_mb(soup)
 		elif annoucer == "MRV Engenharia S/A":
@@ -50,21 +55,26 @@ class Zapi_crawler:
 			self.extract_data_normal(soup)
 
 	def extract_data_normal(self, soup):
-		price = soup.find("span",  {"class": "value-ficha"})
-		self.data[ price(text=True)[1] ] = (price(text=True)[2].strip())
+		try:
+			price = soup.find("span",  {"class": "value-ficha"})
+			self.data[ price(text=True)[1] ] = (price(text=True)[2].strip())
 
-		prop = soup.find("h1", {"class": "pull-left"})
-		prop = prop.find("span")
-		self.title = self.title + " - " + prop.text
-		print self.title
+			prop = soup.find("h1", {"class": "pull-left"})
+			prop = prop.find("span")
+			self.title = self.title + " - " + prop.text
+			print self.title
+		except:
+			pass
 
-
-		address = soup.find("span", {"class": "logradouro"})
-		address = address.text.split(',')
-		self.data["Bairro"] = address[0].strip()
-		address = address[1].split('-')
-		self.data["Cidade"] = address[0].strip()
-		self.data["Estado"] = address[1].strip()
+		try:
+			address = soup.find("span", {"class": "logradouro"})
+			address = address.text.split(',')
+			self.data["Bairro"] = address[0].strip()
+			address = address[1].split('-')
+			self.data["Cidade"] = address[0].strip()
+			self.data["Estado"] = address[1].strip()
+		except:
+			pass
 
 
 		uls = soup.find_all("ul", {"class": "unstyled"})
@@ -105,10 +115,9 @@ class Zapi_crawler:
 
 
 
-
-
-url = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viagem+recife+pe+181m2+RS1670000/ID-15204142/?oti=1'
-url2 = 'https://www.zapimoveis.com.br/lancamento/casa+venda+jd-betania+cachoeirinha+rs+chacara-das-rosas-ii+bolognesi+30m2-44m2/ID-11657/?contato=0'
-url3 = 'https://www.zapimoveis.com.br/oferta/venda+apartamento+4-quartos+boa-viagem+recife+pe+149m2+RS1100000/ID-13656803/?oti=1'
-#ri = Zapi_crawler(url)
-#ri.crawl()
+db = ExtractorDB()
+for item in db.get_domain("zapi"):
+	print item
+	zapi = Zapi_crawler(item)
+	zapi.crawl()
+	print "\n\n"

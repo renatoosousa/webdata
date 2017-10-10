@@ -5,6 +5,7 @@ import requests
 import os
 import bs4
 from bs4 import BeautifulSoup
+from results import ExtractorDB
 
 
 
@@ -37,31 +38,43 @@ class Imoveisavenda_crawler:
         start_page = requests.get(link, headers = agent)
         soup = BeautifulSoup(start_page.content, "html.parser")
 
-        valor = soup.find("div", {"class": "price"})
-        self.data["Modalidade"] = valor(text=True)[0].strip()
-        self.data["Preco por m2"] = valor(text=True)[-1].strip()
-         
-        preco = ""
-        for i in range(1, len(valor(text=True)) - 1):
-            preco = valor(text=True)[i].strip() + " " + preco 
-        self.data["Valor"] = preco.strip()
+        try:
+            valor = soup.find("div", {"class": "price"})
+            self.data["Modalidade"] = valor(text=True)[0].strip()
+            self.data["Preco por m2"] = valor(text=True)[-1].strip()
+        except:
+            pass
 
-        infos = soup.find("div", {"id": "basicInfo"})
-        for b in infos.find_all("b"):
-            campo = b.text.replace(':', '')
-            valor = b.next_element.next_element.text
-            if campo == "Cidade":
-                valor = valor.split('-')
-                self.data["Estado"] = valor[1].strip()
-                valor = valor[0]
-            self.data[campo] = valor
+        try:
+            preco = ""
+            for i in range(1, len(valor(text=True)) - 1):
+                preco = valor(text=True)[i].strip() + " " + preco 
+            self.data["Valor"] = preco.strip()
+        except:
+            pass
 
+        try:
+            infos = soup.find("div", {"id": "basicInfo"})
+            for b in infos.find_all("b"):
+                campo = b.text.replace(':', '')
+                valor = b.next_element.next_element.text
+                if campo == "Cidade":
+                    valor = valor.split('-')
+                    self.data["Estado"] = valor[1].strip()
+                    valor = valor[0]
+                self.data[campo] = valor
+        except:
+            pass
+
+            
         for key in self.data:
             print (key, end='')
             print (": ", end='')
             print (self.data[key])
 
-
-url = 'http://imovelavenda.com.br/Fiateci_Apto_2_Dorm_Sao_Geraldo_Porto_Alegre_10066_RS__YWQ10'
-ri = Imoveisavenda_crawler(url)
-ri.crawl()
+db = ExtractorDB()
+for item in db.get_domain("imovelavenda"):
+    print (item)
+    imoveisavenda = Imoveisavenda_crawler(item)
+    imoveisavenda.crawl()
+    print ("\n\n")

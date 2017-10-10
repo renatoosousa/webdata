@@ -5,6 +5,7 @@ import os
 import bs4
 from bs4 import BeautifulSoup
 import time
+from results import ExtractorDB
 
 
 
@@ -35,23 +36,34 @@ class Olx_crawler:
         start_page = requests.get(link, headers = agent)
         soup = BeautifulSoup(start_page.content, "html.parser")
 
-        preco = soup.find("span", {"class": "actual-price"})
-        self.data["Valor de Venda"] = preco.get_text()
+        try:
+            preco = soup.find("span", {"class": "actual-price"})
+            self.data["Valor de Venda"] = preco.get_text()
+        except:
+            pass
 
-
-        estado = self.start_url[7] + self.start_url[8]
-        self.data["Estado:"] = estado.upper()
-        address = soup.find_all("ul", {"class": "list square-gray"})
-        for info in address:
-            ps = info.find_all("p")
-            for p in ps:
-                self.data[p(text=True)[1]] = p(text=True)[3].strip()
-
+        try:
+            estado = self.start_url[7] + self.start_url[8]
+            self.data["Estado:"] = estado.upper()
+            address = soup.find_all("ul", {"class": "list square-gray"})
+            for info in address:
+                ps = info.find_all("p")
+                for p in ps:
+                    self.data[p(text=True)[1]] = p(text=True)[3].strip()
+        except:
+            pass
         
-        self.title = self.data["Tipo:"]
+        try:
+            self.title = self.data["Tipo:"]
+        except:
+            pass
+            
         for key in self.data:
 			print key + " " + self.data[key]
 
-url = 'http://pa.olx.com.br/regiao-de-belem/imoveis/eco-parque-mobiliado-389595562'
-olx = Olx_crawler(url)
-olx.crawl()
+db = ExtractorDB()
+for item in db.get_domain("olx"):
+	print item
+	olx = Olx_crawler(item)
+	olx.crawl()
+	print "\n\n"

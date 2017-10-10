@@ -4,6 +4,8 @@ import requests
 import os
 import bs4
 from bs4 import BeautifulSoup
+from results import ExtractorDB
+
 
 
 
@@ -35,39 +37,35 @@ class Teuimovel_crawler:
         start_page = requests.get(link, headers = agent)
         soup = BeautifulSoup(start_page.content, "html.parser")
 
-        infos = soup.find_all("div", {"class": "col-lg-6"})
-        infos = infos[1]
+        try:
+            infos = soup.find_all("div", {"class": "col-lg-6"})
+            infos = infos[1]
 
-        valor = infos.find("div", {"class": "titulo faixa"})
-        valor = valor.text.split('-')
-        self.data["Tipo"] = valor[0].strip()
-        self.data["Valor"] = valor[1].strip()
+            valor = infos.find("div", {"class": "titulo faixa"})
+            valor = valor.text.split('-')
+            self.data["Tipo"] = valor[0].strip()
+            self.data["Valor"] = valor[1].strip()
 
-        local = infos.find("strong")
-        local = local.previous.previous.previous.strip()
-        local = local.split(' ')
-        estado = local[-1].strip()
-        self.data["Estado"] = estado
+            local = infos.find("strong")
+            local = local.previous.previous.previous.strip()
+            local = local.split(' ')
+            estado = local[-1].strip()
+            self.data["Estado"] = estado
 
-        # local.pop()
-        # cidade = ""
-        # for word in reversed(local):
-        #     if word == word.upper():
-        #         cidade = word + " " + cidade
-        
-        # self.data["Cidade"] = cidade.strip()
 
-        for info in infos.find_all("strong"):
-            self.data[info.text.strip()] = info.previous.strip()
-
+            for info in infos.find_all("strong"):
+                self.data[info.text.strip()] = info.previous.strip()
+        except:
+            pass
         
 
         for key in self.data:
             print key + ": " + self.data[key]
 
 
-
-url = 'http://www.teuimovel.com/index_detalheimovel_id_1783_desc_sao-paulo-sp-paraIso'
-url2 = 'http://www.teuimovel.com/index_detalheimovel_id_2109_desc_GRAVATAi-RS%20cruzeiro'
-ri = Teuimovel_crawler(url2)
-ri.crawl()
+db = ExtractorDB()
+for item in db.get_domain("teuimovel"):
+	print item
+	teuimovel = Teuimovel_crawler(item)
+	teuimovel.crawl()
+	print "\n\n"

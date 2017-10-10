@@ -4,6 +4,7 @@ import requests
 import os
 import bs4
 from bs4 import BeautifulSoup
+from results import ExtractorDB
 
 
 
@@ -36,21 +37,24 @@ class Imovelweb_crawler:
         start_page = requests.get(link, headers = agent)
         soup = BeautifulSoup(start_page.content, "html.parser")
 
-        infos = soup.find("div", {"class": "card aviso-datos"})
-        lis = infos.find_all("li")
+        try:
+            infos = soup.find("div", {"class": "card aviso-datos"})
+            lis = infos.find_all("li")
 
-        self.data["Tipo"] = lis[0].text.strip()
-        valores = lis[1].find_all("span")
-        modalidade = valores[0].text.split(' ')
-        self.data["Modalidade"] = modalidade[1].strip()
+            self.data["Tipo"] = lis[0].text.strip()
+            valores = lis[1].find_all("span")
+            modalidade = valores[0].text.split(' ')
+            self.data["Modalidade"] = modalidade[1].strip()
 
-        for i in range(1, len(lis)-1):
-            span = lis[i].find_all("span")
-            if len(span) == 1:
-                span = span[0].text.split(' ')
-                self.data[span[1].strip()] = span[0].strip()
-            else:
-                self.data[span[0].text.strip()] = span[1].text.strip()
+            for i in range(1, len(lis)-1):
+                span = lis[i].find_all("span")
+                if len(span) == 1:
+                    span = span[0].text.split(' ')
+                    self.data[span[1].strip()] = span[0].strip()
+                else:
+                    self.data[span[0].text.strip()] = span[1].text.strip()
+        except:
+            pass
             
         try:
             local = soup.find("a", {"href": "#map"})
@@ -64,7 +68,9 @@ class Imovelweb_crawler:
             print key + ": " + self.data[key]
 
 
-url = 'http://www.imovelweb.com.br/propriedades/apartamento-residencial-para-locacao-boa-viagem-2932218008.html'
-url2 = 'http://www.imovelweb.com.br/propriedades/apartamento-a-venda-em-moema-2933751732.html'
-ri = Imovelweb_crawler(url2)
-ri.crawl()
+db = ExtractorDB()
+for item in db.get_domain("imovelweb"):
+	print item
+	imovelweb = Imovelweb_crawler(item)
+	imovelweb.crawl()
+	print "\n\n"
