@@ -38,13 +38,13 @@ Table:
 Number of words for each bag of words before and after the gain of information:
 
 
-Dataset     | words      
-:---------: | :--------: 
-db1         | 24041      
-db2         | 20565      
-db3         | 17002      
-db4         | 20437      
-db5         | 12127      
-db6         | 8658       
-db7         | 1000       
-db8         | 1000       
+Dataset     | words   | used     
+:---------: | :-----: | :---:
+db1         | 24041   | No   
+db2         | 20565   | Yes  
+db3         | 17002   | Yes  
+db4         | 20437   | Yes  
+db5         | 12127   | No 
+db6         | 8658    | Yes  
+db7         | 1000    | Yes  
+db8         | 1000    | Yes  
