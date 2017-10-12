@@ -1,6 +1,13 @@
 Description of Data
 ===================
+----------
 
+Extractor:
+-------------
+
+how the data is organized
+
+> extractor > study_codes > results
 ----------
 
 Classifier:
