@@ -6,8 +6,129 @@ UNIDADES: Apartamento de 40m²
 PREÇO A PARTIR DE: R$ 199.000
 VAGAS: 1
 ENDERECO: Avenida Engenheiro Thomaz Magalhães - Sítio da Figueira, São Paulo - SP
+7
 
 
 
 https://www.vivareal.com.br/imovel/casa-de-condominio-3-quartos-jardim-analia-franco-zona-leste-sao-paulo-com-garagem-110m2-venda-RS615000-id-84562353/
 banheiros: 3 
+Tipo de imóvel : Casa de Condomínio
+Preço de compra : R$ 650.000
+Bairro: Jardim Anália Franco
+Cidade: São Paulo
+vagas: 2 
+Área : 110m²  (R$ 5.909/m²) 
+Valor com condomínio : R$ 2.600 / Mês
+Condomínio : R$ 100
+quartos  : 3 
+Aluguel : R$ 2.500 / Mês
+IPTU : R$ 176
+Estado: SP
+13
+
+
+
+https://www.vivareal.com.br/imovel/casa-4-quartos-barra-da-tijuca-zona-oeste-rio-de-janeiro-com-garagem-480m2-venda-RS3800000-id-84416313/
+banheiros: 5 
+Tipo de imóvel : Casa
+Preço de compra : R$ 3.800.000
+Bairro: Barra da Tijuca
+Cidade: Rio de Janeiro
+Área : 480m²  (R$ 7.916/m²) 
+Condomínio : R$ 100
+quartos  : 4 
+vagas: 4 
+IPTU : R$ 100
+Estado: RJ
+11
+
+
+
+https://www.vivareal.com.br/imovel/casa-2-quartos-marechal-hermes-zona-norte-rio-de-janeiro-60m2-venda-RS115000-id-83867231/
+Área : 60m²  (R$ 1.916/m²) 
+Tipo de imóvel : Casa
+Preço de compra : R$ 115.000
+banheiro: 1 
+quartos : 2 
+5
+
+
+
+https://www.vivareal.com.br/imovel/casa-2-quartos-jardim-vitoria-bairros-belo-horizonte-com-garagem-100m2-aluguel-RS890-id-84634467/
+banheiros: 2 
+Tipo de imóvel : Casa
+Aluguel : R$ 890 / Mês
+Área : 100m² 
+quartos  : 2 
+vagas: 3 
+IPTU : R$ 690
+7
+
+
+
+https://www.vivareal.com.br/imovel/casa-4-quartos-floresta-bairros-belo-horizonte-com-garagem-200m2-aluguel-RS3200-id-86273977/
+banheiros: 3 
+quartos : 4 
+Tipo de imóvel : Casa
+Bairro: Floresta
+Cidade: Belo Horizonte
+vagas: 2 
+Área : 200m² 
+Aluguel : R$ 3.200 / Mês
+IPTU : R$ 124
+Estado: MG
+10
+
+
+
+https://www.vivareal.com.br/imoveis-lancamento/parque-das-hortensias-8796/
+BANHEIROS: 5
+QUARTOS: 3
+CÓDIGO: 7660
+UNIDADES: Apartamento de 122m² até 126m²
+PREÇO A PARTIR DE: 
+VAGAS: 2
+ENDERECO: SQNW 102 Bloco B -  Brasília - DF
+7
+
+
+
+https://www.vivareal.com.br/imovel/apartamento-3-quartos-asa-norte-bairros-brasilia-com-garagem-105m2-venda-RS980000-id-86144451/
+banheiros: 3 
+Tipo de imóvel : Apartamento
+Preço de compra : R$ 980.000
+Área : 105m²  (R$ 9.333/m²) 
+vaga: 1 
+Condomínio : R$ 600
+quartos  : 3 
+IPTU : R$ 1.000
+8
+
+
+
+https://www.vivareal.com.br/imovel/apartamento-3-quartos-madalena-bairros-recife-com-garagem-86m2-venda-RS650000-id-85864609/
+banheiros: 3 
+Tipo de imóvel : Apartamento
+Preço de compra : R$ 650.000
+Bairro: Madalena
+Cidade: Recife
+Área : 86m²  (R$ 7.558/m²) 
+Condomínio : R$ 480
+quartos  : 3 
+vagas: 2 
+Estado: PE
+10
+
+
+
+https://www.vivareal.com.br/imoveis-lancamento/morada-dos-ipes-9208/
+BANHEIROS: 2
+QUARTOS: 3
+UNIDADES: Apartamento de 60m²
+PREÇO A PARTIR DE: R$ 327.420
+VAGAS: 1
+ENDERECO: Rua Gervásio Campêlo, 209 - Prado, Recife - PE
+6
+
+
+

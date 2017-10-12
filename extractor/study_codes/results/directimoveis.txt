@@ -11,11 +11,13 @@ Dormitórios: 2 (sendo 1 suítes)
 Condominio: 400
 Valor: R$ 530.000,00
 Estado: PE
+12
 
 
 
 http://www.directimoveis.com.br/imovel-AL0101
 Tipo: O melhor para o seu negócio
+1
 
 
 
@@ -31,6 +33,7 @@ IPTU: R$ 540,00
 Condominio: 244
 Valor: R$ 4.500,00
 Estado: PE
+11
 
 
 
@@ -46,6 +49,7 @@ Dormitórios: 3 (sendo 1 suítes)
 Condominio: 700
 Valor: R$ 320.000,00
 Estado: PE
+11
 
 
 
@@ -60,6 +64,7 @@ Vagas de garagem: 2
 Dormitórios: 3 (sendo 3 suítes)
 Valor: R$ 800.000,00
 Estado: a
+10
 
 
 
@@ -75,6 +80,7 @@ Dormitórios: 3 (sendo 2 suítes)
 Condominio: 300
 Valor: R$ 330.000,00
 Estado: PE
+11
 
 
 
@@ -91,6 +97,7 @@ Dormitórios: 3 (sendo 2 suítes)
 Condominio: 1000
 Valor: R$ 900.000,00
 Estado: PE
+12
 
 
 
@@ -107,6 +114,7 @@ Dormitórios: 1
 Condominio: 650
 Valor: R$ 1.500,00
 Estado: PE
+12
 
 
 
@@ -123,6 +131,7 @@ Dormitórios: 4 (sendo 2 suítes)
 Condominio: 900
 Valor: R$ 8.000,00
 Estado: PE
+12
 
 
 
@@ -139,6 +148,7 @@ Dormitórios: 3 (sendo 1 suítes)
 Condominio: 800
 Valor: R$ 650.000,00
 Estado: PE
+12
 
 
 

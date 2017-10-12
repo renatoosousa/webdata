@@ -1,40 +1,188 @@
 http://imovelavenda.com.br/Apto_Macaxeira_Ter_3_Qtos_1_STE_Conjunto_Apipucos_Recife_PE__BU505
-BanheirosTipoPreco por m2BairroCidadeModalidadeValorGaragemEstado
+Banheiros: 1 banheiro
+: 
+Área total: 73 m²
+Tipo: Apartamento Residencial
+Preco por m2: R$ 3.013,70/m²
+Bairro: Macaxeira
+Cidade: Recife 
+Endereço: Av. Norte
+Código: 
+Dormitórios: 3 quartos (1 suíte)
+Condomínio: R$ 180,00
+Modalidade: à venda
+Valor: R$ 220.000, 00
+Área privada: 73 m²
+Garagem: 1 vaga
+Estado: PE
+16
+
 
 
 http://imovelavenda.com.br/Apartamento_3_Quartos_Boa_Viagem_Recife_PE__QY194
-BanheirosTipoPreco por m2BairroCidadeContato AlemanhaModalidadeValorContato Sao Paulo/BrasilGaragemEstado
+Banheiros: 2 banheiros
+O apartamento é composto por: 
+Condomínio: R$ 450,00
+Tipo: Apartamento Residencial
+Preco por m2: R$ 6.707,32/m²
+Bairro: Boa Viagem
+Cidade: Recife 
+Contato Alemanha: 
+Código: 
+Dormitórios: 3 quartos (1 suíte)
+Modalidade: à venda
+Valor: R$ 550.000, 00
+Contato Sao Paulo/Brasil: 
+Área privada: 82 m²
+Garagem: 2 vagas
+Estado: PE
+16
+
 
 
 http://imovelavenda.com.br/Apto_3_Dorm_Ipanema_Porto_Alegre_139795_RS__RR993
-BanheirosTipoPreco por m2BairroCidadeModalidadeValorGaragemEstado
+Banheiros: 2 banheiros
+Condomínio: R$ 400,00
+Tipo: Apartamento Residencial
+Preco por m2: R$ 5.075,70/m²
+Bairro: Ipanema
+Cidade: Porto Alegre 
+Código: 
+Dormitórios: 3 quartos (1 suíte)
+Modalidade: à venda
+Valor: R$ 466.000, 00
+Área privada: 91,81 m²
+Garagem: 2 vagas
+Estado: RS
+13
+
 
 
 http://imovelavenda.com.br/Fiateci_Apto_2_Dorm_Sao_Geraldo_Porto_Alegre_10066_RS__YWQ10
-BanheirosEmpreendimentoTipoPreco por m2BairroCidadeModalidadeValorGaragemEstado
+Banheiros: 1 banheiro
+Empreendimento: Fiateci
+Tipo: Apartamento Residencial
+Preco por m2: R$ 5.135,39/m²
+Bairro: São Geraldo
+Cidade: Porto Alegre 
+Código: 
+Dormitórios: 2 quartos
+Modalidade: à venda
+Valor: R$ 330.000, 00
+Área privada: 64,26 m²
+Garagem: 1 vaga
+Estado: RS
+13
+
 
 
 http://imovelavenda.com.br/Torre_Molinos_Cobertura_3_Dorm_Rio_Branco_Porto_Alegre_11122_RS__RC381
-BanheirosEmpreendimentoTipoPreco por m2BairroCidadeModalidadeValorGaragemEstado
+Banheiros: 3 banheiros
+Empreendimento: Torre Molinos
+Área total: 367,1 m²
+Tipo: Cobertura Residencial
+Preco por m2: R$ 5.274,07/m²
+Bairro: Rio Branco
+Cidade: Porto Alegre 
+Código: 
+Dormitórios: 3 quartos (1 suíte)
+Condomínio: R$ 1.620,00
+Modalidade: à venda
+Valor: R$ 1.450.000, 00
+Área privada: 274,93 m²
+Garagem: 2 vagas
+Estado: RS
+15
+
 
 
 http://imovelavenda.com.br/Apto_4_Dorm_Rio_Branco_Porto_Alegre_159467_RS__OUR86
-BanheirosTipoPreco por m2BairroCidadeModalidadeValorGaragemEstado
+Banheiros: 5 banheiros
+Condomínio: R$ 2.500,00
+Tipo: Apartamento Residencial
+Preco por m2: R$ 10.959,45/m²
+Bairro: Rio Branco
+Cidade: Porto Alegre 
+Código: 
+Dormitórios: 4 quartos (3 suítes)
+Modalidade: à venda
+Valor: R$ 2.378.200, 00
+Área privada: 217 m²
+Garagem: 4 vagas
+Estado: RS
+13
+
 
 
 http://imovelavenda.com.br/Apto_3_Dorm_Tatuape_Sao_Paulo_3684_SP__DUO21
-BanheirosTipoPreco por m2BairroCidadeModalidadeValorGaragemEstado
+Banheiros: 3 banheiros
+Área total: 190 m²
+Tipo: Apartamento Residencial
+Preco por m2: R$ 5.294,12/m²
+Bairro: Tatuapé
+Cidade: São Paulo 
+Código: 
+Dormitórios: 3 quartos (1 suíte)
+Condomínio: R$ 1.900,00
+Modalidade: à venda
+Valor: R$ 900.000, 00
+Área privada: 170 m²
+Garagem: 3 vagas
+Estado: SP
+14
+
 
 
 http://imovelavenda.com.br/Apto_3_Dorm_Tatuape_Sao_Paulo_11236_SP__RQ183
-BanheirosTipoPreco por m2BairroCidadeModalidadeValorGaragemEstado
+Banheiros: 3 banheiros
+Área total: 111,27 m²
+Tipo: Apartamento Residencial
+Preco por m2: R$ 8.784,95/m²
+Bairro: Tatuapé
+Cidade: São Paulo 
+Código: 
+Dormitórios: 3 quartos (1 suíte)
+Modalidade: à venda
+Valor: R$ 817.000, 00
+Área privada: 93 m²
+Garagem: 2 vagas
+Estado: SP
+13
+
 
 
 http://imovelavenda.com.br/Apto_3_Dorm_Tatuape_Sao_Paulo_10245_SP__DW476
-BanheirosTipoPreco por m2BairroCidadeModalidadeValorGaragemEstado
+Banheiros: 3 banheiros
+Área total: 232,71 m²
+Tipo: Apartamento Residencial
+Preco por m2: R$ 6.775,58/m²
+Bairro: Tatuapé
+Cidade: São Paulo 
+Código: 
+Dormitórios: 3 quartos (1 suíte)
+Condomínio: R$ 1.518,00
+Modalidade: à venda
+Valor: R$ 900.000, 00
+Área privada: 132,83 m²
+Garagem: 3 vagas
+Estado: SP
+14
+
 
 
 http://imovelavenda.com.br/Apto_4_Dorm_Tatuape_Sao_Paulo_3669_SP__RW870
-BanheirosTipoPreco por m2BairroCidadeModalidadeValorGaragemEstado
-
-
+Banheiros: 6 banheiros
+Área total: 200 m²
+Tipo: Apartamento Residencial
+Preco por m2: R$ 8.008,85/m²
+Bairro: Tatuapé
+Cidade: São Paulo 
+Código: 
+Dormitórios: 4 quartos (1 suíte)
+Condomínio: R$ 900,00
+Modalidade: à venda
+Valor: R$ 905.000, 00
+Área privada: 113 m²
+Garagem: 3 vagas
+Estado: SP
+14

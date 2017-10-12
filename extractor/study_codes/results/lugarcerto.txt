@@ -11,6 +11,7 @@ VAGA: 1
 Código do imóvel: AP0381
 VALOR: R$ 2.200.000,00
 ESTADO: SP
+12
 
 
 
@@ -27,6 +28,7 @@ IPTU: R$ 460,00
 Código do imóvel: AP0371
 VAGAS: 2
 ESTADO: SP
+12
 
 
 
@@ -43,6 +45,7 @@ IPTU: R$ 1,00
 Código do imóvel: VDH1508
 VAGAS: 2
 ESTADO: PE
+12
 
 
 
@@ -57,10 +60,12 @@ VALOR: R$ 4.000,00
 Código do imóvel: I00225
 VAGAS: 2
 ESTADO: MG
+10
 
 
 
 http://estadodeminas.lugarcerto.com.br/imovel/apartamento-4-quartos-lourdes-belo-horizonte-com-garagem-252m2-compra-e-venda-rs2900000-id-340430084
+0
 
 
 
@@ -75,14 +80,17 @@ SUÍTES: 2
 Código do imóvel: GPI6451
 VAGAS: 2
 ESTADO: MG
+10
 
 
 
 http://estadodeminas.lugarcerto.com.br/imovel/andar-centro-belo-horizonte-com-garagem-392m2-compra-e-venda-rs2500000-id-340004839
+0
 
 
 
 http://www.lugarcerto.com.br/imovel/apartamento-2-quartos-santo-cristo-rio-de-janeiro-com-garagem-compra-e-venda-rs340000-id-308414719
+0
 
 
 
@@ -96,6 +104,7 @@ SUÍTES: 2
 Código do imóvel: FAI-1574
 VALOR: R$ 420.000,00
 ESTADO: RJ
+9
 
 
 
@@ -109,6 +118,7 @@ SUÍTE: 1
 Código do imóvel: FAI-1132
 VALOR: R$ 770.000,00
 ESTADO: presidente José Alencar, Barra da Tijuca, Rio de Janeiro
+9
 
 
 

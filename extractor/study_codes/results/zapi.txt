@@ -9,11 +9,13 @@ suítes: 2
 vagas: 2
 Área Útil (m²): 72
 Estado: RS
+10
 
 
 
 https://www.zapimoveis.com.br/oferta/aluguel+apartamento+2-quartos+bela-vista+porto-alegre+rs+89m2+RS5500/ID-14573236/?paginaoferta=1
 inexistent site?
+0
 
 
 
@@ -26,6 +28,7 @@ Valor de Venda: R$ 1.060.000,00
 suíte: 1
 vagas: 2
 Área Útil (m²): 104
+8
 
 
 
@@ -37,11 +40,13 @@ Cidade:  Novo Hamburgo
 Valor de Venda: A partir de  R$ 167.727
 Estado:  RS
 Área (m²): 46 
+6
 
 
 
 https://www.zapimoveis.com.br/lancamento/apartamento+venda+perdizes+zona-oeste+sao-paulo+sp+bosque-araucaria+tecnisa+157m2/ID-8089/?contato=0
 inexistent site?
+0
 
 
 
@@ -51,6 +56,7 @@ https://www.zapimoveis.com.br/lancamento/apartamento+venda+rosarinho+recife+pe+p
 quartos: 2
 suíte: 1
 vaga: 1
+5
 
 
 
@@ -60,6 +66,7 @@ a: 2
 2: 
 suíte: 1
 vagas: 2
+5
 
 
 
@@ -75,6 +82,7 @@ IPTU: R$ 115
 vaga: 1
 Área Útil (m²): 73
 Estado: PE
+11
 
 
 
@@ -90,6 +98,7 @@ IPTU: R$ 85
 vaga: 1
 Área Útil (m²): 46
 Estado: PE
+10
 
 
 
@@ -105,6 +114,7 @@ IPTU: R$ 450
 vagas: 2
 Área Útil (m²): 95
 Estado: PE
+10
 
 
 

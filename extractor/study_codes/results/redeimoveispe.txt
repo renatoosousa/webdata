@@ -1,1 +1,109 @@
 http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP1169-DZQ
+Área útil: 102,00m²
+dorms: 3
+Tipo: Venda
+Suíte(s): 1
+Vaga(s): 2
+Valor: R$ 835.000
+6
+
+
+
+http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP1231-DZQ
+Valor do IPTU: R$ 142,00
+Área útil: 57,00m²
+dorms: 2
+Tipo: Venda
+Suíte(s): 0
+Vaga(s): 1
+Valor: R$ 420.000
+Valor médio do condomínio: R$ 402,00
+8
+
+
+
+http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP1132-DZQ
+Valor do IPTU: R$ 300,00
+Área útil: 110,00m²
+dorms: 4
+Tipo: Venda
+Suíte(s): 1
+Vaga(s): 1
+Valor: R$ 350.000
+Valor médio do condomínio: R$ 120,00
+8
+
+
+
+http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP0181-C8F
+Área útil: 140,00m²
+dorms: 3
+Tipo: Venda
+Suíte(s): 3
+Vaga(s): 2
+Valor: R$ 480.000
+6
+
+
+
+http://www.redeimoveispe.com.br/empreendimento-detalhes.aspx?id_empreendimento=7759469
+Banheiros: 5
+Area: 119,0 a 170,0
+A partir de:: R$ 850.000
+Vagas: 2
+Endereco: Rua Le Park 100, Imbiribeira, Recife-PE
+dorm(s): 4
+6
+
+
+
+http://www.redeimoveispe.com.br/empreendimento-detalhes.aspx?id_empreendimento=7766946
+Banheiros: 6
+Area: 312,0
+A partir de:: R$ 3.328.150
+Vagas: 3
+Endereco: Rua Muniz Tavares 137, Jaqueira, Recife-PE
+dorm(s): 5
+6
+
+
+
+http://www.redeimoveispe.com.br/empreendimento-detalhes.aspx?id_empreendimento=7751473
+Banheiros: 2
+Area: 52,0 a 57,5
+A partir de:: R$ 239.999,99
+Vaga: 1
+Endereco: Avenida João de Barros 765, Boa Vista, Recife-PE
+dorm(s): 2
+6
+
+
+
+http://www.redeimoveispe.com.br/empreendimento-detalhes.aspx?id_empreendimento=7619227
+Endereco: Rodovia PE 040 , Tejucupapo, Goiana-PE
+1
+
+
+
+http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=CO0005-DZQ
+Área útil: 430,00m²
+dorms: 6
+Tipo: Venda
+Suíte(s): 6
+Vaga(s): 5
+Valor: R$ 7.212.084,19
+6
+
+
+
+http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=CA0117-D3O
+dorms: 5
+Tipo: Venda
+Suíte(s): 5
+Área construída: 940,00m²
+Vaga(s): 13
+Valor: R$ 4.500.000
+6
+
+
+

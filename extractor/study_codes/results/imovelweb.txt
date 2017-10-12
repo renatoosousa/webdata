@@ -5,6 +5,7 @@ Tipo: Casa
 Área: 385m²
 Valor Condominio: R$ 450
 Modalidade: Venda
+6
 
 
 
@@ -16,6 +17,7 @@ Tipo: Apartamento
 Valor Venda: R$ 520.000
 Modalidade: Venda
 Suite: 1
+7
 
 
 
@@ -29,6 +31,7 @@ Unidades: -
 Entrega: Imediata
 Modalidade: 
 Cidade: São Paulo
+9
 
 
 
@@ -43,6 +46,7 @@ Unidades: -
 2: Até
 Modalidade: 
 Cidade: São Paulo
+10
 
 
 
@@ -55,6 +59,7 @@ Unidades: -
 Entrega: Imediata
 Modalidade: 
 Cidade: São Paulo
+8
 
 
 
@@ -71,6 +76,7 @@ Valor Condominio: R$ 2.500
 IPTU: R$ 1.640
 Modalidade: Venda
 Vagas: 4
+12
 
 
 
@@ -86,6 +92,7 @@ Cidade: São Paulo
 Valor Condominio: R$ 960
 Modalidade: Venda
 Vagas: 2
+11
 
 
 
@@ -101,6 +108,7 @@ Cidade: São Paulo
 Valor Condominio: R$ 720
 IPTU: R$ 550
 Modalidade: Venda
+11
 
 
 
@@ -116,6 +124,7 @@ Valor Condominio: R$ 700
 IPTU: R$ 112
 Modalidade: Venda
 Suite: 1
+11
 
 
 
@@ -131,6 +140,7 @@ Valor Condominio: R$ 1.200
 IPTU: R$ 3.660
 Modalidade: Venda
 Suite: 1
+11
 
 
 

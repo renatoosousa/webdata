@@ -23,6 +23,7 @@ class Imoveisavenda_crawler:
 
     def crawl(self):
         self.get_data(self.start_url)
+        print (len(self.data))
         return
 
     def get_rawHtml(self):
@@ -69,9 +70,9 @@ class Imoveisavenda_crawler:
             
         for key in self.data:
             try:
-                print (key, end='').encode("utf-8")
+                print (key, end='')
                 print (": ", end='')
-                print (self.data[key]).encode("utf-8")
+                print (self.data[key])
             except:
                 pass
 

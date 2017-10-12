@@ -43,6 +43,7 @@ class Regex_scrapper:
         for key in self.data:
                 print key.encode("utf-8") + ": " + self.data[key].encode("utf-8")
 
+        print len(self.data)
         return
 
     def post_processing(self, raw_data):

@@ -21,6 +21,7 @@ class Olx_crawler:
 
     def crawl(self):
         self.get_data(self.start_url)
+        print len(self.data)
         return
 
     def get_rawHtml(self):
