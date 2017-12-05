@@ -1,0 +1,14 @@
+
+
+
+https://www.vivareal.com.br/imovel/casa-4-quartos-floresta-bairros-belo-horizonte-com-garagem-200m2-aluguel-RS3200-id-86273977/
+banheiros: 3
+quartos : 4
+Tipo de imóvel : Casa
+Bairro: Floresta
+Cidade: Belo Horizonte
+vagas: 2
+Área : 200m²
+Aluguel : R$ 3.200 / Mês
+IPTU : R$ 124
+Estado: MG
