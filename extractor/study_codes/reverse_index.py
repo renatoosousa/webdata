@@ -5,6 +5,7 @@ regex_value = "[Vv][aA][lL][oO][Rr](.+)?:\s?R\$\s?\d+[,.]\d+([,.]\d+)?"
 regex_quartos = ["[Qq][uU][aA][rR][tT].+:\s\d", "[Dd][Oo][Rr][Mm].+:\s\d"]
 regex_cidade = ["[cC][iI][dD][aA][dD].+", "[mM][uU][nN][iI][cC].+", "[eE][nN][dD][eE][rR][eE].+"]
 regex_banheiro = ["[bB][aA][nN][hH][eE].+", "[sS][uU].+:\s\d"]
+regex_vagas = ["[vV][aA][gG].+:\s\d", "[gG][aA][rR][aA][gG][eE].+:\s\d"]
 
 def get_quartos(data):
 
@@ -56,14 +57,27 @@ def get_banheiros(data):
     else:
         return -1
 
+def get_vagas(data):
+    vagas = re.findall(regex_vagas[0], data)
+    if not vagas:
+        vagas = re.findall(regex_vagas[1], data)
+        if not vagas:
+            return -1
+    
+    vagas = vagas[0].split(' ')
+    vagas = int(vagas[-1])
+    return vagas
+
 doc = "results/docs/doc_"
 dist_quartos = {}
 dist_banheiros = {}
+dist_vagas = {}
 for i in range(255,355):
     doc_name = doc + str(i) + ".txt"
     with open(doc_name) as f:
         data = f.read()
 
+        print "doc id: ", i
         #processing quartos
         quartos = get_quartos(data)
         if not dist_quartos.get(quartos):
@@ -75,7 +89,6 @@ for i in range(255,355):
         #processing cidade
         cidade = get_cidade(data)
         print "cidade: ", cidade
-        print "doc id: ", i
 
 
         #processing banheiro
@@ -85,10 +98,21 @@ for i in range(255,355):
         else:
             dist_banheiros[banheiros] += 1
         print "banheiros: ", banheiros
+
+        #processing vagas
+        vagas = get_vagas(data)
+        if not dist_vagas.get(vagas):
+            dist_vagas[vagas] = 1
+        else:
+            dist_vagas[vagas] += 1
+        print "vagas: ", vagas
+
         #z = raw_input()
 
 print "distribuicao quartos: ", dist_quartos
 print "distribuicao banheiros: ", dist_banheiros
+print "distribuicao vagas: ", dist_vagas
+
 
 # sum = 0
 # for item in dist_quartos:
