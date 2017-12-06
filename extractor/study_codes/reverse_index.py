@@ -1,11 +1,33 @@
 import re
 from collections import defaultdict
 
-regex_value = "[Vv][aA][lL][oO][Rr](.+)?:\s?R\$\s?\d+[,.]\d+([,.]\d+)?"
+regex_valor = "R\$.+"
 regex_quartos = ["[Qq][uU][aA][rR][tT].+:\s\d", "[Dd][Oo][Rr][Mm].+:\s\d"]
 regex_cidade = ["[cC][iI][dD][aA][dD].+", "[mM][uU][nN][iI][cC].+", "[eE][nN][dD][eE][rR][eE].+"]
 regex_banheiro = ["[bB][aA][nN][hH][eE].+", "[sS][uU].+:\s\d"]
 regex_vagas = ["[vV][aA][gG].+:\s\d", "[gG][aA][rR][aA][gG][eE].+:\s\d"]
+
+def get_valor(data):
+    valor = re.findall(regex_valor, data)
+    if not valor:
+        return -1
+    #print valor
+    max = 0.0
+    for item in valor:
+        item = item.split(' ')
+        item = item[1].replace('.', '')
+        item = item.replace(',', '.')
+        try:
+            item = float(item)
+        except:
+            item = 0.0
+        print item
+        if item > max:
+            max = item
+    
+    #print "valor: ", max
+    return max
+
 
 def get_quartos(data):
 
@@ -33,7 +55,7 @@ def get_cidade(data):
                 cidade = cidade[-1].split('-')
                 cidade = cidade[0]
                 #print cidade
-                return cidade.lower()
+                return cidade.lower().strip()
 
 
     try:
@@ -43,7 +65,7 @@ def get_cidade(data):
         cidade = -1
         return cidade
     #print cidade
-    return cidade.lower()
+    return cidade.lower().strip()
 
 def get_banheiros(data):
     banheiro = re.findall(regex_banheiro[0], data)
@@ -72,12 +94,23 @@ doc = "results/docs/doc_"
 dist_quartos = {}
 dist_banheiros = {}
 dist_vagas = {}
+dist_cidades = {}
+dist_valor = {}
 for i in range(255,355):
     doc_name = doc + str(i) + ".txt"
     with open(doc_name) as f:
         data = f.read()
 
         print "doc id: ", i
+        #processing valor
+        valor = get_valor(data)
+        if not dist_valor.get(valor):
+            dist_valor[valor] = 1
+        else:
+            dist_valor[valor] += 1
+        print "valor: ", valor
+
+
         #processing quartos
         quartos = get_quartos(data)
         if not dist_quartos.get(quartos):
@@ -88,6 +121,11 @@ for i in range(255,355):
 
         #processing cidade
         cidade = get_cidade(data)
+        if not dist_cidades.get(cidade):
+            dist_cidades[cidade] = 1
+        else:
+            dist_cidades[cidade] += 1
+
         print "cidade: ", cidade
 
 
@@ -108,10 +146,17 @@ for i in range(255,355):
         print "vagas: ", vagas
 
         #z = raw_input()
+    print "------------------------------"
 
-print "distribuicao quartos: ", dist_quartos
-print "distribuicao banheiros: ", dist_banheiros
-print "distribuicao vagas: ", dist_vagas
+print "distribuicao quartos: ", sorted(dist_quartos.items())
+print "distribuicao banheiros: ", sorted(dist_banheiros.items())
+print "distribuicao vagas: ", sorted(dist_vagas.items())
+print "distribuicao cidades: ", sorted(dist_cidades.items())
+print "distribuicao valor: ", sorted(dist_valor.items())
+
+for item in dist_cidades:
+    print item
+
 
 
 # sum = 0
