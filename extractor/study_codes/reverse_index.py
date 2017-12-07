@@ -296,11 +296,7 @@ for i in range(255,355):
 
         #processing vagas
         vagas = get_vagas(data)
-        if not dist_vagas.get(vagas):
-            dist_vagas[vagas] = [i]
-        else:
-            dist_vagas[vagas].append(i)
-
+        insert_reverseindex_vagas(i, vagas)
         #z = raw_input()'''
     '''print "------------------------------"
 
@@ -328,43 +324,91 @@ for item in sorted(dist_valor.items()):
 file = open("reverse_index.txt", "w")
 
 dist_banheiros.pop(-1, None)
-print "BANHEIROS"
+print "\n\nBANHEIROS"
 for item in dist_banheiros:
     print str(item) + ": ",
     print dist_banheiros[item]
     pickle.dump(dist_banheiros[item], file)
 
+dist_comp_banheiros.pop(-1, None)
+print "\n\nBANHEIROS COMPRESSAO"
+for item in dist_comp_banheiros:
+    print str(item) + ": ",
+    print dist_comp_banheiros[item]
+    #pickle.dump(dist_banheiros[item], file)
+
+
 dist_cidades.pop(-1, None)
-print "CIDADE"
+print "\n\nCIDADE"
 for item in dist_cidades:
     print str(item) + ": ",
     print dist_cidades[item]
     pickle.dump(dist_cidades[item],file)
 
-print "QUARTOS"
+dist_comp_cidades.pop(-1, None)
+print "\n\nCIDADE COMPRESSAO"
+for item in dist_comp_cidades:
+    print str(item) + ": ",
+    print dist_comp_cidades[item]
+    #pickle.dump(dist_cidades[item],file)
+
+
+print "\n\nQUARTOS"
 dist_quartos.pop(-1, None)
 for item in dist_quartos:
     print str(item) + ": ",
     print dist_quartos[item]
     pickle.dump(dist_quartos[item],file)
 
-print "VAGAS"
+print "\n\nQUARTOS COMPRESSAO"
+dist_comp_quartos.pop(-1, None)
+for item in dist_comp_quartos:
+    print str(item) + ": ",
+    print dist_comp_quartos[item]
+    #pickle.dump(dist_quartos[item],file)
+
+print "\n\nVAGAS"
 dist_vagas.pop(-1, None)
 for item in dist_vagas:
     print str(item) + ": ",
     print dist_vagas[item]
     pickle.dump(dist_vagas[item], file)
 
-print "VALOR"
+print "\n\nVAGAS COMPRESSAO"
+dist_comp_vagas.pop(-1, None)
+for item in dist_comp_vagas:
+    print str(item) + ": ",
+    print dist_comp_vagas[item]
+    #pickle.dump(dist_vagas[item], file)
+
+print "\n\nVALOR"
 for item in dist_valor:
     print str(item) + ": ",
     print dist_valor[item]
     pickle.dump(dist_valor[item], file)
 
-
-
+print "\n\nVALOR COMPRESSAO"
+for item in dist_comp_valor:
+    print str(item) + ": ",
+    print dist_comp_valor[item]
+    #pickle.dump(dist_comp_valor[item], file)
 
 file.close()
 
+print "\n\nINDICE INVERTIDO DOS TERMOS"
+sum_ids = 0
+for item in dist_termos:
+    print item + ": "
+    print dist_termos[item]
+    sum_ids += len(dist_termos[item])
+    print ""
+#print sum_ids
+
+print "\n\nINDICE INVERTIDO DOS TERMOS COMPRESSAO"
+for item in dist_comp_termos:
+    print str(item) + ": ",
+    print dist_comp_termos[item]
+    print ""
+#file = open("reverse_index_comp.txt", "w")
 
 #banheiros, quartos, cidade, valor, vaga
