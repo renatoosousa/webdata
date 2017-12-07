@@ -16,7 +16,10 @@ request = {"cidade": "recife", "quartos": 4, "banheiros": 2, "valor": 1000, "vag
 score.setRequest(request)
 
 score.ranking()
+score.ranking_tfidf()
 
+print score.spearman()
+print score.kendalTau()
 # print score.rank
 
 renato = score.getInfo()

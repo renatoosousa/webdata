@@ -6,6 +6,7 @@ Created on Wed Dec  6 16:56:53 2017
 @author: renato
 """
 from collections import Counter
+import itertools
 import math
 import pickle
 
@@ -13,8 +14,9 @@ class IR(object):
     
     def __init__(self):
         self.rank = []
-        self.rank_tdidf = 0
+        self.rank_tdidf = []
         self.allPostings = self.getPostings()
+        self.docs_vect = self.termAtTime()
         self.request = {}
         
     def setRequest(self, dic):
@@ -72,6 +74,63 @@ class IR(object):
         for value in rangevalor:
             if(self.request.get('valor') >= value[0] and self.request.get('valor') < value[1]):
                 qry.append(3)
+            else:
+                qry.append(0)
+        
+        return qry
+
+    def parser2(self):
+        # quartos 1 2 3 4 5 6
+        rangeqts = [1,2,3,4,5,6]
+        # banheiro 1 2 3 4 5 6
+        rangebanheiro = [0,1,2,3,4,5,6]
+        # vaga 1 2 3 4 5
+        rangevaga = [1,2,3,4,5]
+        # valor
+        # 480-10k 10k-135k 135k-225.5k 225.5k-330k 330k-480k 480k-650k 650k-850k 850k-980k
+        #980k-1.6kk 1.6kk-2.2kk 2.2kk-3.8kk 3.8kk+
+        rangevalor = [(480,10000), (10000,135000), (135000,225500), (225500,330000),
+                      (330000,480000), (480000,650000), (650000,850000), (850000,980000),
+                      (980000,1600000), (1600000,2200000), (2200000,3800000), (3800000,3800000*5)]
+        # cidade
+        rangecidade = ['pe','novo hamburgo','canoas','df','joão pessoa','sp','natal',
+                       'rio de janeiro','itapevi','goiana','praia do pai',
+                       'jaboatão dos guararapes','belo horizonte','são paulo','porto alegre',
+                       'barueri','recife','avenida vice','manoel ribeiro,maricá']
+        qry = []
+        
+        # Banheiros
+        for value in rangebanheiro:
+            if(self.request.get('banheiros') == value):
+                qry.append(1)
+            else:
+                qry.append(0)
+                
+        # Cidadde
+        for value in rangecidade:
+            if(self.request.get('cidade') == value):
+                qry.append(1)
+            else:
+                qry.append(0)
+        
+        # Quartos
+        for value in rangeqts:
+            if(self.request.get('quartos') == value):
+                qry.append(1)
+            else:
+                qry.append(0)
+                
+        # Vagas
+        for value in rangevaga:
+            if(self.request.get('vaga') == value):
+                qry.append(1)
+            else:
+                qry.append(0)
+                
+        # Valor
+        for value in rangevalor:
+            if(self.request.get('valor') >= value[0] and self.request.get('valor') < value[1]):
+                qry.append(1)
             else:
                 qry.append(0)
         
@@ -175,12 +234,18 @@ class IR(object):
         return score
     
     def ranking(self):
-        dic = self.termAtTime()
         query = self.parser()
         result = {}    
-        for key in dic:
-            result.setdefault(key,self.vectorSpace(dic[key],query))
+        for key in self.docs_vect:
+            result.setdefault(key,self.vectorSpace(self.docs_vect[key],query))
         self.rank = sorted(result.items(), key=lambda x:x[1], reverse=True)
+
+    def ranking_tfidf(self):
+        query = self.parser2()
+        result = {}    
+        for key in self.docs_vect:
+            result.setdefault(key,self.vectorSpace(self.docs_vect[key],query))
+        self.rank_tfidf = sorted(result.items(), key=lambda x:x[1], reverse=True)
         
     def getInfo(self, n = 10):
         path = '../extractor/study_codes/results/docs/doc_'
@@ -192,5 +257,28 @@ class IR(object):
             if(len(return_docs) >= n):
                 break
         return return_docs
+    
+    def spearman(self):
+        r1 = [int(i[0]) for i in self.rank]
+        r2 = [int(i[0]) for i in self.rank_tfidf]
+        _sum = 0
+        if(len(r1) == len(r2)):
+            for doc in r1:
+                _sum += math.pow((r1.index(doc) - r2.index(doc)),2)
+            _sum *= 6.0 / (math.pow(len(r1),3) - math.pow(len(r1),2))
+        else:
+            print("sizes dont match")
+            
+        return 1 - _sum
+    
+    def combinations(self,l):
+        return list(itertools.combinations(l,2))
+
+    def kendalTau(self):
+        r1 = [int(i[0]) for i in self.rank]
+        r2 = [int(i[0]) for i in self.rank_tfidf]
+        delta = len(list(set(self.combinations(r1)).difference(self.combinations(r2))))
+#        print delta
+        return 1 - (2.0 * delta)/(len(r1) * (len(r1)-1)) 
 
     
