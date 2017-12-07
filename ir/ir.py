@@ -9,7 +9,6 @@ from collections import Counter
 import itertools
 import math
 import pickle
-import scipy.stats
 
 class IR(object):
     
@@ -284,8 +283,7 @@ class IR(object):
         else:
             print("sizes dont match")
             
-#        return 1 - _sum
-        return scipy.stats.stats.spearmanr(r1,r2)[0]
+        return 1 - _sum
     
     def combinations(self,l):
         return list(itertools.combinations(l,2))
@@ -294,6 +292,5 @@ class IR(object):
         r1 = [int(i[0]) for i in self.rank]
         r2 = [int(i[0]) for i in self.rank_tfidf]
         delta = len(list(set(self.combinations(r1)).difference(self.combinations(r2))))
-#        return 1 - (2.0 * delta)/(len(r1) * (len(r1)-1)) 
-        return scipy.stats.stats.kendalltau(r1,r2)[0]
+        return 1 - (2.0 * delta)/(len(r1) * (len(r1)-1)) 
     
