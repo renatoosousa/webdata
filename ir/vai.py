@@ -6,8 +6,6 @@ Created on Wed Dec  6 21:21:01 2017
 @author: renato
 """
 
-#import sys
-#sys.path.append('../../extractor/study_codes/')
 from ir import IR
 
 score = IR()

@@ -9,6 +9,7 @@ from collections import Counter
 import itertools
 import math
 import pickle
+import scipy.stats
 
 class IR(object):
     
@@ -21,6 +22,9 @@ class IR(object):
         
     def setRequest(self, dic):
         self.request = dic
+        
+    def tfidf(self):
+        return 5
 
     def parser(self):
         # quartos 1 2 3 4 5 6
@@ -52,14 +56,14 @@ class IR(object):
         # Cidadde
         for value in rangecidade:
             if(self.request.get('cidade') == value):
-                qry.append(3)
+                qry.append(1)
             else:
                 qry.append(0)
         
         # Quartos
         for value in rangeqts:
             if(self.request.get('quartos') == value):
-                qry.append(2)
+                qry.append(1)
             else:
                 qry.append(0)
                 
@@ -73,7 +77,7 @@ class IR(object):
         # Valor
         for value in rangevalor:
             if(self.request.get('valor') >= value[0] and self.request.get('valor') < value[1]):
-                qry.append(3)
+                qry.append(1)
             else:
                 qry.append(0)
         
@@ -109,7 +113,7 @@ class IR(object):
         # Cidadde
         for value in rangecidade:
             if(self.request.get('cidade') == value):
-                qry.append(1)
+                qry.append(self.tfidf())
             else:
                 qry.append(0)
         
@@ -247,12 +251,16 @@ class IR(object):
             result.setdefault(key,self.vectorSpace(self.docs_vect[key],query))
         self.rank_tfidf = sorted(result.items(), key=lambda x:x[1], reverse=True)
         
-    def getInfo(self, n = 10):
+    def getInfo(self, n = 10, tfidf = True):
         path = '../extractor/study_codes/results/docs/doc_'
         return_docs = []
-        for tp in self.rank:
-            file = open(path + str(tp[0]) +'.txt', 'r') 
-    #        print file.read()
+        temp = []
+        if(tfidf):
+            temp = self.rank_tfidf
+        else:
+            temp = self.rank
+        for tp in temp:
+            file = open(path + str(tp[0]) +'.txt', 'r')
             return_docs.append(file.read())
             if(len(return_docs) >= n):
                 break
@@ -269,7 +277,8 @@ class IR(object):
         else:
             print("sizes dont match")
             
-        return 1 - _sum
+#        return 1 - _sum
+        return scipy.stats.stats.spearmanr(r1,r2)[0]
     
     def combinations(self,l):
         return list(itertools.combinations(l,2))
@@ -278,7 +287,6 @@ class IR(object):
         r1 = [int(i[0]) for i in self.rank]
         r2 = [int(i[0]) for i in self.rank_tfidf]
         delta = len(list(set(self.combinations(r1)).difference(self.combinations(r2))))
-#        print delta
-        return 1 - (2.0 * delta)/(len(r1) * (len(r1)-1)) 
-
+#        return 1 - (2.0 * delta)/(len(r1) * (len(r1)-1)) 
+        return scipy.stats.stats.kendalltau(r1,r2)[0]
     
