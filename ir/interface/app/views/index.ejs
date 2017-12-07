@@ -117,8 +117,6 @@ input[type=submit]:hover {
     <p>Recomendacoes de pesquisa</p>
     <ul class="list-group">
       <li class="list-group-item" id="firstUnica"></li>
-      <li class="list-group-item" id="secondUnica"></li>
-      <li class="list-group-item" id="thirdUnica"></li>
     </ul>
   </div>
     <div id="dialogos"></div>
@@ -162,9 +160,7 @@ input[type=submit]:hover {
       });
 
       socket.on('erroBuscaUnica', function(data){
-        $('#firstUnica').text(data.mensagem[0]);
-        $('#secondUnica').text(data.mensagem[1]);
-        $('#thirdUnica').text(data.mensagem[2]);
+        $('#firstUnica').text(data.mensagem);
         document.getElementById("recUnica").style.display = "block";
       });
 
@@ -176,6 +172,7 @@ input[type=submit]:hover {
       });
 
       $('#firstBuscaByCity').click(function(){
+        $('#nomeCidade').val($('#firstBuscaByCity').text());
         socket.emit(
           'buscaByCityRight',
           {cidade: $('#firstBuscaByCity').text(),quartos:$('#quartos').val(),banheiros:$('#banheiros').val(),valor:$('#valor').val(),vaga:$('#vagas').val()}
@@ -184,6 +181,7 @@ input[type=submit]:hover {
       });
 
       $('#secondBuscaByCity').click(function(){
+        $('#nomeCidade').val($('#secondBuscaByCity').text());
         socket.emit(
           'buscaByCityRight',
           {cidade: $('#secondBuscaByCity').text(),quartos:$('#quartos').val(),banheiros:$('#banheiros').val(),valor:$('#valor').val(),vaga:$('#vagas').val()}
@@ -192,6 +190,7 @@ input[type=submit]:hover {
       });
 
       $('#thirdBuscaByCity').click(function(){
+        $('#nomeCidade').val($('#thirdBuscaByCity').text());
         socket.emit(
           'buscaByCityRight',
           {cidade: $('#thirdBuscaByCity').text(),quartos:$('#quartos').val(),banheiros:$('#banheiros').val(),valor:$('#valor').val(),vaga:$('#vagas').val()}
