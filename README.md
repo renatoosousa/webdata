@@ -4,11 +4,12 @@
 
 Extractor:
 -------------
-RUN python extractor/study_codes/reverse_index.py to see all the ### INDEX LISTS
+RUN python extractor/study_codes/reverse_index.py to see all the INDEX LISTS
 
 how the data is organized
 
-> extractor > study_codes > results
+> extractor > study_codes > results: First part with extracted data
+> extractor > study_codes > results > docs: Second part with pre-processed data separated by document with ID
 ----------
 
 Classifier:
