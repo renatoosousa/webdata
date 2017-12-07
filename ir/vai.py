@@ -9,13 +9,14 @@ Created on Wed Dec  6 21:21:01 2017
 from ir import IR
 
 score = IR()
-request = {"cidade": "recife", "quartos": 4, "banheiros": 2, "valor": 1000, "vaga": 3}
-
-score.setRequest(request)
-
+request1 = {'banheiros': 3, 'cidade': 'sp', 'vaga': 1, 'quartos': 1, 'valor': 160000}
+request2 = {'banheiros': 1, 'cidade': 'belo horizonte', 'vaga': 2, 'quartos': 4, 'valor': 500}
+score.setRequest(request1)
 score.ranking()
-score.ranking_tfidf()
-
+a = score.rank
+score.setRequest(request2)
+score.ranking()
+score.rank_tfidf = a
 print score.spearman()
 print score.kendalTau()
 # print score.rank
