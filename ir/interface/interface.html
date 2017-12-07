@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<style>
+.normalsearch, textarea {
+    width: 12%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.digitsearch{
+    width: 89%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- <h3>RI imoveis</h3> -->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">RI imóveis</a>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container" ng-app="">
+  <form>
+    <label for="cidade">Cidade</label>
+    <input type="text" class="normalsearch" name="cidade" placeholder="Cidade.." ng-model="cidade" id="nomeCidade">
+
+    <label for="preco">Preço Médio</label>
+    <input type="text" class="normalsearch" name="preco" placeholder="Preço.." id="valor">
+
+    <label for="quartos">Quartos</label>
+    <select id="quartos" name="banheiros" class="normalsearch">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+
+    <label for="banheiros">Banheiros</label>
+    <select id="banheiros" name="banheiros" class="normalsearch">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+
+    <label for="vagas">Vagas</label>
+    <select id="vagas" name="country" class="normalsearch">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <input type="submit" value="Buscar" id="enviarByCity">
+    <div style="display: none" id="recBuscaByCity">
+      <p>Recomendacoes de cidades</p>
+      <ul class="list-group">
+        <li class="list-group-item" id="firstBuscaByCity"></li>
+        <li class="list-group-item" id="secondBuscaByCity"></li>
+        <li class="list-group-item" id="thirdBuscaByCity"></li>
+      </ul>
+    </div>
+    <!-- <label for="cidade"></label> -->
+    <input type="text" class="digitsearch" id="test" name="digitsearch" placeholder="Digite o que deseja procurar...">
+	<input type="submit" value="Buscar" id="enviar">    
+  <div style="display: none" id="recUnica">
+    <p>Recomendacoes de pesquisa</p>
+    <ul class="list-group">
+      <li class="list-group-item" id="firstUnica"></li>
+      <li class="list-group-item" id="secondUnica"></li>
+      <li class="list-group-item" id="thirdUnica"></li>
+    </ul>
+  </div>
+	<div id="dialogos"></div>
+  </form>
+</div>
+
+<div class="container">
+  <h3>Resultado</h3>
+  <ul class="list-group">
+    <li class="list-group-item">
+    	<p><a href="http://www.redeimoveispe.com.br/imovel-detalhes.aspx?refRede=AP1231-DZQ">Link</a></p>
+		<p>Valor do IPTU: R$ 142,00</p>
+		<p>Área útil: 57,00m²</p>
+		<p>dorms: 2</p>
+		<p>Tipo: Venda</p>
+		<p>Suíte(s): 0</p>
+		<p>Vaga(s): 1</p>
+		<p>Valor: R$ 420.000</p>
+		<p>Valor médio do condomínio: R$ 402,00</p>
+    </li>
+    <li class="list-group-item">Second item</li>
+    <li class="list-group-item">Third item</li>
+  </ul>
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io('http://localhost:3000/');
+
+      $('#enviar').click(function(){
+        socket.emit(
+          'buscaUnica',
+          {mensagem: $('#test').val()}
+        );
+      });
+
+      $('#enviarByCity').click(function(){
+        socket.emit(
+          'buscaByCity',
+          {cidade: $('#nomeCidade').val(),quartos:$('#quartos').val(),banheiros:$('#banheiros').val(),valor:$('#valor').val(),vaga:$('#vagas').val()}
+        );
+      });
+
+      socket.on('erroBuscaUnica', function(data){
+        $('#firstUnica').text(data.mensagem[0]);
+        $('#secondUnica').text(data.mensagem[1]);
+        $('#thirdUnica').text(data.mensagem[2]);
+        document.getElementById("recUnica").style.display = "block";
+      });
+
+      socket.on('erroBuscaByCity', function(data){
+        $('#firstBuscaByCity').text(data.mensagem[0]);
+        $('#secondBuscaByCity').text(data.mensagem[1]);
+        $('#thirdBuscaByCity').text(data.mensagem[2]);
+        document.getElementById("recBuscaByCity").style.display = "block";
+      });
+
+      $('#firstBuscaByCity').click(function(){
+        socket.emit(
+          'buscaByCityRight',
+          {cidade: $('#firstBuscaByCity').text(),quartos:$('#quartos').val(),banheiros:$('#banheiros').val(),valor:$('#valor').val(),vaga:$('#vagas').val()}
+        );
+        document.getElementById("recBuscaByCity").style.display = "none";
+      });
+
+      $('#secondBuscaByCity').click(function(){
+        socket.emit(
+          'buscaByCityRight',
+          {cidade: $('#secondBuscaByCity').text(),quartos:$('#quartos').val(),banheiros:$('#banheiros').val(),valor:$('#valor').val(),vaga:$('#vagas').val()}
+        );
+        document.getElementById("recBuscaByCity").style.display = "none";
+      });
+
+      $('#thirdBuscaByCity').click(function(){
+        socket.emit(
+          'buscaByCityRight',
+          {cidade: $('#thirdBuscaByCity').text(),quartos:$('#quartos').val(),banheiros:$('#banheiros').val(),valor:$('#valor').val(),vaga:$('#vagas').val()}
+        );
+        document.getElementById("recBuscaByCity").style.display = "none";
+      });
+
+    </script>
+
+</body>
+</html>
