@@ -62,7 +62,7 @@ class IR(object):
                 
         # Cidadde
         for value in rangecidade:
-            if(self.request.get('cidade') == value):
+            if(self.request.get('cidade').lower() == value):
                 qry.append(1)
             else:
                 qry.append(0)
@@ -119,7 +119,7 @@ class IR(object):
                 
         # Cidadde
         for value in rangecidade:
-            if(self.request.get('cidade') == value):
+            if(self.request.get('cidade').lower() == value):
                 qry.append(self.tfidf())
             else:
                 qry.append(0)
