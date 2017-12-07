@@ -25,7 +25,7 @@ var client = new net.Socket();
 /* Criar a conexão por websocket */
 io.on('connection', function(socket){
 	console.log('User connected');
-	client.connect(8480, '127.0.0.1', function() {
+	client.connect(8484, '127.0.0.1', function() {
 		console.log('Connected with python server');
 		socket.on('disconnect',function(){
 			console.log('User disconnected');

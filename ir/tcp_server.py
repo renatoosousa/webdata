@@ -23,12 +23,16 @@ while 1:
     if data:
     	obj = data.decode('utf-8')
     	obj_json = json.loads(obj)
-        print obj_json['cidade']
+        print obj_json
+
+        obj_json['cidade']=str(obj_json['cidade'])
 
         #Rankeamento aqui
-        score.setRequest(data)
+        score.setRequest(obj_json)
         score.ranking()
         score.ranking_tfidf()
-        data = score.getInfo() #pode passar como parametro o numero de docs retornados
-
-        conn1.send('data')
+        result = score.getInfo() #pode passar como parametro o numero de docs retornados
+        print result
+        for elem in result:
+            conn1.send(elem+"criscriscris");
+        # conn1.send('data')
