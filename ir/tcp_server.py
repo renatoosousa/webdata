@@ -28,6 +28,7 @@ while 1:
         #Rankeamento aqui
         score.setRequest(data)
         score.ranking()
+        score.ranking_tfidf()
         data = score.getInfo() #pode passar como parametro o numero de docs retornados
 
         conn1.send('data')
