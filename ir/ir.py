@@ -23,8 +23,15 @@ class IR(object):
     def setRequest(self, dic):
         self.request = dic
         
+    def recursive_len(self,item):
+        if type(item) == list:
+            return sum(self.recursive_len(subitem) for subitem in item)
+        else:
+            return 1
+        
     def tfidf(self):
-        return 5
+#        print math.log(self.recursive_len(self.allPostings))
+        return math.log(self.recursive_len(self.allPostings))
 
     def parser(self):
         # quartos 1 2 3 4 5 6
